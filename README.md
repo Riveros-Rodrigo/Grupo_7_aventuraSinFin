@@ -8,5 +8,5 @@
 ### Maria Clara Zalazar / Edad: 33 / recidencia: Villa Ángela - Chaco 
 ### Carolina Dicciaca / edad: 42 / Residencia: Bs AS, La MAtanza, San Justo 
 ### Ludmila Tévez / Edad: 32 / Recidencia: J.L. Suarez
-### odrigo Riveros / edad: 23 / residencia: Lomas De Zamora - Buenos Aires
+### Rodrigo Riveros / edad: 23 / residencia: Lomas De Zamora - Buenos Aires
 ### Esteban Augieri / edad: 30 / residencia: tristan suarez
