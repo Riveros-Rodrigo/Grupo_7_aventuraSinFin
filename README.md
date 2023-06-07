@@ -4,7 +4,7 @@
 
 ## Descripcion del Publico : En cuanto al público al que apunta el sitio, esto depende en gran medida del enfoque y la estrategia de marketing del e-commerce en cuestión. Sin embargo, en general, podemos decir que los e-commerce de viajes y turismo suelen apuntar a un público amplio que incluye a personas de todas las edades y perfiles socioeconómicos que tienen en común su interés por viajar y conocer nuevos destinos.
 
-# Mienbros del Equipo 
+# Miembros del Equipo 
 ### Maria Clara Zalazar / Edad: 33 / recidencia: Villa Ángela - Chaco 
 ### Carolina Dicciaca / edad: 42 / Residencia: Bs AS, La MAtanza, San Justo 
 ### Ludmila Tévez / Edad: 32 / Recidencia: J.L. Suarez
