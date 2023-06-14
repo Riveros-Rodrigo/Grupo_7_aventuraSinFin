@@ -22,3 +22,19 @@
 ### https://www.smiles.com.ar/
 
 ### Las empresas selecionadas como referentes para nuestro proyecto son instituciones reconocidas no sólo a nivel nacional sino que cuentan con una buena reputación y  liderazgo a nivel internacional. Elegimos varios referentes debido a que esto nos brinda la posibilidad de tener una mejor visión y más opciones a la hora de diseñar e investigar las distintas propuestas que encontramos dentro del negocio relativo a viajes y turismo. Entendemos que esto nos permitirá tener una visión más amplia del mercado y enriqueserá los aportes que realicemos a nuestro proyecto.
+
+# Sitios por las funcionalidades implementadas
+## Funcionalidad de un carrusel en la página de inicio. Hemos implementado un carrusel en la página de inicio que permite mostrar contenido destacado de manera interactiva. Utilizamos de referencia a https://www.smiles.com.ar/ para implementar esta funcionalidad.
+
+## Funcionalidad de Cards o Tarjetas. Hemos implementado una funcionalidad de "cards" o "tarjetas" en nuestro proyecto para presentar información de manera visual y organizada. Cada tarjeta representa un elemento o una entidad y muestra detalles relevantes relacionados. Utilizamos un diseño moderno y adaptable para nuestras tarjetas, lo que permite una experiencia de usuario agradable tanto en dispositivos de escritorio como en dispositivos móviles. Tuvimos de referencia a https://www.turismocity.com.ar/
+
+## Tambien tuvimos de referencia a la misma pagina https://www.turismocity.com.ar/ para la funcionalidad de nuestro navbar, nos sirvio de inspiracion y lo ajustamos a nuestro diseño.
+
+
+
+
+
+
+
+
+
