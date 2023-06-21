@@ -1,4 +1,4 @@
-# Aventuras Sin Fin 
+# Aventura Sin Fin 
 
 ## Descripcion de la Pagina : Desde una perspectiva de marketing; en general, un e-commerce de viajes y turismo ofrece una amplia variedad de productos y servicios relacionados con viajes y turismo, como boletos de avión, reservas de hoteles, paquetes turísticos, alquiler de autos, cruceros y tours. Además, algunos e-commerce también pueden ofrecer servicios adicionales como seguros de viaje, asesoramiento turístico y la posibilidad de reservar actividades y experiencias en destino.
 
