@@ -52,6 +52,10 @@
 ## Consideramos que tienen diseños atractivos y funcionales, de navegación sencilla, con estructura de menú clara que facilita la navegación entre las diferentes páginas de los sitios. También poseen una excelente optimización para dispositivos móviles, contenido de calidad, tanto imágenes y videos, como así también un lenguaje adecuado a la industria a la que pertenecen; con informacion de contacto clara y a la vista, llamados a la acción, enlaces a redes sociales y todo tipo de características de seguridad que brinda a los clientes la confianza de que pueden explorar y navegar un contenido sin complicaciones y realizar compras sin el temor de caer en fraudes o que alguien robe su información bancaria o personal.
 
 
+Ramas
+develop []
+
+
 
 
 
