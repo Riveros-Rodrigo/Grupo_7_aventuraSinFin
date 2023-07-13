@@ -1,0 +1,96 @@
+/* Estilos main */
+/* Banner */
+main .contenedor{
+    background-color: #46E4DB;
+}
+main .contenedor .banner{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 10px;
+}
+main .banner .destinos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .banner .destinos p{
+    padding: 0rem 1rem;
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+}
+main .banner .vuelos{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+main .banner .vuelos .argentina{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 70%;
+}
+main .banner .vuelos .argentina p{
+    margin-bottom: 0;
+}
+main .banner .vuelos .brasil{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    width: 70%;
+}
+main .banner .vuelos .brasil p{
+    margin-bottom: 0;
+}
+main .banner .formas{
+    display: flex;
+    justify-content: center;
+}
+main .banner .formas .calendario{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+main .banner .formas .calendario p{
+    margin-bottom: 0;
+}
+main .banner .formas .pasajeros{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    width: 70%;
+}
+main .banner .formas .pasajeros p{
+    margin-bottom: 0;
+}
+main .banner .formas .calendario .ida{
+    padding-right: 1rem;
+    border-right: 1px solid #000;
+}
+main .banner .formas .calendario .ida i{
+    color: #bdbaba;
+    font-size: 2rem;
+}
+main .banner .formas .calendario .vuelta{
+    padding-left: 1rem;
+}
+main .banner .formas .calendario .vuelta i{
+    color: #bdbaba;
+    font-size: 2rem;
+}
+main .banner .contenedor-boton{
+    display: flex;
+    justify-content: center;
+}
+main .banner .contenedor-boton button{
+    border: none;
+    background-color: #00F0FF;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+}
