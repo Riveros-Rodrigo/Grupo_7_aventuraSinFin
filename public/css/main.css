@@ -138,3 +138,119 @@ main .banner .contenedor-boton button{
     border-radius: 1rem;
     padding: 0.2rem 1rem;
 }
+/* Estilos primer carrusel */
+.contenedor-primer-carrusel{
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+}
+.contenedor-primer-carrusel .img-1{
+    background-position: left;
+    width: 15%;
+    object-fit: cover;
+}
+.contenedor-primer-carrusel .img-2{
+    background-position: center;
+    width: 60%;
+    margin: 0rem 1rem;
+}
+.contenedor-primer-carrusel .img-3{
+    background-position: right;
+    width: 15%;
+    object-fit: cover;
+}
+/* Estilos segundo carrusel */
+.contenedor-segundo-carrusel h1{
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+.contenedor-segundo-carrusel article{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contenedor-segundo-carrusel article img{
+    overflow: hidden;
+}
+.contenedor-segundo-carrusel article .img-miami{
+    padding: 0rem 0.5rem;
+}
+.contenedor-segundo-carrusel .contenedor-iconos{
+    text-align: center;
+}
+/* Seccion ofertas */
+.ofertas h2{
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+.ofertas article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ofertas article .boton{
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.18);
+    width: 235px;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.ofertas article .boton button{
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    border: none;
+    border-radius: 9px 8px 8px 9px;
+    padding: 0.2rem 0.2rem;
+    cursor: pointer;
+}
+/* Estilos seccion pagos */
+.pagos {
+    background-color: var(--colorPrincipal);
+    border: 1px solid #000;
+    margin: 1rem 0rem;
+}
+.pagos .texto-canje{
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    font-weight: 600;
+}
+.pagos .img-canjes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+/* beneficios */
+.pagos .beneficios{
+    display: flex;
+}
+.pagos .beneficios div{
+    background-color: #fff;
+    border: 1px solid #000;
+    margin: 1rem 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pagos .beneficios div img{
+    padding-top: 1rem;
+}
+.pagos .beneficios div p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+}
+/* Estilos footer */
+footer{
+    width: 100%;
+    background-color: var(--colorFooter);
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+footer img{
+    padding: 1.5rem 0rem;
+}
