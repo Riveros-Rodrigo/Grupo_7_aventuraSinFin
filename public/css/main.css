@@ -3,6 +3,10 @@
 main .contenedor{
     background-color: #46E4DB;
 }
+/* se ve solo en desktop */
+main .contenedor .buscador{
+    display: none;
+}
 main .contenedor .banner{
     width: 90%;
     margin: auto;
@@ -162,6 +166,13 @@ main .banner .contenedor-boton button{
     overflow: hidden;
 }
 /* Estilos segundo carrusel */
+main .contenedor-desktop .carrusel-desktop{
+    display: none;
+}
+/* elimino en mobile y tablet el icono next */
+.carousel-control-prev-icon{
+    display: none;
+}
 .contenedor-segundo-carrusel h1{
     font-size: 1rem;
     text-align: center;
@@ -284,5 +295,84 @@ main .banner .contenedor-boton button{
 }
 /* responsive desktop */
 @media (min-width:1000px){
-
+    /* responsive banner */
+    .contenedor{
+        background-image: url('/img/img-banner.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+    /* barra de busqueda */
+    main .contenedor .buscador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    main .contenedor .buscador div{
+        background-color: #DDE7EA;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+    }
+    main .contenedor .buscador input{
+        background-color: #DDE7EA;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.2rem 0rem;
+    }
+    main .contenedor .buscador i{
+        position: relative;
+        padding-right: 0.2rem;
+    }
+    main .contenedor .buscador button{
+        background-color: #DDE7EA;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    /* desaparece banner de mobile y teablet */
+    main .contenedor .banner .destinos{
+        display: none;
+    }
+    main .contenedor .banner .vuelos{
+        display: none;
+    }
+    main .contenedor .banner .formas{
+        display: none;
+    }
+    main .contenedor .banner .contenedor-boton{
+        display: none;
+    }
+    main .contenedor .banner label{
+        display: none;
+    }
+    /* primer carrusel */
+    main .contenedor-primer-carrusel{
+        display: none;
+    }
+    /* segundo carrusel */
+    main .contenedor-segundo-carrusel article{
+        display: none;
+    }
+    main .contenedor-segundo-carrusel .contenedor-iconos{
+        display: none;
+    }
+    /* carrusel y oferta desktop */
+    main .contenedor-desktop{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    main .contenedor-desktop .contenedor-segundo-carrusel{
+        width: 33%;
+    }
+    main .contenedor-desktop .carrusel-desktop{
+        display: flex;
+    }
+    /* ofertas */
+    main .ofertas{
+        width: 40%;
+    }
 }

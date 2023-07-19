@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a84aca7bf1.js" crossorigin="anonymous"></script>
     <title>Aventura Sin Fin | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <main>
         <div class="contenedor">
+            <label class="buscador">
+                <div>
+                    <input type="search" id="#" name="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button>Buscar</button>
+            </label>
             <section class="banner">
                 <div class="destinos">
                     <p>Ida y vuelta</p>
@@ -61,35 +69,71 @@
             </div> -->
         </section>
         <!-- Carrusel numero 2 -->
-        <section class="contenedor-segundo-carrusel">
-            <h1>Top destinos más buscados hoy</h1>
-            <article>
-                <img src="/img/top1.png" alt="Ciudad">
-                <img class="img-miami" src="/img/top2.png" alt="Miami">
-                <img src="/img/top3.png" alt="Llama">
-            </article>
-            <div class="contenedor-iconos">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle-blue.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                <img src="/img/Rectangle 36.png" alt="icono rectangular">
-            </div>
-        </section>
-        <!-- Seccion ofertas -->
-        <section class="ofertas">
-            <h2>Ofertas que no pueden esperar</h2>
-            <article>
-                <img src="/img/oferta.png" alt="Hombre descansando">
-                <div class="boton">
-                    <button>Ver Ofertas</button>
+        <div class="contenedor-desktop">
+            <section class="contenedor-segundo-carrusel">
+                <h1>Top destinos más buscados hoy</h1>
+                <!-- carrusel desktop -->
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row carrusel-desktop">
+                                <div class="col-md-6">
+                                    <img src="/img/top1.png" width="100%"  alt="Ciudad">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="/img/top1.png" width="100%" alt="Ciudad">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row carrusel-desktop">
+                                <div class="col-md-6">
+                                    <img src="/img/top2.png" width="100%" alt="Ciudad">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="/img/top2.png" width="100%" alt="Ciudad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-            </article>
-        </section>
+                <!-- carrusel mobile y tablet -->
+                <article>
+                    <img src="/img/top1.png" alt="Ciudad">
+                    <img class="img-miami" src="/img/top2.png" alt="Miami">
+                    <img src="/img/top3.png" alt="Llama">
+                </article>
+                <div class="contenedor-iconos">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle-blue.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                </div>
+            </section>
+            <!-- Seccion ofertas -->
+            <section class="ofertas">
+                <h2>Ofertas que no pueden esperar</h2>
+                <article>
+                    <img src="/img/oferta.png" alt="Hombre descansando">
+                    <div class="boton">
+                        <button>Ver Ofertas</button>
+                    </div>
+                </article>
+            </section>
+        </div>
         <!-- Seccion pagos -->
         <section class="pagos">
             <p class="texto-canje">Pedí la tarjeta Aventuras Sin Fin ICBC para sumar puntos con tus viajes. Canjéalos por lo que quieras en Aventuras Sin Fin y viví viajando</p>
@@ -113,6 +157,8 @@
             </article>
         </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 </html>
