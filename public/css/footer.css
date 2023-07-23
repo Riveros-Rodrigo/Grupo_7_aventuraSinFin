@@ -1,0 +1,149 @@
+/* Estilos generales para el footer */
+.footer__footer {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+}
+
+/* Estilos para los horarios de atención */
+.footer__hours span {
+    margin-left: 115px;
+    margin-right: 60px; 
+}
+
+/* Estilos para el separador en negro */
+.footer__separator {
+    border: none;
+    border-top: 1px solid black; 
+    margin: 10px 0;
+}
+
+/* Estilos para el menú horizontal del bloque naranja con letras en color negro */
+.footer__footer__nav--menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__footer__nav--menu li {
+    display: inline-block;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: black; 
+}
+
+/* Estilos para centrar el menú horizontal del bloque naranja */
+.footer__menu-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para los enlaces del menú horizontal */
+.footer__footer__nav--menu .footer__link {
+    color: black; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para el primer bloque de color naranja */
+.footer__container--naranja {
+    background-color: #FEBB02;
+    padding: 20px;
+}
+
+/* Estilos para el segundo bloque de color azul */
+.footer__container--azul {
+    background-color: #1D4D8B;
+    padding: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* Estilos para cada caja dentro del bloque azul */
+.footer__box {
+    flex: 1; 
+    margin: 5px; 
+}
+
+/* Estilos para el logo */
+.footer__logo-container {
+    width: 350px;
+    margin-right: 20px;
+}
+
+/* Estilos para el logo de la imagen */
+.footer__logo-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el menú vertical */
+.footer__footer__nav--vertical ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.footer__footer__nav--vertical li {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilos para los enlaces dentro del menú vertical */
+.footer__footer__nav--vertical a {
+    color: white;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+/* Estilos para el párrafo */
+.footer__paragraph {
+    color: white; 
+    text-align: center; 
+    font-size: 10px;
+    line-height: 0.2; 
+}
+
+/* Media queries para diseño adaptable */
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (tablet y mobile) */
+@media only screen and (max-width: 768px) {
+    .footer__footer {
+        padding: 10px; 
+    }
+
+    /* Ajustes para el logo */
+    .footer__logo-container {
+        width: 70px;
+    }
+
+    /* Ajustes para el menú vertical */
+    .home__footer__nav--vertical li {
+        font-size: 8px; 
+    }
+
+    /* Ajustes para el párrafo */
+    .footer__paragraph {
+        font-size: 8px; 
+    }
+
+    /* Ajustes para el segundo bloque de color azul en dispositivos móviles */
+    .footer__container--azul {
+        flex-direction: column; 
+    }
+
+    /* Alineación del contenido del segundo bloque en dispositivos móviles */
+    .footer__box {
+        margin: 10px 0; 
+        align-items: center; 
+    }
+}
