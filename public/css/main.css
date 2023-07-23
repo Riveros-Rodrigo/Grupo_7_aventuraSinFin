@@ -1,7 +1,7 @@
 /* Estilos main */
 /* Banner */
 main .contenedor{
-    background-color: #46E4DB;
+    background-color: var(--colorPrincipal);
 }
 /* se ve solo en desktop */
 main .contenedor .buscador{
@@ -138,7 +138,7 @@ main .banner .contenedor-boton{
 }
 main .banner .contenedor-boton button{
     border: none;
-    background-color: #00F0FF;
+    background-color: var(--colorSecundario);
     border-radius: 1rem;
     padding: 0.2rem 1rem;
 }
@@ -170,7 +170,7 @@ main .contenedor-desktop .carrusel-desktop{
     display: none;
 }
 /* elimino en mobile y tablet el icono next */
-.carousel-control-prev-icon{
+.iconos-flecha{
     display: none;
 }
 .contenedor-segundo-carrusel h1{
@@ -211,12 +211,16 @@ main .contenedor-desktop .carrusel-desktop{
     padding: 1rem 0rem;
 }
 .ofertas article .boton button{
-    background-color: var(--colorPrincipal);
+    background-color: var(--colorSecundario);
     color: #fff;
     border: none;
     border-radius: 9px 8px 8px 9px;
     padding: 0.2rem 0.2rem;
     cursor: pointer;
+}
+/* cards solo vista desktop */
+.tarjetas-desktop{
+    display: none;
 }
 /* Estilos seccion pagos */
 .pagos {
@@ -371,6 +375,24 @@ main .contenedor-desktop .carrusel-desktop{
     main .contenedor-desktop .carrusel-desktop{
         display: flex;
     }
+    main .contenedor-desktop .col-md-6 img{
+        border-radius: 1rem;
+    }
+    main .contenedor-desktop .iconos-flecha{
+        display: flex;
+        background-color: gainsboro;
+        border-radius: 50%;
+    }
+    /* cards solo vista desktop */
+    .tarjetas-desktop{
+        width: 90%;
+        margin: auto;
+        display: flex;
+    }
+    .tarjetas-desktop .card-body{
+        background-color: var(--colorPrincipal);
+    }
+    
     /* ofertas */
     main .ofertas{
         width: 40%;

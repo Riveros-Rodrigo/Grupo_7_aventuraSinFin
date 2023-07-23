@@ -1,9 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap');
-
 :root{
-    --colorPrincipal: #00F0FF;
-    --colorBanner: #46E4DB;
-    --colorFooter: #04D2FF;
+    --colorPrincipal: #1D4D8B;
+    --colorSecundario: #FEBB02;
     --tipografia: 'Inter', sans-serif;
 }
 *{
