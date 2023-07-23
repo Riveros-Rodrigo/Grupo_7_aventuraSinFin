@@ -219,7 +219,13 @@ main .contenedor-desktop .carrusel-desktop{
     cursor: pointer;
 }
 /* cards solo vista desktop */
-.tarjetas-desktop{
+.primer-tarjetas-desktop{
+    display: none;
+}
+.segunda-tarjeta-desktop{
+    display: none;
+}
+.contenedor-card h3{
     display: none;
 }
 /* Estilos seccion pagos */
@@ -229,6 +235,7 @@ main .contenedor-desktop .carrusel-desktop{
     margin: 1rem 0rem;
 }
 .pagos .texto-canje{
+    color: #fff;
     text-align: center;
     font-size: 1rem;
     padding: 1rem 0rem;
@@ -307,6 +314,34 @@ main .contenedor-desktop .carrusel-desktop{
         background-size: cover;
         height: 50vh;
     }
+    .contenedor .txt-carrusel-banner-desk{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+    }
+    .contenedor .txt-carrusel-banner-desk div{
+        border: 1px solid #fff;
+        width: 30rem;
+        border-radius: 1rem;
+        padding: 1rem 0rem;
+        background-color: var(--colorPrincipal);
+    }
+    .contenedor .txt-carrusel-banner-desk div h2{
+        font-size: 3rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    .contenedor .txt-carrusel-banner-desk div p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .contenedor .txt-carrusel-banner-desk div i{
+        color: gray;
+    }
     /* barra de busqueda */
     main .contenedor .buscador{
         display: flex;
@@ -384,15 +419,34 @@ main .contenedor-desktop .carrusel-desktop{
         border-radius: 50%;
     }
     /* cards solo vista desktop */
-    .tarjetas-desktop{
+    .primer-tarjetas-desktop{
         width: 90%;
         margin: auto;
         display: flex;
     }
-    .tarjetas-desktop .card-body{
+    .primer-tarjetas-desktop .card-body{
         background-color: var(--colorPrincipal);
     }
-    
+    .primer-tarjetas-desktop .card-body .estrellas{
+        color: #FFE500;
+    }
+    .contenedor-card h3{
+        display:inherit;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    /* segunda card */
+    .segunda-tarjeta-desktop{
+        width: 90%;
+        margin: auto;
+        display: flex;
+    }
+    .segunda-tarjeta-desktop .card-body{
+        background-color: var(--colorPrincipal);
+    }
+    .segunda-tarjeta-desktop .card-body .estrellas{
+        color: #FFE500;
+    }
     /* ofertas */
     main .ofertas{
         width: 40%;
