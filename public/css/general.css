@@ -1,0 +1,36 @@
+
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Grisoscuro: #666;
+    --Grisclaro: #ebebeb;
+    --Verde: #39b54a;
+    --tipoGrafia: "Roboto", sans-serif;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+li{
+list-style:none ;
+display: inline;
+float: left;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    
+        
+
+}
+
