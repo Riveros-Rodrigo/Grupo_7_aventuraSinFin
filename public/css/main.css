@@ -13,12 +13,17 @@ main .contenedor .banner{
     position: relative;
     top: 10px;
 }
+/* carrusel banner solo se ve en desktop */
+main .contenedor .txt-carrusel-banner-desk{
+    display: none;
+}
 main .banner .destinos{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 main .banner .destinos p{
+    color: #fff;
     margin: 0rem 1rem;
     padding: 0rem 0.2rem;
     font-size: 0.7rem;
@@ -175,6 +180,7 @@ main .contenedor-desktop .carrusel-desktop{
 }
 .contenedor-segundo-carrusel h1{
     font-size: 1rem;
+    font-weight: 600;
     text-align: center;
     margin: 1rem 0rem;
 }
@@ -284,6 +290,7 @@ main .contenedor-desktop .carrusel-desktop{
     /* ofertas */
     .ofertas h2{
         font-size: 1.5rem;
+        font-weight: 600;
         text-align: center;
         margin: 1rem 0rem;
     }
@@ -314,7 +321,7 @@ main .contenedor-desktop .carrusel-desktop{
         background-size: cover;
         height: 50vh;
     }
-    .contenedor .txt-carrusel-banner-desk{
+    main .contenedor .txt-carrusel-banner-desk{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -433,6 +440,7 @@ main .contenedor-desktop .carrusel-desktop{
     .contenedor-card h3{
         display:inherit;
         text-align: center;
+        font-weight: 600;
         margin-top: 2rem;
     }
     /* segunda card */
