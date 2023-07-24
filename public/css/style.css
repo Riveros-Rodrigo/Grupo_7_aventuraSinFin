@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap');
 @import './general.css';
 @import './main.css';
+<<<<<<< HEAD
 @import "/css/header.css";
 @import "../css/register.css";
 @import './footer.css';
@@ -8,3 +9,9 @@
 
 
 
+=======
+@import './header.css';
+@import './register.css';
+@import './footer.css';
+@import './login.css';
+>>>>>>> bf5177ddb1b6df6c4d7e07e29e6d382ab183dfdc
