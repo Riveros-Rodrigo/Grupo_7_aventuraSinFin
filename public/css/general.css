@@ -1,0 +1,32 @@
+:root {
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Grisoscuro: #666;
+    --Grisclaro: #ebebeb;
+    --Verde: #39b54a;
+    --tipoGrafia: "Inter";
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--tipoGrafia);
+}
+
+
+
+li{
+list-style:none ;
+display: inline;
+float: left;
+
+}
+
+a{
+    text-decoration: none;
+    /*color: white;*/  
+}
+
