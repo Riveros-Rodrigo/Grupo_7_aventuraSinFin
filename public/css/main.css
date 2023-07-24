@@ -216,6 +216,9 @@ main .contenedor-desktop .carrusel-desktop{
     text-align: center;
     padding: 1rem 0rem;
 }
+.ofertas article img{
+    width: 235px;
+}
 .ofertas article .boton button{
     background-color: var(--colorSecundario);
     color: #fff;
@@ -251,6 +254,10 @@ main .contenedor-desktop .carrusel-desktop{
     display: flex;
     justify-content: center;
     gap: 1rem;
+}
+.pagos .img-canjes img{
+    width: 100%;
+    overflow: hidden;
 }
 /* beneficios */
 .pagos .beneficios{
@@ -306,6 +313,9 @@ main .contenedor-desktop .carrusel-desktop{
     /* pagos */
     .pagos .img-canjes{
         height: 10rem;
+    }
+    .pagos .img-canjes img{
+        width: 40%;
     }
     .pagos .beneficios div{
         height: 10rem;
@@ -458,5 +468,9 @@ main .contenedor-desktop .carrusel-desktop{
     /* ofertas */
     main .ofertas{
         width: 40%;
+    }
+    /* pagos */
+        .pagos .img-canjes img{
+        width: auto;
     }
 }
