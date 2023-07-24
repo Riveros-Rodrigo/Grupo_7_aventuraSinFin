@@ -70,7 +70,7 @@
     background: transparent;
     display: inline-block;
     width: 30px;
-    padding: 15px;
+    padding: 25px;
     text-align: center;
     
     
@@ -86,6 +86,7 @@
     border-radius: 50%;
     border: 1px solid #000;
     cursor: pointer;
+    ;
 }
 
 .carrito .carrito__item .carrito__item__precio{
@@ -93,13 +94,13 @@
     display: inline-block;
     font-size: 25px;
     margin-bottom: 5px;
-    /*padding-left: 65px;*/
+    padding-right: 0 200px 0 0;
 }
 
 .carrito .carrito__item .boton__eliminar i{
     position: absolute;
     right: 15px;
-    top:15px;
+    bottom:15px;
     color: black;
     width: 40px;
     height: 40px;
@@ -170,4 +171,399 @@
 }
 .carrito__items .carrito__item {
     padding: 10px; 
+}
+
+
+@media(max-width:767px) {
+
+    .logo__avion {
+      position: relative;
+      left: 110px;
+      width: 100px;
+  
+    }
+  
+    header {
+      background-color: #1D4D8B;
+    }
+  
+    .header__logo {
+      margin-top: 10px;
+      width: 200px;
+    }
+  
+    .nav__container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 1px;
+    }
+  
+  
+  
+    .nav__lavel {
+      background-color: rgb(255, 126, 79);
+      color: #ffff;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav__input {
+      display: none;
+  
+    }
+  
+    .nav__lavel {
+      cursor: pointer;
+    }
+  
+    .nav__menu ul li {
+      margin: 10px;
+    }
+  
+    .nav__menu ul li i {
+      display: none;
+    }
+  
+    .nav__menu ul {
+      width: 50px;
+  
+    }
+  
+    hr {
+      height: 5px;
+      margin: 30px;
+      background-color: rgb(255, 126, 79);
+      border: none;
+    }
+  
+    .nav__menu {
+      background-color: grey;
+      position: absolute;
+      top: 120px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+      transition: all 0.5ms;
+      transition: all 1s ease-in-out;
+    }
+  
+    .nav__input:checked+.nav__menu {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      z-index: 100;
+    }
+  
+    .nav__menu ul li:hover {
+      border-bottom: 2px solid white;
+      border-radius: 2px;
+      transition: 0.2s;
+    }
+  
+  }
+  
+  @media (min-width:768px) {
+    .logo__avion {
+      display: none;
+    }
+  
+    header {
+      background-color: #1D4D8B;
+    }
+  
+    .header__logo {
+      width: 200px;
+    }
+  
+    .nav__lavel,
+    .nav__input,
+    hr {
+      display: none;
+    }
+  
+    .nav__container {
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 40px;
+      gap: 50px;
+  
+    }
+  
+    .nav__menu {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 20px;
+      gap: 40px;
+    }
+  
+    .nav__menu ul li {
+      margin: 5px;
+      list-style: none;
+      display: inline;
+      float: left;
+      font-size: 12px;
+    }
+  
+    .nav__menu ul li i {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 3px;
+      padding-left: 15px;
+      color: white;
+  
+    }
+  
+    #alquiler {
+      padding-left: 25px;
+    }
+  
+    #paquetes {
+      padding-left: 20px;
+    }
+  
+  
+  
+  }
+  
+  @media (min-width:1024px) {
+    header {
+      background-color: #1D4D8B;
+    }
+  
+    .header__logo {
+  
+      width: 250px;
+    }
+  
+    .nav__lavel,
+    .nav__input,
+    hr {
+      display: none;
+    }
+  
+    .nav__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 20px 40px;
+      width: 100%;
+      gap: 40px;
+    }
+  
+    .nav__menu {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 200px;
+    }
+  
+    .nav__menu ul li {
+      margin: 5px;
+      list-style: none;
+      display: inline;
+      float: left;
+    }
+  
+    .nav__menu ul li i {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 3px;
+      padding-left: 15px;
+      color: white;
+  
+    }
+  
+    #alquiler {
+      padding-left: 25px;
+    }
+  
+    #paquetes {
+      padding-left: 20px;
+    }
+  
+  }
+
+  /* Estilos generales para el footer */
+.footer__footer {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilos para los horarios de atención */
+.footer__hours span {
+    margin-left: 115px;
+    margin-right: 60px; 
+}
+
+/* Estilos para el separador en negro */
+.footer__separator {
+    border: none;
+    border-top: 1px solid black; 
+    margin: 10px 0;
+}
+
+/* Estilos para el menú horizontal del bloque naranja con letras en color negro */
+.footer__footer__nav--menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer__footer__nav--menu li {
+    display: inline-block;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: black; 
+}
+
+/* Estilos para centrar el menú horizontal del bloque naranja */
+.footer__menu-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para los enlaces del menú horizontal */
+.footer__footer__nav--menu .footer__link {
+    color: black; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos para el primer bloque de color naranja */
+.footer__container--naranja {
+    background-color: #FEBB02;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Estilos para el segundo bloque de color azul */
+.footer__container--azul {
+    background-color: #1D4D8B;
+    padding: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilos para cada caja dentro del bloque azul */
+.footer__box {
+    flex: 1; 
+    margin: 5px; 
+}
+
+/* Estilos para el logo */
+.footer__logo-container {
+    width: 350px;
+    margin-right: 20px;
+}
+
+/* Estilos para el logo de la imagen */
+.footer__logo-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para el menú vertical */
+.footer__footer__nav--vertical ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.footer__footer__nav--vertical li {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilos para los enlaces dentro del menú vertical */
+.footer__footer__nav--vertical a {
+    color: white;
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+/* Estilos para el párrafo */
+.footer__paragraph {
+    color: white; 
+    text-align: center; 
+    font-size: 10px;
+    line-height: 0.1; 
+}
+
+/* Media queries para diseño adaptable */
+
+/* Estilos para dispositivos con un ancho de pantalla máximo de 768px (tablet y mobile) */
+@media only screen and (max-width: 768px) {
+    .footer__footer {
+        padding: 10px; 
+    }
+
+    /* Ajustes para el logo */
+    .footer__logo-container {
+        width: 70px;
+    }
+
+    /* Ajustes para el menú vertical */
+    .home__footer__nav--vertical li {
+        font-size: 8px; 
+    }
+
+    /* Ajustes para el párrafo */
+    .footer__paragraph {
+        font-size: 8px; 
+    }
+
+    /* Ajustes para el segundo bloque de color azul en dispositivos móviles */
+    .footer__container--azul {
+        flex-direction: column; 
+    }
+
+    /* Alineación del contenido del segundo bloque en dispositivos móviles */
+    .footer__box {
+        margin: 10px 0; 
+        align-items: center; 
+    }
+
+    /*Corrección*/
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .footer__footer {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .footer__container--naranja,
+      .footer__container--azul {
+        padding: 0;
+        margin: 0;
+      }
+      
 }
