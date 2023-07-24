@@ -28,5 +28,10 @@ a{
 }
 
 body{
+    width: 100%;
     font-family: var(--tipografia);
+}
+
+footer{
+    width: 100%;
 }
