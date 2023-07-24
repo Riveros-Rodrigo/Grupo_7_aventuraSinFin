@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a84aca7bf1.js" crossorigin="anonymous"></script>
+    <title>Aventura Sin Fin | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav__container">
+            <img src="/img/logoLetrasBlancaModPixeles.png" class="header__logo" alt="">
+            <label for="menu" class="nav__lavel">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu" class="nav__input"> 
+        
+            <div class="nav__menu">
+                <ul>
+                    <li><a href="">Vuelos</a><i class="fas fa-plane" ></i></li>
+                    <li><a href="">Hoteles</a><i class="fas fa-hotel" id="hotel"></i></li>
+                    <li><a href="">Alquileres</a><i class="fas fa-home" id="alquiler"></i></li>
+                    <li><a href="">Paquetes</a><i class="fas fa-briefcase" id="paquetes"></i></li>
+                </ul>
+                <hr>
+                <ul>
+                    <li><a href="">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
+                    <li><a href="/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                </ul>
+                <img src="/img/logo_avion.png" class="logo__avion" alt="">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contenedor">
+            <label class="buscador">
+                <div>
+                    <input type="search" id="#" name="#">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <button>Buscar</button>
+            </label>
+            <div class="txt-carrusel-banner-desk">
+                <div>
+                    <h2>Rio de Janeiro</h2>
+                    <p>Vuelos desde $82.000</p>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle" style="color: white;"></i>
+                    <i class="fa-solid fa-circle"></i>
+                </div>
+            </div>
+            <section class="banner">
+                <div class="destinos">
+                    <p>Ida y vuelta</p>
+                    <p>Solo ida</p>
+                    <p>Multidestino</p>
+                </div>
+                <article class="vuelos">
+                    <div class="argentina">
+                        <p class="bue">BUE</p>
+                        <p>Buenos Aires, Arg</p>
+                    </div>
+                    <div class="brasil">
+                        <p class="rio">RIO</p>
+                        <p>Rio de janeiro, Brasil</p>
+                    </div>
+                </article>
+                <article class="formas">
+                    <div class="calendario">
+                        <div class="ida">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>Ida</p>
+                        </div>
+                        <div class="vuelta">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <p>Vuelta</p>
+                        </div>
+                    </div>
+                    <div class="pasajeros">
+                        <p class="pasajero">1 Pasajero</p>
+                        <p>Económica</p>
+                    </div>
+                </article>
+                <label>
+                    <input type="checkbox" name="hobby" value="Pescar">Ver fechas más baratas
+                </label>
+                <div class="contenedor-boton">
+                    <button>Buscar</button>
+                    <i class="fas fa-horizontal-rule"></i>
+                </div>
+            </section>
+        </div>
+        <!-- Carrusel -->
+        <section class="contenedor-primer-carrusel">
+            <img class="img-1" src="/img/publicida2.png" alt="Mundo">
+            <img class="img-2" src="/img/publicidad1.png" alt="Avion">
+            <img class="img-3" src="/img/publicidad3.png" alt="Avion">
+        </section>
+        <!-- Carrusel numero 2 -->
+        <div class="contenedor-desktop">
+            <section class="contenedor-segundo-carrusel">
+                <h1>Top destinos más buscados hoy</h1>
+                <!-- carrusel desktop -->
+                <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row carrusel-desktop">
+                                <div class="col-md-6">
+                                    <img src="/img/top1.png" width="100%"  alt="Ciudad">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="/img/top1.png" width="100%" alt="Ciudad">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row carrusel-desktop">
+                                <div class="col-md-6">
+                                    <img src="/img/top2.png" width="100%" alt="Ciudad">
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="/img/top2.png" width="100%" alt="Ciudad">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon iconos-flecha" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon iconos-flecha" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- carrusel mobile y tablet -->
+                <article>
+                    <img src="/img/top1.png" alt="Ciudad">
+                    <img class="img-miami" src="/img/top2.png" alt="Miami">
+                    <img src="/img/top3.png" alt="Llama">
+                </article>
+                <div class="contenedor-iconos">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle-blue.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
+                </div>
+            </section>
+            <!-- Seccion ofertas -->
+            <section class="ofertas">
+                <h2>Ofertas que no pueden esperar</h2>
+                <article>
+                    <img src="/img/oferta.jpg" alt="Hombre descansando">
+                    <div class="boton">
+                        <button>Ver Ofertas</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+            <!-- cards solo vista desktop -->
+            <section class="contenedor-card"> 
+                <h3>Hoteles Recomendados para ti </h3>
+                <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <img src="/img/card1.png" class="card-img-top" alt="...">
+                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                <h5 class="card-title text-white">Ribera Sur Hotel</h5>
+                                <ul class="card-text text-white">
+                                    <li>Ubicación: Ciudad del Lago, Costa del Azahar, Argentina.</li>
+                                    <li>Distancia a la playa: A solo 200 metros de la playa principal de Ciudad del Lago.</li>
+                                    <li>Precio: Desde $150 por noche.</li>
+                                    <div class="estrellas">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/card2.png" class="card-img-top" alt="...">
+                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                <h5 class="card-title text-white">The Betsy Hotel</h5>
+                                <ul class="card-text text-white">
+                                    <li>Ubicación: Bahía Dorada, Costa Esmeralda, Argentina.</li>
+                                    <li>Distancia a la playa: A solo 50 metros de la hermosa playa de Bahía Dorada.</li>
+                                    <li>Precio: Desde $250 por noche.</li>
+                                    <div class="estrellas">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/card3.png" class="card-img-top" alt="...">
+                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                <h5 class="card-title text-white">Vincci The Mint</h5>
+                                <ul class="card-text text-white">
+                                    <li>Ubicación: Villa del Mar, Costa del Sol, Argentina.</li>
+                                    <li>Distancia a la playa:  A menos de 100 metros de la playa principal de Villa del Mar.</li>
+                                    <li>Precio: Desde $180 por noche.</li>
+                                    <div class="estrellas">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/card4.png" class="card-img-top" alt="...">
+                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                <h5 class="card-title text-white">Hotel tres Reyes</h5>
+                                <ul class="card-text text-white">
+                                    <li>Ubicación: Ciudad del Lago, Costa del Azahar, Argentina.</li>
+                                    <li>Distancia a la playa: A solo 200 metros de la playa principal de Ciudad del Lago.</li>
+                                    <li>Precio: Desde $150 por noche.</li>
+                                    <div class="estrellas">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <img src="/img/card5.png" class="card-img-top" alt="...">
+                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                <h5 class="card-title text-white">Argentino Hotel</h5>
+                                <ul class="card-text text-white">
+                                    <li>Ubicación: Villa Real, Costa del Rey, Argentina.</li>
+                                    <li>Distancia a la playa: A solo 500 metros de la hermosa playa de Villa Real</li>
+                                    <li>Precio: Desde $200 por noche.</li>
+                                    <div class="estrellas">
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                        <i class="fa-sharp fa-solid fa-star"></i>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                    <!-- lugares de arg -->
+                <section class="contenedor-card">
+                    <h3>Lugares recomendados en argentina</h3>
+                    <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <img src="/img/card6.png" class="card-img-top" alt="...">
+                                    <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title text-white">Hotel Selva Adentro - Posadas, Misiones</h5>
+                                        <ul class="card-text text-white">
+                                            <li>Precio: Desde $1500 por noche.</li>
+                                            <li>Piezas: 20 habitaciones.</li>
+                                            <li>Incluye: Desayuno continental, acceso a la piscina y Wi-Fi gratuito.</li>
+                                            <div class="estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                        </ul>
+                                    </div>                        
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="/img/card7.png" class="card-img-top" alt="...">
+                                    <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title text-white">Hotel Colonial Plaza - Salta, Argentina</h5>
+                                        <ul class="card-text text-white">
+                                            <li>Precio: Desde $2500 por noche.</li>
+                                            <li>Piezas: 35 habitaciones.</li>
+                                            <li>Incluye: Desayuno buffet, estacionamiento privado y servicio de conserjería.</li>
+                                            <div class="estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                        </ul>
+                                    </div>                        
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="/img/card8.png" class="card-img-top" alt="...">
+                                    <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title text-white">Los Cipreses - Bariloche, Argentina</h5>
+                                        <ul class="card-text text-white">
+                                            <li>Precio: Desde $3500 por noche.</li>
+                                            <li>Piezas: 10 cabañas.</li>
+                                            <li>Incluye: Desayuno casero, acceso a senderos y actividades al aire libre.</li>
+                                            <div class="estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                        </ul>
+                                    </div>                        
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="/img/card9.png" class="card-img-top" alt="...">
+                                    <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title text-white">Hotel Boutique La Casona - Córdoba, Argentina</h5>
+                                        <ul class="card-text text-white">
+                                            <li>Precio: Desde $1800 por noche.</li>
+                                            <li>Piezas: 12 habitaciones.</li>
+                                            <li>Incluye: Desayuno a la carta, servicio de té y café todo el día y acceso al jardín interior.</li>
+                                            <div class="estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                        </ul>
+                                    </div>                        
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                    <img src="/img/card10.png" class="card-img-top" alt="...">
+                                    <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
+                                        <h5 class="card-title text-white">Hotel Viñas del Valle - Mendoza, Argentina</h5>
+                                        <ul class="card-text text-white">
+                                            <li>Precio: Desde $2800 por noche.</li>
+                                            <li>Piezas: 18 habitaciones.</li>
+                                            <li>Incluye: Desayuno buffet, visita a bodegas cercanas y degustación de vinos.</li>
+                                            <div class="estrellas">
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                                <i class="fa-sharp fa-solid fa-star"></i>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </section>
+        <!-- Seccion pagos -->
+        <section class="pagos">
+            <p class="texto-canje">Pedí la tarjeta Aventuras Sin Fin ICBC para sumar puntos con tus viajes. Canjéalos por lo que quieras en Aventuras Sin Fin y viví viajando</p>
+            <article class="img-canjes">
+                <img src="/img/planea.jpg" alt="Hombre usando netbook">
+                <img src="/img/tarjeta-vuelo.jpg" alt="Tarjetas">
+            </article>
+            <article class="beneficios">
+                <div>
+                    <img src="/img/tarjeta-icono.png" alt="">
+                    <p>Te bonificamos renovación y membresía por un año</p>
+                </div>
+                <div>
+                    <img src="/img/descuento.png" alt="">
+                    <p>Hasta 30% de descuento canjeando tus puntos pasaporte</p>
+                </div>
+                <div>
+                    <img src="/img/regalo.png" alt="">
+                    <p>Te regalamos hasta 8.000 puntos en tus primeras  compras*</p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+</html>
