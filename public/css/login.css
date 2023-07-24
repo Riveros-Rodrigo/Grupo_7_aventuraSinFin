@@ -1,5 +1,6 @@
 .container__box {
     display: flex;
+    padding: 40px 16px 24px;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -147,17 +148,24 @@ div .login p {
     background-color: transparent;
 }
 
-@media (min-width:768px) {
-    h2 {
-        margin: 10px 0px;
-        color: var(--Grisoscuro);
-    }
+.boton__log:hover,
+.bottons__login--register button:hover {
+    background-color: rgba(100, 100, 100, 0.5);
+    border: 2px solid var(--Celeste);
+}
 
+@media (min-width:768px) {
     .container__box {
         display: flex;
+        padding: 40px 16px 24px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+    }
+
+    h2 {
+        margin: 10px 0px;
+        color: var(--Grisoscuro);
     }
 
     .logo {
@@ -214,27 +222,34 @@ div .login p {
         padding: 10px 0px;
     }
 
-
     .fa-facebook {
         color: var(--Celeste);
     }
 
     .fa-google {
         color: brown;
+    }
+
+    .boton__log:hover,
+    .bottons__login--register button:hover {
+        background-color: rgba(100, 100, 100, 0.5);
+        border: 2px solid var(--Celeste);
     }
 }
 
 @media(min-width:1024px) {
-    h2 {
-        margin: 10px 0px;
-        color: var(--Grisoscuro);
-    }
 
     .container__box {
         display: flex;
+        padding: 40px 16px 24px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+    }
+
+    h2 {
+        margin: 10px 0px;
+        color: var(--Grisoscuro);
     }
 
     .logo {
@@ -297,5 +312,11 @@ div .login p {
 
     .fa-google {
         color: brown;
+    }
+
+    .boton__log:hover,
+    .bottons__login--register button:hover {
+        background-color: rgba(100, 100, 100, 0.5);
+        border: 2px solid var(--Celeste);
     }
 }
