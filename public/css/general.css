@@ -1,15 +1,13 @@
-
 :root {
-    --Amarillo: #EAC926;
-    --Azul: #03264C;
     --Celeste: #1259c3;
     --Grisoscuro: #666;
     --Grisclaro: #ebebeb;
     --Verde: #39b54a;
     --tipoGrafia: "Roboto", sans-serif;
-
+    --colorPrincipal: #1D4D8B;
+    --colorSecundario: #FEBB02;
+    --tipografia: 'Inter', sans-serif;
 }
-
 
 *{
     margin: 0;
@@ -17,20 +15,18 @@
     box-sizing: border-box;
 }
 
-
-
-li{
+/* li{
 list-style:none ;
 display: inline;
 float: left;
 
-}
+} */
 
 a{
     text-decoration: none;
     color: white;
-    
-        
-
 }
 
+body{
+    font-family: var(--tipografia);
+}

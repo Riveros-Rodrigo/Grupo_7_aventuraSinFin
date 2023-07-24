@@ -1,0 +1,476 @@
+/* Estilos main */
+/* Banner */
+main .contenedor{
+    background-color: var(--colorPrincipal);
+}
+/* se ve solo en desktop */
+main .contenedor .buscador{
+    display: none;
+}
+main .contenedor .banner{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    top: 10px;
+}
+/* carrusel banner solo se ve en desktop */
+main .contenedor .txt-carrusel-banner-desk{
+    display: none;
+}
+main .banner .destinos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .banner .destinos p{
+    color: #fff;
+    margin: 0rem 1rem;
+    padding: 0rem 0.2rem;
+    font-size: 0.7rem;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+}
+main .banner .vuelos{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+main .banner .vuelos .argentina{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 70%;
+    height: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .banner .vuelos .argentina .bue{
+    font-size: 1rem;
+    font-weight: 600;
+}
+main .banner .vuelos .argentina p{
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+main .banner .vuelos .brasil{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    width: 70%;
+    height: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .banner .vuelos .brasil .rio{
+    font-size: 1rem;
+    font-weight: 600;
+}
+main .banner .vuelos .brasil p{
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+main .banner .formas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .banner .formas .calendario{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    height: 3.2rem;
+}
+main .banner .formas .calendario p{
+    margin-bottom: 0;
+}
+main .banner .formas .pasajeros{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    width: 70%;
+    height: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .banner .formas .pasajeros .pasajero{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+main .banner .formas .pasajeros p{
+    margin-bottom: 0;
+    font-size: 0.8rem;
+    color: #bdbaba;
+}
+main .banner .formas .calendario p{
+    color: #bdbaba;
+    font-size: 0.8rem;
+}
+main .banner .formas .calendario .ida{
+    padding-right: 1rem;
+    border-right: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .banner .formas .calendario .ida i{
+    color: #bdbaba;
+    font-size: 2rem;
+}
+main .banner .formas .calendario .vuelta{
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+main .banner .formas .calendario .vuelta i{
+    color: #bdbaba;
+    font-size: 2rem;
+}
+/* BOTON BUSCAR */
+main .banner .contenedor-boton{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem 0rem;
+}
+main .banner .contenedor-boton button{
+    border: none;
+    background-color: var(--colorSecundario);
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+}
+/* Estilos primer carrusel */
+.contenedor-primer-carrusel{
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+}
+.contenedor-primer-carrusel .img-1{
+    background-position: left;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+.contenedor-primer-carrusel .img-2{
+    background-position: center;
+    width: 60%;
+    margin: 0rem 1rem;
+}
+.contenedor-primer-carrusel .img-3{
+    background-position: right;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* Estilos segundo carrusel */
+main .contenedor-desktop .carrusel-desktop{
+    display: none;
+}
+/* elimino en mobile y tablet el icono next */
+.iconos-flecha{
+    display: none;
+}
+.contenedor-segundo-carrusel h1{
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+.contenedor-segundo-carrusel article{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.contenedor-segundo-carrusel article img{
+    overflow: hidden;
+}
+.contenedor-segundo-carrusel article .img-miami{
+    padding: 0rem 0.5rem;
+}
+.contenedor-segundo-carrusel .contenedor-iconos{
+    text-align: center;
+}
+/* Seccion ofertas */
+.ofertas h2{
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0rem;
+}
+.ofertas article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ofertas article .boton{
+    background-color: #fff;
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.18);
+    width: 235px;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+.ofertas article img{
+    width: 235px;
+}
+.ofertas article .boton button{
+    background-color: var(--colorSecundario);
+    color: #fff;
+    border: none;
+    border-radius: 9px 8px 8px 9px;
+    padding: 0.2rem 0.2rem;
+    cursor: pointer;
+}
+/* cards solo vista desktop */
+.primer-tarjetas-desktop{
+    display: none;
+}
+.segunda-tarjeta-desktop{
+    display: none;
+}
+.contenedor-card h3{
+    display: none;
+}
+/* Estilos seccion pagos */
+.pagos {
+    background-color: var(--colorPrincipal);
+    border: 1px solid #000;
+    margin: 1rem 0rem;
+}
+.pagos .texto-canje{
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    font-weight: 600;
+}
+.pagos .img-canjes{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.pagos .img-canjes img{
+    width: 100%;
+    overflow: hidden;
+}
+/* beneficios */
+.pagos .beneficios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagos .beneficios div{
+    background-color: #fff;
+    border: 1px solid #000;
+    margin: 1rem 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.pagos .beneficios div img{
+    padding-top: 1rem;
+}
+.pagos .beneficios div p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.8rem 0.5rem;
+    text-align: center;
+}
+
+/* responsive tablet */
+@media (min-width:768px){
+    /* responsive segundo carrusel */
+    .contenedor-segundo-carrusel h1{
+        font-size: 1.5rem;
+    }
+    .contenedor-segundo-carrusel article img{
+        width: 100%;
+        height: 170px;
+    }
+    /* ofertas */
+    .ofertas h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        margin: 1rem 0rem;
+    }
+    .ofertas article img{
+        width: 60%;
+    }
+    .ofertas article .boton{
+        width: 60%;
+    }
+    .ofertas article .boton button{
+        padding: 0.5rem 0.5rem;
+    }
+    /* pagos */
+    .pagos .img-canjes{
+        height: 10rem;
+    }
+    .pagos .img-canjes img{
+        width: 40%;
+    }
+    .pagos .beneficios div{
+        height: 10rem;
+    }
+}
+/* responsive desktop */
+@media (min-width:1000px){
+    /* responsive banner */
+    .contenedor{
+        background-image: url('/img/img-banner.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+    main .contenedor .txt-carrusel-banner-desk{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 40vh;
+    }
+    .contenedor .txt-carrusel-banner-desk div{
+        border: 1px solid #fff;
+        width: 30rem;
+        border-radius: 1rem;
+        padding: 1rem 0rem;
+        background-color: var(--colorPrincipal);
+    }
+    .contenedor .txt-carrusel-banner-desk div h2{
+        font-size: 3rem;
+        font-weight: 500;
+        color: #fff;
+    }
+    .contenedor .txt-carrusel-banner-desk div p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .contenedor .txt-carrusel-banner-desk div i{
+        color: gray;
+    }
+    /* barra de busqueda */
+    main .contenedor .buscador{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 1rem;
+    }
+    main .contenedor .buscador div{
+        background-color: #DDE7EA;
+        border-radius: 1rem;
+        margin-right: 0.5rem;
+    }
+    main .contenedor .buscador input{
+        background-color: #DDE7EA;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.2rem 0rem;
+    }
+    main .contenedor .buscador i{
+        position: relative;
+        padding-right: 0.2rem;
+    }
+    main .contenedor .buscador button{
+        background-color: #DDE7EA;
+        border: none;
+        border-radius: 1rem;
+        padding: 0.4rem;
+    }
+    /* desaparece banner de mobile y teablet */
+    main .contenedor .banner .destinos{
+        display: none;
+    }
+    main .contenedor .banner .vuelos{
+        display: none;
+    }
+    main .contenedor .banner .formas{
+        display: none;
+    }
+    main .contenedor .banner .contenedor-boton{
+        display: none;
+    }
+    main .contenedor .banner label{
+        display: none;
+    }
+    /* primer carrusel */
+    main .contenedor-primer-carrusel{
+        display: none;
+    }
+    /* segundo carrusel */
+    main .contenedor-segundo-carrusel article{
+        display: none;
+    }
+    main .contenedor-segundo-carrusel .contenedor-iconos{
+        display: none;
+    }
+    /* carrusel y oferta desktop */
+    main .contenedor-desktop{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+    main .contenedor-desktop .contenedor-segundo-carrusel{
+        width: 33%;
+    }
+    main .contenedor-desktop .carrusel-desktop{
+        display: flex;
+    }
+    main .contenedor-desktop .col-md-6 img{
+        border-radius: 1rem;
+    }
+    main .contenedor-desktop .iconos-flecha{
+        display: flex;
+        background-color: gainsboro;
+        border-radius: 50%;
+    }
+    /* cards solo vista desktop */
+    .primer-tarjetas-desktop{
+        width: 90%;
+        margin: auto;
+        display: flex;
+    }
+    .primer-tarjetas-desktop .card-body{
+        background-color: var(--colorPrincipal);
+    }
+    .primer-tarjetas-desktop .card-body .estrellas{
+        color: #FFE500;
+    }
+    .contenedor-card h3{
+        display:inherit;
+        text-align: center;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+    /* segunda card */
+    .segunda-tarjeta-desktop{
+        width: 90%;
+        margin: auto;
+        display: flex;
+    }
+    .segunda-tarjeta-desktop .card-body{
+        background-color: var(--colorPrincipal);
+    }
+    .segunda-tarjeta-desktop .card-body .estrellas{
+        color: #FFE500;
+    }
+    /* ofertas */
+    main .ofertas{
+        width: 40%;
+    }
+    /* pagos */
+        .pagos .img-canjes img{
+        width: auto;
+    }
+}
