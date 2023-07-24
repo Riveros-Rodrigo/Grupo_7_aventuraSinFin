@@ -30,3 +30,7 @@ a{
 body{
     font-family: var(--tipografia);
 }
+
+footer{
+    width: 100%;
+}
