@@ -1,28 +1,47 @@
 :root {
+<<<<<<< HEAD
     --Amarillo: #EAC926;
     --Azul: #03264C;
+=======
+>>>>>>> 242f96988a5be174d796e4d1dba84bbd2b0d8b9f
     --Celeste: #1259c3;
     --Grisoscuro: #666;
     --Grisclaro: #ebebeb;
     --Verde: #39b54a;
+<<<<<<< HEAD
     --tipoGrafia: "Inter";
 }
 
 
+=======
+    --tipoGrafia: "Roboto", sans-serif;
+    --colorPrincipal: #1D4D8B;
+    --colorSecundario: #FEBB02;
+    --tipografia: 'Inter', sans-serif;
+}
+
+>>>>>>> 242f96988a5be174d796e4d1dba84bbd2b0d8b9f
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+<<<<<<< HEAD
     font-family: var(--tipoGrafia);
 }
 
 
 
 li{
+=======
+}
+
+/* li{
+>>>>>>> 242f96988a5be174d796e4d1dba84bbd2b0d8b9f
 list-style:none ;
 display: inline;
 float: left;
 
+<<<<<<< HEAD
 }
 
 a{
@@ -30,3 +49,20 @@ a{
     /*color: white;*/  
 }
 
+=======
+} */
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    width: 100%;
+    font-family: var(--tipografia);
+}
+
+footer{
+    width: 100%;
+}
+>>>>>>> 242f96988a5be174d796e4d1dba84bbd2b0d8b9f

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://kit.fontawesome.com/62badcedc9.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="register">
+
+    <main class="main__register">
+        <div class="caja__container">
+            <img src="/img/logo_Avion.png" class="logo" alt="">
+            <div class="div__container">
+                <h1>Creá tu cuenta</h1>
+                <form action="">
+                    <div class="div__form">
+                        <label for="name">Nonbre</label>
+                        <input type="text" id="name" required="" pattern="[A-Z , a-z]">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" required="" pattern="[A-Z , a-z]">
+                        <label for="email">Correo</label>
+                        <input type="email" id="email" required="" pattern="[A-Z , a-z,@,1-9999]">
+                        <p>Acedé con el mail que realizaste la compar</p>
+                        <label for="contraseña">Contraseña</label>
+                        <input type="password" id="contraseña" required="" pattern="[A-Z , a-z,@,1-9999]">
+                        <p>Usá entre 8 y 16 carácteres.</p>
+                    </div>
+                    <div class="boton__registro">
+                        <button type="submit"><a href="">Registrate</a></button>
+                    </div>
+
+                </form>
+
+                <div class="registrer__redsocial">
+                    <p>Al registrarte aceptas los <a href="">Terminos y condiciones</a></p>
+                    <h4>¡Chau contraseña! Ingresa con un solo paso.</h4>
+                    <ul>
+                        <li><i class="fab fa-facebook"></i><a href="">Ingresa con Facebook</a></li>
+                        <li><i class="fab fa-google"></i><a href="">Ingresa con Google</li>
+                    </ul></a>
+                </div>
+                <div class="cuenta">
+                    <p>¿Ya tenés cuenta?</p>
+                    <button><a href="/login">Ingresar</a></button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
