@@ -2,6 +2,8 @@
 /* Banner */
 main .contenedor{
     background-color: var(--colorPrincipal);
+    z-index: 1;
+    position: relative;
 }
 /* se ve solo en desktop */
 main .contenedor .buscador{

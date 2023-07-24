@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column; 
     padding: 20px;
+    width: 100%;
 }
 
 /* Estilos para los horarios de atención */
@@ -50,6 +51,7 @@
 .footer__container--naranja {
     background-color: #FEBB02;
     padding: 20px;
+    width: 100%;
 }
 
 /* Estilos para el segundo bloque de color azul */
@@ -59,7 +61,8 @@
     display: flex; 
     flex-wrap: wrap; 
     justify-content: space-between; 
-    align-items: center; 
+    align-items: center;
+    width: 100%;
 }
 
 /* Estilos para cada caja dentro del bloque azul */
@@ -110,7 +113,7 @@
     color: white; 
     text-align: center; 
     font-size: 10px;
-    line-height: 0.2; 
+    line-height: 0.1; 
 }
 
 /* Media queries para diseño adaptable */
@@ -146,4 +149,23 @@
         margin: 10px 0; 
         align-items: center; 
     }
+
+    /*Corrección*/
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .footer__footer {
+        padding: 0;
+        margin: 0;
+      }
+      
+      .footer__container--naranja,
+      .footer__container--azul {
+        padding: 0;
+        margin: 0;
+      }
+      
 }
