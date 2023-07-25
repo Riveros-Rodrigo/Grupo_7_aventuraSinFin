@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/62badcedc9.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,11 +11,37 @@
     <title>Document</title>
 </head>
 
-<body class="register">
+<body>
 
+
+    <header class="header">
+        <div class="nav__container">
+            <a href="/"><img src="/img/logoLetrasBlancaModPixeles.png" class="header__logo" alt=""></a>
+            <label for="menu" class="nav__lavel">
+                <i class="fas fa-bars"></i>
+            </label>
+            <input type="checkbox" id="menu" class="nav__input"> 
+        
+            <div class="nav__menu">
+                <ul>
+                    <li><a href="">Vuelos</a><i class="fas fa-plane" ></i></li>
+                    <li><a href="">Hoteles</a><i class="fas fa-hotel" id="hotel"></i></li>
+                    <li><a href="">Alquileres</a><i class="fas fa-home" id="alquiler"></i></li>
+                    <li><a href="">Paquetes</a><i class="fas fa-briefcase" id="paquetes"></i></li>
+                </ul>
+                <hr>
+                <ul>
+                    <li><a href="/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
+                    <li><a href="/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                </ul>
+                <img src="/img/logo_avion.png" class="logo__avion" alt="">
+            </div>
+        </div>
+    </header>
+    
     <main class="main__register">
         <div class="caja__container">
-            <img src="/img/logo_Avion.png" class="logo" alt="">
+            <a href="/"><img src="/img/logo_Avion.png" class="logo" alt=""></a>
             <div class="div__container">
                 <h1>Creá tu cuenta</h1>
                 <form action="">
