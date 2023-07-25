@@ -1,10 +1,13 @@
+
 /* Estilos generales para el footer */
 .footer__footer {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column; 
-    padding: 20px;
+    padding: 0px;
+    margin: 0px;
     width: 100%;
+    height: 100%;
 }
 
 /* Estilos para los horarios de atención */
@@ -13,12 +16,29 @@
     margin-right: 60px; 
 }
 
+/* Estilos para el contenedor del separador */
+.separator-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilos para el separador en negro */
+  .footer__separator {
+    border: none;
+    border-top: 1px solid black; 
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 500px; /* Opcional: Limita el ancho máximo */
+    margin: 10px 0;
+  }
+  
+
 /* Estilos para el separador en negro */
-.footer__separator {
+/*.footer__separator {
     border: none;
     border-top: 1px solid black; 
     margin: 10px 0;
-}
+}*/
 
 /* Estilos para el menú horizontal del bloque naranja con letras en color negro */
 .footer__footer__nav--menu ul {
@@ -52,6 +72,8 @@
     background-color: #FEBB02;
     padding: 20px;
     width: 100%;
+    height: 100%;
+    margin-top: -20px;
 }
 
 /* Estilos para el segundo bloque de color azul */
@@ -63,6 +85,7 @@
     justify-content: space-between; 
     align-items: center;
     width: 100%;
+    height: 100%;
 }
 
 /* Estilos para cada caja dentro del bloque azul */
