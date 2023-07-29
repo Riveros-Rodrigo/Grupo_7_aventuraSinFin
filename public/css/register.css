@@ -123,6 +123,7 @@
     padding: 10px 20px;
     width: 100%;
     text-align: center;
+    list-style: none;
 }
 
 .registrer__redsocial ul li i {
