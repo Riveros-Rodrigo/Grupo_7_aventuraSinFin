@@ -217,6 +217,7 @@ main .contenedor-desktop .carrusel-desktop{
     width: 235px;
     text-align: center;
     padding: 1rem 0rem;
+    position: relative;
 }
 .ofertas article img{
     width: 235px;
