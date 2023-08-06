@@ -154,6 +154,7 @@ div .login p {
     border: none;
     margin: 5px 0;
     background-color: var(--Grisclaro);
+    cursor: pointer;
 }
 
 .boton__log:hover,
