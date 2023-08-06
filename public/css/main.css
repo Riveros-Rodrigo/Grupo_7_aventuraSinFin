@@ -240,52 +240,71 @@ main .contenedor-desktop .carrusel-desktop{
 .contenedor-card h3{
     display: none;
 }
-/* Estilos seccion pagos */
-.pagos {
-    background-color: var(--colorPrincipal);
-    border: 1px solid #000;
-    margin: 1rem 0rem;
-}
-.pagos .texto-canje{
-    color: #fff;
+/* por que elegirnos */
+.container__testimonials{
     text-align: center;
-    font-size: 1rem;
-    padding: 1rem 0rem;
-    font-weight: 600;
-}
-.pagos .img-canjes{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-.pagos .img-canjes img{
-    width: 100%;
+    background: #F7F7F7;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .testimonial__txt{
+    color: #777;
+  }
+  .container-editor{
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .editor__item{
+    height: 200px;
+    position: relative;
     overflow: hidden;
-}
-/* beneficios */
-.pagos .beneficios{
+  }
+  .editor__img  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .editor__circle{
+    width: 200px;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.pagos .beneficios div{
-    background-color: #fff;
-    border: 1px solid #000;
-    margin: 1rem 0.2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.pagos .beneficios div img{
-    padding-top: 1rem;
-}
-.pagos .beneficios div p{
-    font-size: 0.8rem;
-    font-weight: 600;
-    padding: 0.8rem 0.5rem;
+    position: absolute;
+    bottom: -200px;
+    right: -150px;
+    color: white;
+    padding: 20px;
+    padding-bottom: 70px;
+    padding-right: 50px;
+    font-size: 1.1em;
     text-align: center;
-}
+    font-weight: bold;
+    transition: all 0.5s;
+  }
+  .editor__item:hover .editor__circle{
+    transform: scale(1.2);
+    bottom: -90px;
+    right: -50px;
+  }
+  .editor__item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .editor__item:hover:before {
+    opacity: 1;
+  }
 
 /* responsive tablet */
 @media (min-width:768px){
@@ -313,15 +332,9 @@ main .contenedor-desktop .carrusel-desktop{
     .ofertas article .boton button{
         padding: 0.5rem 0.5rem;
     }
-    /* pagos */
-    .pagos .img-canjes{
-        height: 10rem;
-    }
-    .pagos .img-canjes img{
-        width: 40%;
-    }
-    .pagos .beneficios div{
-        height: 10rem;
+    /* por que elegirnos */
+    .editor__item {
+        height: 250px;
     }
 }
 /* responsive desktop */
@@ -472,8 +485,24 @@ main .contenedor-desktop .carrusel-desktop{
     main .ofertas{
         width: 40%;
     }
-    /* pagos */
-        .pagos .img-canjes img{
-        width: auto;
+    /* por que elegirnos */
+    .container__testimonials{
+        font-size: 1.3em; 
+    }
+    .container-editor{
+        display: flex;
+        justify-content: space-between;
+    }
+    .editor__item{
+        width: 48%;
+    }
+    .main-footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+    .copy {
+        grid-column-start: span 4;
+        text-align: center;
     }
 }
