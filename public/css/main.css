@@ -322,6 +322,7 @@ main .contenedor-desktop .carrusel-desktop{
         font-weight: 600;
         text-align: center;
         margin: 1rem 0rem;
+        color: #000;
     }
     .ofertas article img{
         width: 60%;
@@ -435,10 +436,11 @@ main .contenedor-desktop .carrusel-desktop{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-bottom: 2rem;
+        width: 80%;
+        margin: auto;
     }
     main .contenedor-desktop .contenedor-segundo-carrusel{
-        width: 33%;
+        width: 50%;
     }
     main .contenedor-desktop .carrusel-desktop{
         display: flex;
@@ -448,7 +450,7 @@ main .contenedor-desktop .carrusel-desktop{
     }
     main .contenedor-desktop .iconos-flecha{
         display: flex;
-        background-color: gainsboro;
+        background-color: var(--colorPrincipal);
         border-radius: 50%;
     }
     /* cards solo vista desktop */
