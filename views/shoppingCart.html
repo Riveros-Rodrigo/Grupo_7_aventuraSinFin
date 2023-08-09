@@ -14,73 +14,70 @@
 </head>
 
 <body>
+    <!-- header -->
     <header class="header">
         <div class="nav__container">
             <a href="/"><img src="/img/logoLetrasBlancaModPixeles.png" class="header__logo" alt=""></a>
             <label for="menu" class="nav__lavel">
-               <i class="fas fa-bars"></i>
+                <i class="fas fa-bars"></i>
             </label>
             <input type="checkbox" id="menu" class="nav__input"> 
-        
             <div class="nav__menu">
-                 <ul>
+                <ul>
                     <li><a href="">Vuelos</a><i class="fas fa-plane" ></i></li>
                     <li><a href="">Hoteles</a><i class="fas fa-hotel" id="hotel"></i></li>
                     <li><a href="">Alquileres</a><i class="fas fa-home" id="alquiler"></i></li>
                     <li><a href="">Paquetes</a><i class="fas fa-briefcase" id="paquetes"></i></li>
-                 </ul>
-                 <hr>
-                 <ul>
-                 <li><a href="">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
-                 <li><a href="/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
-
-                 </ul>
-                 <img src="/img/logo_avion.png" class="logo__avion" alt="">
+                </ul>
+                <hr>
+                <ul>
+                    <li><a href="">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
+                    <li><a href="/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                </ul>
+                    <img src="/img/logo_avion.png" class="logo__avion" alt="">
             </div>
         </div>
-
     </header>
-
+    <!-- cuerpo de pagina -->
     <main class="container">
         <div class="carrito">
             <div class="div__carrito">
                 <h1> Carrito de compras</h1>
                 <h2>Tiene 3 articulos en su carrito</h2>
-        </div>
-
-        <div class="carrito__items">
-            <div class="carrito__item">
-                <img src="/img/argentinoHotel.jpg" alt=""width="400px">
-                <div class="carrito__item__detalles">
-                    <h2>Argentino Hotel</h2>
-                    <p>Mar Del Plata</p>
-                    <div class="selector__cantidad">
-                        <i class="fa-solid fa-minus restar-cantidad"></i>
-                        <p class="carrito__item__cantidad">1</p>
-                        <i class="fa-solid fa-plus sumar-cantidad"></i>
-                    </div>
-                    <span class="carrito__item__precio">$13.500</span>
-                </div>
-                <span class="boton__eliminar">
-                    <i class="fa-solid fa-trash"></i>
-                </span>
             </div>
+            <div class="carrito__items">
                 <div class="carrito__item">
-                    <img src="/img/riberaSurHotel.jpg" alt=""width="400px">
+                    <img src="/img/argentinoHotel.jpg" alt=""width="400px">
                     <div class="carrito__item__detalles">
-                        <h2>Ribera Sur Hotel</h2>
-                        <p>San Telmo</p>
+                        <h2>Argentino Hotel</h2>
+                        <p>Mar Del Plata</p>
                         <div class="selector__cantidad">
                             <i class="fa-solid fa-minus restar-cantidad"></i>
                             <p class="carrito__item__cantidad">1</p>
                             <i class="fa-solid fa-plus sumar-cantidad"></i>
                         </div>
-                        <span class="carrito__item__precio">$33.600</span>
+                        <span class="carrito__item__precio">$13.500</span>
                     </div>
                     <span class="boton__eliminar">
                         <i class="fa-solid fa-trash"></i>
                     </span>
                 </div>
+                    <div class="carrito__item">
+                        <img src="/img/riberaSurHotel.jpg" alt=""width="400px">
+                        <div class="carrito__item__detalles">
+                            <h2>Ribera Sur Hotel</h2>
+                            <p>San Telmo</p>
+                            <div class="selector__cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <p class="carrito__item__cantidad">1</p>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito__item__precio">$33.600</span>
+                        </div>
+                        <span class="boton__eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
                     <div class="carrito__item">
                         <img src="/img/hotelTresReyes.jpg" alt="">
                         <div class="carrito__item__detalles">
@@ -96,31 +93,29 @@
                         <span class="boton__eliminar">
                             <i class="fa-solid fa-trash"></i>
                         </span>
+                    </div>
             </div>
-        </div>
-
-        <div class="carrito__total">
-            <div class="fila">
-                <strong>Total</strong>
-                <span class="carrito__precio__total">
-                    $97.100,00
-                </span>
+            <div class="carrito__total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="carrito__precio__total">$97.100,00</span>
+                </div>
+                <button class="boton__comprar">Comprar</i></button>
             </div>
-            <button class="boton__comprar">Comprar</i></button>
         </div>
     </main>
     <!-- footer -->
     <footer class="main-footer">
         <div class="footer__section">
-          <h2 class="footer__title">Sobre nosotros</h2>
-          <p class="footer__txt">¡Bienvenido a Aventuras Sin Fin! Somos tu puerta de entrada a un mundo de emocionantes experiencias y viajes inolvidables. En Aventuras Sin Fin, creemos que cada viaje es una oportunidad para descubrir, aprender y crecer. Nuestra misión es brindarte destinos fascinantes, guías expertos y servicios excepcionales para que vivas las mejores aventuras de tu vida.</p>
+            <h2 class="footer__title">Sobre nosotros</h2>
+            <p class="footer__txt">¡Bienvenido a Aventuras Sin Fin! Somos tu puerta de entrada a un mundo de emocionantes experiencias y viajes inolvidables. En Aventuras Sin Fin, creemos que cada viaje es una oportunidad para descubrir, aprender y crecer. Nuestra misión es brindarte destinos fascinantes, guías expertos y servicios excepcionales para que vivas las mejores aventuras de tu vida.</p>
         </div>
         <div class="footer__section">
-          <h2 class="footer__title">Ubicacion:</h2>
-          <p class="footer__txt">Calle Viajeros Intrépidos, N° 123 Capital Federal</p>
-          <h2 class="footer__title">Contacto</h2>
-          <p class="footer__txt">Celular : +54 9 11345-67890</p>
-          <p class="footer__txt">Email : info@aventurassinfin.com</p>
+            <h2 class="footer__title">Ubicacion:</h2>
+            <p class="footer__txt">Calle Viajeros Intrépidos, N° 123 Capital Federal</p>
+            <h2 class="footer__title">Contacto</h2>
+            <p class="footer__txt">Celular : +54 9 11345-67890</p>
+            <p class="footer__txt">Email : info@aventurassinfin.com</p>
         </div>
         <div class="footer__section">
             <h2 class="footer__title">Enlaces rapidos</h2>
@@ -128,14 +123,13 @@
             <a href="#" class="footer__link">Hoteles</a>
             <a href="#" class="footer__link">Alquileres</a>
             <a href="#" class="footer__link">Paquetes</a>
-          </div>
+        </div>
         <div class="footer__section">
-          <h2 class="footer__title">Suscríbete a nuestras ofertas</h2>
-          <p class="footer__txt">Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
-          <input type="email" class="footer__input" placeholder="Ingrese email">
+            <h2 class="footer__title">Suscríbete a nuestras ofertas</h2>
+            <p class="footer__txt">Al suscribirse a nuestra lista de correo, siempre recibirá nuestras últimas noticias y actualizaciones.</p>
+            <input type="email" class="footer__input" placeholder="Ingrese email">
         </div>
         <p class="copy">© Aventuras Sin Fin. Todos los derechos reservados</p>
-      </footer>
-    
+    </footer>
 </body>
 </html>
