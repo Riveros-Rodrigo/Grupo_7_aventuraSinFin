@@ -240,6 +240,9 @@ main .contenedor-desktop .carrusel-desktop{
 .contenedor-card h3{
     display: none;
 }
+.contenedor-card .pointer{
+    cursor: pointer;
+}
 /* por que elegirnos */
 .container__testimonials{
     text-align: center;
