@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/a84aca7bf1.js" crossorigin="anonymous"></script>
     <title>Aventura Sin Fin | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -98,78 +99,281 @@
                 </div>
             </section>
         </div>
-        <!-- Carrusel -->
+                <!-- Carrusel top destinos buscados mobile -->
+                <div class="contenedor-desktop">
+                    <section class="contenedor-segundo-carrusel">
+                        <h1>Top destinos más buscados hoy</h1>
+                        <!-- carrusel desktop -->
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row carrusel-desktop">
+                                        <div class="col-md-6">
+                                            <img src="/img/tokio.jpg" width="100%" alt="Ciudad">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img src="/img/tokio.jpg" width="100%" alt="Ciudad">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row carrusel-desktop">
+                                        <div class="col-md-6">
+                                            <img src="/img/francia.jpg" width="100%" alt="Ciudad">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <img src="/img/francia.jpg" width="100%" alt="Ciudad">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon iconos-flecha" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                                <span class="carousel-control-next-icon iconos-flecha" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <!-- carrusel mobile y tablet -->
+                        <div id="carouselExampleCaptions" class="carousel slide carrusel-mobile">
+                            <div class="carousel-indicators">
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="/img/publicidad1.jpg" class="d-block w-100 img-top" alt="...">
+                                <div class="carousel-caption d-md-block">
+                                  <h5>Comenza una nueva aventura</h5>
+                                  <p>Con nuestras buenisimas ofertas semanales!</p>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="/img/publicidad2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Comenza una nueva aventura</h5>
+                                    <p>Con nuestras buenisimas ofertas semanales!</p>
+                                  </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img src="/img/publicidad3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-md-block">
+                                    <h5>Comenza una nueva aventura</h5>
+                                    <p>Con nuestras buenisimas ofertas semanales!</p>
+                                  </div>
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                    </section>
+                    <!-- Seccion ofertas -->
+                    <section class="ofertas">
+                        <h2>Ofertas que no pueden esperar</h2>
+                        <article>
+                            <img src="/img/oferta.jpg" alt="Hombre descansando">
+                            <div class="boton">
+                                <button>Ver Ofertas</button>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+        <!-- Hoteles recomendados mobile slider -->
         <section class="contenedor-primer-carrusel">
-            <img class="img-1" src="/img/publicida2.png" alt="Mundo">
-            <img class="img-2" src="/img/publicidad1.png" alt="Avion">
-            <img class="img-3" src="/img/publicidad3.png" alt="Avion">
+            <div class="swiper-container mySwiper">
+                <h3>Hoteles Recomendados para ti </h3>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/card1.png"
+                            alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                    modi
+                                    sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/card2.png"
+                            alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                    modi
+                                    sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/card3.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/card4.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/card5.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- Carrusel numero 2 -->
-        <div class="contenedor-desktop">
-            <section class="contenedor-segundo-carrusel">
-                <h1>Top destinos más buscados hoy</h1>
-                <!-- carrusel desktop -->
-                <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row carrusel-desktop">
-                                <div class="col-md-6">
-                                    <img src="/img/tokio.jpg" width="100%" alt="Ciudad">
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="/img/tokio.jpg" width="100%" alt="Ciudad">
-                                </div>
+        <!-- lugares recomendados mobile slider -->
+        <section class="contenedor-primer-carrusel">
+            <div class="swiper-container mySwiper">
+                <h3>Lugares recomendados</h3>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="/img/card6.png"
+                            alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
                             </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row carrusel-desktop">
-                                <div class="col-md-6">
-                                    <img src="/img/francia.jpg" width="100%" alt="Ciudad">
-                                </div>
-                                <div class="col-md-6">
-                                    <img src="/img/francia.jpg" width="100%" alt="Ciudad">
-                                </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                    modi
+                                    sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon iconos-flecha" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                        <span class="carousel-control-next-icon iconos-flecha" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-                <!-- carrusel mobile y tablet -->
-                <article>
-                    <img src="/img/top1.png" alt="Ciudad">
-                    <img class="img-miami" src="/img/top2.png" alt="Miami">
-                    <img src="/img/top3.png" alt="Llama">
-                </article>
-                <div class="contenedor-iconos">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle-blue.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                    <img src="/img/Rectangle 36.png" alt="icono rectangular">
-                </div>
-            </section>
-            <!-- Seccion ofertas -->
-            <section class="ofertas">
-                <h2>Ofertas que no pueden esperar</h2>
-                <article>
-                    <img src="/img/oferta.jpg" alt="Hombre descansando">
-                    <div class="boton">
-                        <button>Ver Ofertas</button>
+                    <div class="swiper-slide">
+                        <img src="/img/card7.png"
+                            alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                    modi
+                                    sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
                     </div>
-                </article>
-            </section>
-        </div>
+                    <div class="swiper-slide">
+                        <img src="/img/card8.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/card9.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/img/card10.png"
+                        alt="">
+                        <div class="card-description">
+                            <div class="card-title">
+                                <h4>Descripción</h4>
+                            </div>
+                            <div class="card-text">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
+                                modi
+                                sunt ips.</p>
+                            </div>
+                            <div class="card-link">
+                                <a href="#/productDetail">Ver más</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
             <!-- cards solo vista desktop -->
         <section class="contenedor-card"> 
             <h3>Hoteles Recomendados para ti </h3>
@@ -439,5 +643,9 @@
 
     <!-- script de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- ruta a carpeta js -->
+    <script src="/js/sliderMobile.js"></script>
 </body>
 </html>

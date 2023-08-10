@@ -149,28 +149,48 @@ main .banner .contenedor-boton button{
     border-radius: 1rem;
     padding: 0.2rem 1rem;
 }
-/* Estilos primer carrusel */
-.contenedor-primer-carrusel{
+/* carrusel de tarjetas mobile*/
+main .contenedor-primer-carrusel{
     width: 100%;
+    overflow: hidden;
+    padding: 10px 40px;
     display: flex;
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
 }
-.contenedor-primer-carrusel .img-1{
-    background-position: left;
+main .contenedor-primer-carrusel .swiper-container{
     width: 100%;
-    object-fit: cover;
-    overflow: hidden;
+    height: 100%;
 }
-.contenedor-primer-carrusel .img-2{
-    background-position: center;
-    width: 60%;
-    margin: 0rem 1rem;
+main .contenedor-primer-carrusel .swiper-slide {
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: start;
+    box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.25);
 }
-.contenedor-primer-carrusel .img-3{
-    background-position: right;
+main .contenedor-primer-carrusel .swiper-slide img{
+    display: block;
     width: 100%;
+    height: 180px;
     object-fit: cover;
-    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+main .contenedor-primer-carrusel .swiper-slide .card-description{
+    padding:1rem 1rem;
+}
+main .contenedor-primer-carrusel .swiper-slide .card-title,.container .swiper-slide .card-text{
+    margin-bottom: .5rem;
+}
+main .contenedor-primer-carrusel .swiper-slide .card-link{
+    text-align: center;  
+}
+main .contenedor-primer-carrusel .swiper-slide .card-link a{
+    text-decoration: none;
+    color: #1d6ce2;
 }
 /* Estilos segundo carrusel */
 main .contenedor-desktop .carrusel-desktop{
@@ -185,20 +205,6 @@ main .contenedor-desktop .carrusel-desktop{
     font-weight: 600;
     text-align: center;
     margin: 1rem 0rem;
-}
-.contenedor-segundo-carrusel article{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-.contenedor-segundo-carrusel article img{
-    overflow: hidden;
-}
-.contenedor-segundo-carrusel article .img-miami{
-    padding: 0rem 0.5rem;
-}
-.contenedor-segundo-carrusel .contenedor-iconos{
-    text-align: center;
 }
 /* Seccion ofertas */
 .ofertas h2{
@@ -315,9 +321,20 @@ main .contenedor-desktop .carrusel-desktop{
     .contenedor-segundo-carrusel h1{
         font-size: 1.5rem;
     }
-    .contenedor-segundo-carrusel article img{
-        width: 100%;
-        height: 170px;
+    /* carrusel mobile top destinos */
+    .contenedor-segundo-carrusel .carrusel-mobile {
+        display: none;
+    }
+    main .contenedor-desktop .contenedor-segundo-carrusel .carrusel-desktop{
+        display: flex;
+    }
+    main .contenedor-desktop .col-md-6 img{
+        border-radius: 1rem;
+    }
+    .iconos-flecha{
+        display: flex;
+        background-color: var(--colorPrincipal);
+        border-radius: 50%;
     }
     /* ofertas */
     .ofertas h2{
@@ -428,7 +445,7 @@ main .contenedor-desktop .carrusel-desktop{
         display: none;
     }
     /* segundo carrusel */
-    main .contenedor-segundo-carrusel article{
+    main .contenedor-segundo-carrusel .carrusel-mobile{
         display: none;
     }
     main .contenedor-segundo-carrusel .contenedor-iconos{
@@ -447,14 +464,6 @@ main .contenedor-desktop .carrusel-desktop{
     }
     main .contenedor-desktop .carrusel-desktop{
         display: flex;
-    }
-    main .contenedor-desktop .col-md-6 img{
-        border-radius: 1rem;
-    }
-    main .contenedor-desktop .iconos-flecha{
-        display: flex;
-        background-color: var(--colorPrincipal);
-        border-radius: 50%;
     }
     /* cards solo vista desktop */
     .primer-tarjetas-desktop{
