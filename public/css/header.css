@@ -1,12 +1,4 @@
 @media(max-width:767px) {
-
-  .logo__avion {
-    position: relative;
-    left: 110px;
-    width: 100px;
-
-  }
-
   header {
     background-color: #1D4D8B;
   }
@@ -47,7 +39,6 @@
   }
 
   .nav__menu ul li a {
-
     color: black;
   }
 
@@ -72,8 +63,8 @@
     position: absolute;
     top: 120px;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 10px;

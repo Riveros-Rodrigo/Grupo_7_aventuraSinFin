@@ -31,7 +31,6 @@
                     <li><a href="/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
                     <li><a href="/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
                 </ul>
-                <img src="/img/logo_avion.png" class="logo__avion" alt="">
             </div>
         </div>
     </header>
@@ -45,19 +44,48 @@
                 </div>
                 <button>Buscar</button>
             </label>
-            <div class="txt-carrusel-banner-desk">
-                <div>
-                    <h2>Rio de Janeiro</h2>
-                    <p>Vuelos desde $82.000</p>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle"></i>
-                    <i class="fa-solid fa-circle" style="color: white;"></i>
-                    <i class="fa-solid fa-circle"></i>
+            <section class="container-slider">
+                <div class="slider" id="slider">
+                  <div class="slider__section">
+                    <img
+                      src="/img/estados-unidos-banner.jpg"
+                      alt=""
+                      class="slider__img"
+                    />
+                    <div class="slider__content">
+                      <h3 class="slider__title">Estados Unidos</h3>
+                      <p class="slider__txt">Vuelos desde $82.000</p>
+                      <a href="" class="btn-shop">COMPRA AHORA</a>
+                    </div>
+                  </div>
+                  <div class="slider__section">
+                    <img src="/img/francia-banner.jpg" alt="" class="slider__img" />
+                    <div class="slider__content">
+                        <h3 class="slider__title">Francia</h3>
+                      <p class="slider__txt">Vuelos desde $142.000</p>
+                      <a href="" class="btn-shop">COMPRA AHORA</a>
+                    </div>
+                  </div>
+                  <div class="slider__section">
+                    <img src="/img/italia-banner.jpg" alt="" class="slider__img" />
+                    <div class="slider__content">
+                        <h3 class="slider__title">Italia</h3>
+                      <p class="slider__txt">Vuelos desde $182.000</p>
+                      <a href="" class="btn-shop">COMPRA AHORA</a>
+                    </div>
+                  </div>
+                  <div class="slider__section">
+                    <img src="/img/japon-banner.jpg" alt="" class="slider__img" />
+                    <div class="slider__content">
+                        <h3 class="slider__title">Japon</h3>
+                      <p class="slider__txt">Vuelos desde $122.000</p>
+                      <a href="" class="btn-shop">COMPRA AHORA</a>
+                    </div>
+                  </div>
                 </div>
-            </div>
+                <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+                <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+              </section>
             <section class="banner">
                 <div class="destinos">
                     <p>Ida y vuelta</p>
@@ -647,5 +675,6 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- ruta a carpeta js -->
     <script src="/js/sliderMobile.js"></script>
+    <script src="/js/sliderProyecto.js"></script>
 </body>
 </html>
