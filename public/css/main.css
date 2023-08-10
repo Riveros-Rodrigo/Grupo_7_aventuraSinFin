@@ -473,6 +473,7 @@ main .contenedor-desktop .carrusel-desktop{
         justify-content: center;
         align-items: center;
         padding-top: 1rem;
+        margin-bottom: 1rem;
     }
     main .contenedor .buscador div{
         background-color: #DDE7EA;
