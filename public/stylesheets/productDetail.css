@@ -17,7 +17,7 @@ body {
 .product__image {
     padding: 20px;
     height: 23rem;
-    background-image: url('/img/riberaSurHotel.jpg');
+    background-image: url('/images/riberaSurHotel.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
