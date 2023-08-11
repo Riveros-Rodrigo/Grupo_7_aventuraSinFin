@@ -1,52 +1,52 @@
-// [
-//     {
-//         "id" : 1,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 2,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 3,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 4,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 5,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 6,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     },
-//     {
-//         "id" : 7,
-//         "lugar" : "Aventura sin Fin",
-//         "descripción" : "Sorpresa",
-//         "precio" : 1000.00,
-//         "image"  : null
-//     }
-// ]
+[
+    {
+        "id" : 1,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 2,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 3,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 4,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 5,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 6,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    },
+    {
+        "id" : 7,
+        "lugar" : "Aventura sin Fin",
+        "descripción" : "Sorpresa",
+        "precio" : 1000.00,
+        "image"  : null
+    }
+]
 
