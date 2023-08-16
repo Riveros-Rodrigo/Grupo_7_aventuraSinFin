@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
  <!-- head -->
- <%- include('./partials/head') %>
+ <%- include('partials/head',{
+    title : 'Home'
+}) %>
  
 <body>
     <!-- header -->
@@ -16,48 +18,10 @@
                 </div>
                 <button>Buscar</button>
             </label>
+            <!-- banner slider -->
             <section class="container-slider">
-                <div class="slider" id="slider">
-                  <div class="slider__section">
-                    <img
-                      src="/images/estados-unidos-banner.jpg"
-                      alt=""
-                      class="slider__img"
-                    />
-                    <div class="slider__content">
-                      <h3 class="slider__title">Estados Unidos</h3>
-                      <p class="slider__txt">Vuelos desde $82.000</p>
-                      <a href="" class="btn-shop">COMPRA AHORA</a>
-                    </div>
-                  </div>
-                  <div class="slider__section">
-                    <img src="/images/francia-banner.jpg" alt="" class="slider__img" />
-                    <div class="slider__content">
-                        <h3 class="slider__title">Francia</h3>
-                      <p class="slider__txt">Vuelos desde $142.000</p>
-                      <a href="" class="btn-shop">COMPRA AHORA</a>
-                    </div>
-                  </div>
-                  <div class="slider__section">
-                    <img src="/images/italia-banner.jpg" alt="" class="slider__img" />
-                    <div class="slider__content">
-                        <h3 class="slider__title">Italia</h3>
-                      <p class="slider__txt">Vuelos desde $182.000</p>
-                      <a href="" class="btn-shop">COMPRA AHORA</a>
-                    </div>
-                  </div>
-                  <div class="slider__section">
-                    <img src="/images/japon-banner.jpg" alt="" class="slider__img" />
-                    <div class="slider__content">
-                        <h3 class="slider__title">Japon</h3>
-                      <p class="slider__txt">Vuelos desde $122.000</p>
-                      <a href="" class="btn-shop">COMPRA AHORA</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
-                <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
-              </section>
+                <%-include('./partials/slider-banner') %>
+            </section>
             <section class="banner">
                 <div class="destinos">
                     <p>Ida y vuelta</p>
@@ -99,82 +63,18 @@
                 </div>
             </section>
         </div>
-                <!-- Carrusel top destinos buscados mobile -->
+                <!-- Carrusel top destinos -->
                 <div class="contenedor-desktop">
                     <section class="contenedor-segundo-carrusel">
                         <h1>Top destinos más buscados hoy</h1>
-                        <!-- carrusel desktop -->
+                        <!-- carrusel top destinos desktop -->
                         <div id="carouselExampleFade" class="carousel slide carousel-fade">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row carrusel-desktop">
-                                        <div class="col-md-6">
-                                            <img src="/images/tokio.jpg" width="100%" alt="Ciudad">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="/images/tokio.jpg" width="100%" alt="Ciudad">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row carrusel-desktop">
-                                        <div class="col-md-6">
-                                            <img src="/images/francia.jpg" width="100%" alt="Ciudad">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <img src="/images/francia.jpg" width="100%" alt="Ciudad">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon iconos-flecha" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-                                <span class="carousel-control-next-icon iconos-flecha" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
+                            <%-include('./partials/slider-desk-top') %>
                         </div>
-                        <!-- carrusel mobile y tablet -->
+                        <!-- carrusel top destinos mobile y tablet -->
                         <div id="carouselExampleCaptions" class="carousel slide carrusel-mobile">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img src="/images/publicidad1.jpg" class="d-block w-100 img-top" alt="...">
-                                <div class="carousel-caption d-md-block">
-                                  <h5>Comenza una nueva aventura</h5>
-                                  <p>Con nuestras buenisimas ofertas semanales!</p>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="/images/publicidad2.jpg" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-md-block">
-                                    <h5>Comenza una nueva aventura</h5>
-                                    <p>Con nuestras buenisimas ofertas semanales!</p>
-                                  </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="/images/publicidad3.jpg" class="d-block w-100" alt="...">
-                                <div class="carousel-caption d-md-block">
-                                    <h5>Comenza una nueva aventura</h5>
-                                    <p>Con nuestras buenisimas ofertas semanales!</p>
-                                  </div>
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                          </div>
+                            <%-include('./partials/slider-mobile-top') %>
+                        </div>
                     </section>
                     <!-- Seccion ofertas -->
                     <section class="ofertas">
@@ -192,91 +92,7 @@
             <div class="swiper-container mySwiper">
                 <h3>Hoteles Recomendados para ti </h3>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/images/card1.png"
-                            alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                    modi
-                                    sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card2.png"
-                            alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                    modi
-                                    sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card3.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/card4.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card5.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
+                    <%-include('./partials/cards-slider-hotel-mobile') %>
                 </div>
             </div>
         </section>
@@ -285,91 +101,7 @@
             <div class="swiper-container mySwiper">
                 <h3>Lugares recomendados</h3>
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="/images/card6.png"
-                            alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                    modi
-                                    sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card7.png"
-                            alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                    modi
-                                    sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card8.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="./images/card9.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="/images/card10.png"
-                        alt="">
-                        <div class="card-description">
-                            <div class="card-title">
-                                <h4>Descripción</h4>
-                            </div>
-                            <div class="card-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum enim possimus dolorum non,
-                                modi
-                                sunt ips.</p>
-                            </div>
-                            <div class="card-link">
-                                <a href="#/productDetail">Ver más</a>
-                            </div>
-                        </div>
-                    </div>
+                    <%-include('./partials/cards-slider-lugar-mobile') %>
                 </div>
             </div>
         </section>
@@ -378,222 +110,14 @@
         <section class="contenedor-card"> 
             <h3>Hoteles Recomendados para ti </h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <img src="/images/card1.png" class="card-img-top" alt="...">
-                        <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title text-white">Ribera Sur Hotel</h5>
-                            <ul class="card-text text-white">
-                                <li>Ubicación: Ciudad del Lago, Costa del Azahar, Argentina.</li>
-                                <li>Distancia a la playa: A solo 200 metros de la playa principal de Ciudad del Lago.</li>
-                                <li>Precio: Desde $150 por noche.</li>
-                                <div class="estrellas">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/images/card2.png" class="card-img-top" alt="...">
-                        <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title text-white">The Betsy Hotel</h5>
-                            <ul class="card-text text-white">
-                                <li>Ubicación: Bahía Dorada, Costa Esmeralda, Argentina.</li>
-                                <li>Distancia a la playa: A solo 50 metros de la hermosa playa de Bahía Dorada.</li>
-                                <li>Precio: Desde $250 por noche.</li>
-                                <div class="estrellas">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/images/card3.png" class="card-img-top" alt="...">
-                        <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title text-white">Vincci The Mint</h5>
-                            <ul class="card-text text-white">
-                                <li>Ubicación: Villa del Mar, Costa del Sol, Argentina.</li>
-                                <li>Distancia a la playa:  A menos de 100 metros de la playa principal de Villa del Mar.</li>
-                                <li>Precio: Desde $180 por noche.</li>
-                                <div class="estrellas">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/images/card4.png" class="card-img-top" alt="...">
-                        <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title text-white">Hotel tres Reyes</h5>
-                            <ul class="card-text text-white">
-                                <li>Ubicación: Ciudad del Lago, Costa del Azahar, Argentina.</li>
-                                <li>Distancia a la playa: A solo 200 metros de la playa principal de Ciudad del Lago.</li>
-                                <li>Precio: Desde $150 por noche.</li>
-                                <div class="estrellas">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/images/card5.png" class="card-img-top" alt="...">
-                        <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                            <h5 class="card-title text-white">Argentino Hotel</h5>
-                            <ul class="card-text text-white">
-                                <li>Ubicación: Villa Real, Costa del Rey, Argentina.</li>
-                                <li>Distancia a la playa: A solo 500 metros de la hermosa playa de Villa Real</li>
-                                <li>Precio: Desde $200 por noche.</li>
-                                <div class="estrellas">
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                    <i class="fa-sharp fa-solid fa-star"></i>
-                                </div>
-                                <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <%-include('./partials/cards-hotel-index') %>
             </div>
         </section>
     <!-- lugares de arg -->
         <section class="contenedor-card">
             <h3>Lugares recomendados en argentina</h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <img src="/images/card6.png" class="card-img-top" alt="...">
-                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-white">Hotel Selva Adentro - Posadas, Misiones</h5>
-                                <ul class="card-text text-white">
-                                    <li>Precio: Desde $1500 por noche.</li>
-                                    <li>Piezas: 20 habitaciones.</li>
-                                    <li>Incluye: Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.</li>
-                                    <div class="estrellas">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                                </ul>
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="/images/card7.png" class="card-img-top" alt="...">
-                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-white">Hotel Colonial Plaza - Salta, Argentina</h5>
-                                <ul class="card-text text-white">
-                                    <li>Precio: Desde $2500 por noche.</li>
-                                    <li>Piezas: 35 habitaciones.</li>
-                                    <li>Incluye: Desayuno buffet, estacionamiento privado y servicio de conserjería.</li>
-                                    <div class="estrellas">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                                </ul>
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="/images/card8.png" class="card-img-top" alt="...">
-                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-white">Los Cipreses - Bariloche, Argentina</h5>
-                                <ul class="card-text text-white">
-                                    <li>Precio: Desde $3500 por noche.</li>
-                                    <li>Piezas: 10 cabañas.</li>
-                                    <li>Incluye: Desayuno casero, acceso a senderos y actividades al aire libre.</li>
-                                    <div class="estrellas">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                                </ul>
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="/images/card9.png" class="card-img-top" alt="...">
-                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-white">Hotel Boutique La Casona - Córdoba, Argentina</h5>
-                                <ul class="card-text text-white">
-                                    <li>Precio: Desde $1800 por noche.</li>
-                                    <li>Piezas: 12 habitaciones.</li>
-                                    <li>Incluye: Desayuno a la carta, servicio de té y café todo el día y acceso al jardín interior.</li>
-                                    <div class="estrellas">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                                </ul>
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="/images/card10.png" class="card-img-top" alt="...">
-                            <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                                <h5 class="card-title text-white">Hotel Viñas del Valle - Mendoza, Argentina</h5>
-                                <ul class="card-text text-white">
-                                    <li>Precio: Desde $2800 por noche.</li>
-                                    <li>Piezas: 18 habitaciones.</li>
-                                    <li>Incluye: Desayuno buffet, visita a bodegas cercanas y degustación de vinos.</li>
-                                    <div class="estrellas">
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                        <i class="fa-sharp fa-solid fa-star"></i>
-                                    </div>
-                                    <a class="pointer btn btn-primary mt-2" href="/productDetail">Mas Detalles</a>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <%-include('./partials/cards-lugar-index') %>
             </div>
         </section>
     <!-- Por que elegirnos -->
@@ -616,7 +140,7 @@
     <!-- footer -->
     <%- include('./partials/footer') %>
 
-   <!-- scripts-->
-   <%- include('./partials/scripts') %>
+    <!-- scripts-->
+    <%- include('./partials/scripts') %>
 </body>
 </html>
