@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- head -->
-    <%- include('partials/head') %>
+    <%- include('./partials/head',{
+        title : 'Register'
+    }) %>
 
 <body>
     <!-- header -->
-    <%- include('partials/header') %>
+    <%- include('./partials/header') %>
     
     <!-- cuerpo de pagina -->
     <main class="main__register">
@@ -39,7 +41,7 @@
                 </div>
                 <div class="cuenta">
                     <p>¿Ya tenés cuenta?</p>
-                    <button><a href="/login">Ingresar</a></button>
+                    <button><a href="/users/login">Ingresar</a></button>
                 </div>
             </div>
         </div>

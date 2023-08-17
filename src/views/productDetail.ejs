@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <!-- head -->
-    <%- include('partials/head) %>
+    <%- include('./partials/head',{
+        title : 'Product Detail'
+    }) %>
 <body>
     <!-- header -->
-    <%- include('partials/header) %>
+    <%- include('./partials/header') %>
     <!-- cuerpo de pagina -->
     <main class="product__container">
         <div class="product__image">

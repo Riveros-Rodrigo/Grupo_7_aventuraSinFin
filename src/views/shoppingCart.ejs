@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %>
+    <%- include('./partials/head',{
+        title: 'Cart'
+    }) %>
 
 <body>
-    <%- include('./partials/head') %>
+    <!-- header -->
+    <%- include('./partials/header') %>
     <!-- cuerpo de pagina -->
-    <main class="container">
+    <main class="contenedor-carrito">
         <div class="carrito">
             <div class="div__carrito">
                 <h1> Carrito de compras</h1>
