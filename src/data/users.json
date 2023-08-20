@@ -6,7 +6,7 @@
        "email": "maria@example.com",
        "password": "amoMiHijo",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "2",
@@ -15,7 +15,7 @@
        "email": "juan@example.com",
        "password": "amoProgramar",
        "category": "premium",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "3",
@@ -24,7 +24,7 @@
        "email": "monica@example.com",
        "password": "amoMiEsposo",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "4",
@@ -33,7 +33,7 @@
        "email": "francisco@example.com",
        "password": "amoMiFamilia",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "5",
@@ -42,7 +42,7 @@
        "email": "carmen@example.com",
        "password": "amoComer",
        "category": "premium",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "6",
@@ -51,7 +51,7 @@
        "email": "leo@example.com",
        "password": "meEncantaElFernet",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "7",
@@ -60,7 +60,7 @@
        "email": "rodrigo@example.com",
        "password": "meEncantaElAzul",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "8",
@@ -69,7 +69,7 @@
        "email": "carolina@example.com",
        "password": "amoLaMilanesa",
        "category": "premium",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "9",
@@ -78,7 +78,7 @@
        "email": "sandra@example.com",
        "password": "amoViajar",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     },
     {
        "id": "10",
@@ -87,7 +87,7 @@
        "email": "mateo@example.com",
        "password": "amoMiPerro",
        "category": "standard",
-       "image": "null"
+       "image": "PERFIL-VACIO.png"
     }
  ]
  

@@ -7,7 +7,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$300 por noche",
       "discount": "15%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "2",
@@ -17,7 +17,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$500 por noche",
       "discount": "10%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "3",
@@ -27,7 +27,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$350 por noche",
       "discount": "20%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "4",
@@ -37,7 +37,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$200 por noche",
       "discount": "10%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "5",
@@ -47,7 +47,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$150 por noche",
       "discount": "10%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "6",
@@ -57,7 +57,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$400 por noche",
       "discount": "15%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "7",
@@ -67,7 +67,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$450 por noche",
       "discount": "10%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "8",
@@ -77,7 +77,7 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$250 por noche",
       "discount": "10%",
-      "image": "null"
+      "image": "HOTEL.png"
    },
    {
       "id": "9",
@@ -87,6 +87,6 @@
       "description": "Lorem ipsum dolor amet sit",
       "price": "$280 por noche",
       "discount": "15%",
-      "image": "null"
+      "image": "HOTEL.png"
    }
 ]
