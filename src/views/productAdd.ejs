@@ -30,29 +30,12 @@
                                     <input type="text" class="form-control" id="hotelName" name="hotel" required>
                                 </div>
 
-                                <div class="row mb-3">
-                                    <div class="col-md-6">
-                                        <label class="form-label">Vuelos</label>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flights" id="flightsYes" value="si" required>
-                                            <label class="form-check-label" for="flightsYes">
-                                                Sí
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="flights" id="flightsNo" value="no">
-                                            <label class="form-check-label" for="flightsNo">
-                                                No
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="stopover" class="form-label">Escalas</label>
-                                        <select class="form-select" id="stopover" name="stopover">
-                                            <option value="sin-escala">Sin escala</option>
-                                            <option value="con-escala">Con escala</option>
-                                        </select>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="flights" class="form-label">Vuelos</label>
+                                    <select class="form-select" id="flights" name="flights">
+                                        <option value="sin-escala">Sin escala</option>
+                                        <option value="con-escala">Con escala</option>
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
