@@ -5,8 +5,8 @@
       "hotel": "Hotel Mayfair Paris",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$300 por noche",
-      "discount": "15%",
+      "price": 300,
+      "discount": 15,
       "image": "HOTEL.png"
    },
    {
@@ -15,8 +15,8 @@
       "hotel": "Luxor Hotel",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$500 por noche",
-      "discount": "10%",
+      "price": 500,
+      "discount": 10,
       "image": "HOTEL.png"
    },
    {
@@ -25,8 +25,8 @@
       "hotel": "Hotel Romazzino",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$350 por noche",
-      "discount": "20%",
+      "price": 350,
+      "discount": 20,
       "image": "HOTEL.png"
    },
    {
@@ -35,8 +35,8 @@
       "hotel": "Asaba Ryokan",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$200 por noche",
-      "discount": "10%",
+      "price": 200,
+      "discount": 10,
       "image": "HOTEL.png"
    },
    {
@@ -45,8 +45,8 @@
       "hotel": "Ribera Sur Hotel",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$150 por noche",
-      "discount": "10%",
+      "price": 150,
+      "discount": 10,
       "image": "HOTEL.png"
    },
    {
@@ -55,8 +55,8 @@
       "hotel": "Santorini Views Resort",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$400 por noche",
-      "discount": "15%",
+      "price": 400,
+      "discount": 15,
       "image": "HOTEL.png"
    },
    {
@@ -65,8 +65,8 @@
       "hotel": "Sydney Harbor Hotel",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$450 por noche",
-      "discount": "10%",
+      "price": 450,
+      "discount": 10,
       "image": "HOTEL.png"
    },
    {
@@ -75,8 +75,8 @@
       "hotel": "Rainforest Retreat",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$250 por noche",
-      "discount": "10%",
+      "price": 250,
+      "discount": 10,
       "image": "HOTEL.png"
    },
    {
@@ -85,8 +85,8 @@
       "hotel": "Panama City Oasis",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
-      "price": "$280 por noche",
-      "discount": "15%",
+      "price": 280,
+      "discount": 15,
       "image": "HOTEL.png"
    }
 ]

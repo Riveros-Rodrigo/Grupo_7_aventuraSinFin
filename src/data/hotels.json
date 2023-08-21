@@ -1,0 +1,56 @@
+[
+    {
+        "id" : 1,
+        "hotel" : "Hotel Mayfair Paris",
+        "place" : "Francia",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 2,
+        "hotel" : "Luxor Hotel",
+        "place" : "Estados Unidos",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 3,
+        "hotel" : "Hotel Romazzino",
+        "place" : "Italia",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 4,
+        "hotel" : "Asaba Ryokan",
+        "place" : "Japón",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 5,
+        "hotel" : "Ribera Sur Hotel",
+        "place" : "Argentina",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 6,
+        "hotel" : "Santorini Views Resort",
+        "place" : "Grecia",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 7,
+        "hotel" : "Sydney Harbor Hotel",
+        "place" : "Australia",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 8,
+        "hotel" : "Rainforest Retreat",
+        "place" : "Costa Rica",
+        "image" : "HOTEL.png"
+    },
+    {
+        "id" : 9,
+        "hotel" : "Panama City Oasis",
+        "place" : "Panamá",
+        "image" : "HOTEL.png"
+    }
+]
