@@ -1,7 +1,7 @@
 [
    {
       "id": 1,
-      "place": "Francia",
+      "country": "Francia",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -11,7 +11,7 @@
    },
    {
       "id": 2,
-      "place": "Estados Unidos",
+      "country": "Estados Unidos",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -21,7 +21,7 @@
    },
    {
       "id": 3,
-      "place": "Italia",
+      "country": "Italia",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -31,7 +31,7 @@
    },
    {
       "id": 4,
-      "place": "Japón",
+      "country": "Japón",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -41,7 +41,7 @@
    },
    {
       "id": 5,
-      "place": "Argentina",
+      "country": "Argentina",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -51,7 +51,7 @@
    },
    {
       "id": 6,
-      "place": "Grecia",
+      "country": "Grecia",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -61,7 +61,7 @@
    },
    {
       "id": 7,
-      "place": "Australia",
+      "country": "Australia",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -71,7 +71,7 @@
    },
    {
       "id": 8,
-      "place": "Costa Rica",
+      "country": "Costa Rica",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -81,7 +81,7 @@
    },
    {
       "id": 9,
-      "place": "Panamá",
+      "country": "Panamá",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
@@ -91,7 +91,7 @@
    },
    {
       "id": 10,
-      "place": "Panamá",
+      "country": "Panamá",
       "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
