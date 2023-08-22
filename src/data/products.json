@@ -1,92 +1,102 @@
 [
    {
-      "id": "1",
+      "id": 1,
       "place": "Francia",
-      "hotel": "Hotel Mayfair Paris",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 300,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "2",
+      "id": 2,
       "place": "Estados Unidos",
-      "hotel": "Luxor Hotel",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 500,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "3",
+      "id": 3,
       "place": "Italia",
-      "hotel": "Hotel Romazzino",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 350,
       "discount": 20,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "4",
+      "id": 4,
       "place": "Japón",
-      "hotel": "Asaba Ryokan",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 200,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "5",
+      "id": 5,
       "place": "Argentina",
-      "hotel": "Ribera Sur Hotel",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 150,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "6",
+      "id": 6,
       "place": "Grecia",
-      "hotel": "Santorini Views Resort",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 400,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "7",
+      "id": 7,
       "place": "Australia",
-      "hotel": "Sydney Harbor Hotel",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 450,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "8",
+      "id": 8,
       "place": "Costa Rica",
-      "hotel": "Rainforest Retreat",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 250,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "9",
+      "id": 9,
       "place": "Panamá",
-      "hotel": "Panama City Oasis",
+      "location": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 280,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
+   },
+   {
+      "id": 10,
+      "place": "Panamá",
+      "location": "lorem",
+      "flight": ["sin escala", "con escala"],
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
    }
 ]

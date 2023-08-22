@@ -1,56 +1,92 @@
 [
     {
         "id" : 1,
-        "hotel" : "Hotel Mayfair Paris",
-        "place" : "Francia",
-        "image" : "HOTEL.png"
+        "hotel" : "Ribera Sur Hotel",
+        "parts" : "lorem pieza",
+        "place" : "Ciudad del Lago, Costa del Azahar, Argentina.",
+        "price": "Desde $1500 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card1.png"
     },
     {
         "id" : 2,
-        "hotel" : "Luxor Hotel",
-        "place" : "Estados Unidos",
-        "image" : "HOTEL.png"
+        "hotel" : "The Betsy Hotel",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price": "Desde $250 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card2.png"
     },
     {
         "id" : 3,
-        "hotel" : "Hotel Romazzino",
-        "place" : "Italia",
-        "image" : "HOTEL.png"
+        "hotel" : "Vincci The Mint",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card3.png"
     },
     {
         "id" : 4,
-        "hotel" : "Asaba Ryokan",
-        "place" : "Japón",
-        "image" : "HOTEL.png"
+        "hotel" : "Hotel tres Reyes",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $150 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card4.png"
     },
     {
         "id" : 5,
-        "hotel" : "Ribera Sur Hotel",
-        "place" : "Argentina",
-        "image" : "HOTEL.png"
+        "hotel" : "Argentino Hotel",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $200 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card5.png"
     },
     {
         "id" : 6,
-        "hotel" : "Santorini Views Resort",
-        "place" : "Grecia",
-        "image" : "HOTEL.png"
+        "hotel" : "Vincci The Mint",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card6.png"
     },
     {
         "id" : 7,
-        "hotel" : "Sydney Harbor Hotel",
-        "place" : "Australia",
-        "image" : "HOTEL.png"
+        "hotel" : "Vincci The Mint",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card7.png"
     },
     {
         "id" : 8,
-        "hotel" : "Rainforest Retreat",
-        "place" : "Costa Rica",
-        "image" : "HOTEL.png"
+        "hotel" : "Vincci The Mint",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card8.png"
     },
     {
         "id" : 9,
-        "hotel" : "Panama City Oasis",
-        "place" : "Panamá",
-        "image" : "HOTEL.png"
+        "hotel" : "Vincci The Mint",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card9.png"
+    },
+    {
+        "id" : 10,
+        "hotel" : "Esto funciona",
+        "parts" : "lorem pieza",
+        "place" : "lorem impsum",
+        "price":"Desde $180 por noche.",
+        "description":"Desayuno continental, acceso a la piscina, actividades al aire libre y Wi-Fi gratuito.",
+        "image" : "card2.png"
     }
 ]

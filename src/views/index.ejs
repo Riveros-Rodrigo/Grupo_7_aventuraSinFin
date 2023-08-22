@@ -12,11 +12,11 @@
     <main>
         <div class="contenedor">
             <label class="buscador">
-                <div>
-                    <input type="search" id="#" name="#">
+                <form action="/search" method="get">
+                    <input type="text" name="keywords" placeholder="Buscar...">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <button>Buscar</button>
+                </form>
+                <button type="submit">Buscar</button>
             </label>
             <!-- banner slider -->
             <section class="container-slider">
@@ -58,7 +58,7 @@
                     <input type="checkbox" name="hobby" value="Pescar">Ver fechas más baratas
                 </label>
                 <div class="contenedor-boton">
-                    <button>Buscar</button>
+                    <button type="submit">Buscar</button>
                     <i class="fas fa-horizontal-rule"></i>
                 </div>
             </section>
@@ -109,15 +109,28 @@
             <!-- cards solo vista desktop -->
         <section class="contenedor-card"> 
             <h3>Hoteles Recomendados para ti </h3>
-            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
-                <%-include('./partials/cards-hotel-index') %>
+            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+                <% products.forEach(product => { %>
+                    <div class="col">
+                        <%-include('./partials/cards-lugar-index',{
+                            ...product
+                        }) %>
+                    </div>
+                <% }) %>
+            </div>
             </div>
         </section>
     <!-- lugares de arg -->
         <section class="contenedor-card">
-            <h3>Lugares recomendados en Argentina</h3>
+            <h3>Lugares recomendados para ti</h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <%-include('./partials/cards-lugar-index') %>
+                <% hotels.forEach(hotel => { %>
+                    <div class="col">
+                        <%-include('./partials/cards-hotel-index',{
+                            ...hotel
+                        }) %>
+                    </div>
+                <% }) %>
             </div>
         </section>
     <!-- Por que elegirnos -->
