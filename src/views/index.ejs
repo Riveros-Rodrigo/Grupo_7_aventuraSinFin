@@ -106,18 +106,26 @@
             </div>
         </section>
 
-            <!-- cards solo vista desktop -->
+            <!-- cards solo vista desktop LUGARES -->
         <section class="contenedor-card"> 
-            <h3>Hoteles Recomendados para ti </h3>
-            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
-                <%-include('./partials/cards-hotel-index') %>
+            <h3>Lugares Recomendados para ti </h3>
+            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+                <% products.forEach(product => { %>
+                        <%-include('./partials/cards-lugar-index',{
+                            ...product
+                        }) %>
+                <% }) %>
             </div>
         </section>
-    <!-- lugares de arg -->
+    <!-- cards solo vista desktop HOTELES  -->
         <section class="contenedor-card">
-            <h3>Lugares recomendados en Argentina</h3>
+            <h3>Hoteles recomendados para ti</h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <%-include('./partials/cards-lugar-index') %>
+                <% hotels.forEach(hotel => { %>
+                        <%-include('./partials/cards-hotel-index',{
+                            ...hotel
+                        }) %>
+                <% }) %>
             </div>
         </section>
     <!-- Por que elegirnos -->

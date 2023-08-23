@@ -8,24 +8,23 @@
 <body>
         <!-- header -->
         <%- include('./partials/header') %>
-    <section class="contenedor-card"> 
-        <h3>Resultados de la búsqueda: <%= keywords %></h3>
 
+        <section class="contenedor-card"> 
+            <h3>Lugares Recomendados para ti en <%= keywords %> </h3>
             <% if (results.length) { %>
-                <% results.forEach(product => { %>
-                    <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
-                        <%-include('./partials/cards-hotel-index',{
-                            ...results
-                        }) %>
-                    </div>
-                <% }) %>
-            <% } else{ %>
-                <div class="col-12">
-                    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+                    <% results.forEach(product => { %>
+                            <%-include('./partials/cards-lugar-index',{
+                                ...product
+                            }) %>
+                    <% }) %>
+                    <% } else {%>
+                        <div class="col-12">
+                            <h2 class="products-title" style="color: var(--colorPrincipal);">Lo sentimos, no hay lugares que coincidan con <%= keywords %></h2>
+                        </div>
+                        <%}%>
                 </div>
-                <%} %>
-                <!-- me falta que tire los productos que yo busco -->
-    </section>
+        </section>
 
         <!-- footer -->
         <%- include('./partials/footer') %>
