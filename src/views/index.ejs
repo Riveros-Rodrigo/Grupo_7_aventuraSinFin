@@ -111,13 +111,10 @@
             <h3>Lugares Recomendados para ti </h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
                 <% products.forEach(product => { %>
-                    <div class="col">
                         <%-include('./partials/cards-lugar-index',{
                             ...product
                         }) %>
-                    </div>
                 <% }) %>
-            </div>
             </div>
         </section>
     <!-- cards solo vista desktop HOTELES  -->
@@ -125,11 +122,9 @@
             <h3>Hoteles recomendados para ti</h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
                 <% hotels.forEach(hotel => { %>
-                    <div class="col">
                         <%-include('./partials/cards-hotel-index',{
                             ...hotel
                         }) %>
-                    </div>
                 <% }) %>
             </div>
         </section>

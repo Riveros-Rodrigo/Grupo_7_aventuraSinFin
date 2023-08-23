@@ -15,8 +15,9 @@ module.exports = {
       },
     search: (req, res) => {
       const keywords = req.query.keywords
-      const results= products.filter(product => product.place.toLowerCase().includes(keywords.toLowerCase()))
+      const results= products.filter(product => product.country.toLowerCase().includes(keywords.toLowerCase()))
       res.render('results',{
+        products,
         results,
         keywords
       })

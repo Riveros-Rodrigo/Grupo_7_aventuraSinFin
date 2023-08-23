@@ -2,7 +2,7 @@
    {
       "id": 1,
       "country": "Francia",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 300,
@@ -12,7 +12,7 @@
    {
       "id": 2,
       "country": "Estados Unidos",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 500,
@@ -22,7 +22,7 @@
    {
       "id": 3,
       "country": "Italia",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 350,
@@ -32,7 +32,7 @@
    {
       "id": 4,
       "country": "Japón",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 200,
@@ -42,7 +42,7 @@
    {
       "id": 5,
       "country": "Argentina",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 150,
@@ -52,7 +52,7 @@
    {
       "id": 6,
       "country": "Grecia",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 400,
@@ -62,7 +62,7 @@
    {
       "id": 7,
       "country": "Australia",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 450,
@@ -72,7 +72,7 @@
    {
       "id": 8,
       "country": "Costa Rica",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 250,
@@ -82,7 +82,7 @@
    {
       "id": 9,
       "country": "Panamá",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 280,
@@ -92,7 +92,7 @@
    {
       "id": 10,
       "country": "Panamá",
-      "location": "lorem",
+      "hotel": "lorem",
       "flight": ["sin escala", "con escala"],
       "description": "Lorem ipsum dolor amet sit",
       "price": 280,
