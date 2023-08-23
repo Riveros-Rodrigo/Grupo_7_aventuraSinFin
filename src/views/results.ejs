@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head',{
+        title : 'Resultados'
+    }) %>
+</head>
+<body>
+        <!-- header -->
+        <%- include('./partials/header') %>
+    <section class="contenedor-card"> 
+        <h3>Resultados de la búsqueda: <%= keywords %></h3>
+
+            <% if (results.length) { %>
+                <% results.forEach(product => { %>
+                    <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 primer-tarjetas-desktop">
+                        <%-include('./partials/cards-hotel-index',{
+                            ...results
+                        }) %>
+                    </div>
+                <% }) %>
+            <% } else{ %>
+                <div class="col-12">
+                    <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                </div>
+                <%} %>
+                <!-- me falta que tire los productos que yo busco -->
+    </section>
+
+        <!-- footer -->
+        <%- include('./partials/footer') %>
+            <!-- scripts-->
+    <%- include('./partials/scripts') %>
+</body>
+</html>

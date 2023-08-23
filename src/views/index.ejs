@@ -12,11 +12,11 @@
     <main>
         <div class="contenedor">
             <label class="buscador">
-                <div>
-                    <input type="search" id="#" name="#">
+                <form action="/search" method="get">
+                    <input type="text" name="keywords" placeholder="Buscar...">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <button>Buscar</button>
+                </form>
+                <button type="submit">Buscar</button>
             </label>
             <!-- banner slider -->
             <section class="container-slider">
@@ -58,7 +58,7 @@
                     <input type="checkbox" name="hobby" value="Pescar">Ver fechas más baratas
                 </label>
                 <div class="contenedor-boton">
-                    <button>Buscar</button>
+                    <button type="submit">Buscar</button>
                     <i class="fas fa-horizontal-rule"></i>
                 </div>
             </section>
