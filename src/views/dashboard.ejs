@@ -77,10 +77,11 @@
                                                                     <li><a class="dropdown-item"
                                                                             href="/products/edit/<%= id %>">Editar
                                                                             producto</a></li>
-                                                                    <li><a class="dropdown-item"
-                                                                            href="/products/delete/<%= id %>">Eliminar
-                                                                            producto</a>
-                                                                    </li>
+                                                                    <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
+                                                                        <button>
+                                                                            Eliminar producto
+                                                                        </button>
+                                                                    </form>
                                                                 </ul>
                                                             </div>
                                                         </div>

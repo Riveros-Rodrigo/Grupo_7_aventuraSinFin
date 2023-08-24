@@ -1,16 +1,14 @@
 [
    {
       "id": 1,
-      "country": "Francia",
+      "country": "Francia segundo",
       "hotel": "lorem",
-      "flight": [
-         "sin escala",
-         "con escala"
-      ],
-      "description": "Lorem ipsum dolor amet sit",
+      "flight": "sin-escala",
+      "description": "Estos son los que salieron segundos en  2022",
       "price": 300,
       "discount": 15,
-      "image": "card1.png"
+      "image": "card1.png",
+      "updatedAt": "2023-08-24T18:39:43.856Z"
    },
    {
       "id": 2,
