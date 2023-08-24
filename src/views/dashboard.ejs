@@ -23,35 +23,13 @@
                     <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
                         <a href="/products/add" class="btn btn-dark"><i class="fas fa-plus"></i>
                             Agregar</a>
-                        <form action="/products/search"
-                            class="d-flex flex-column flex-md-row  gap-2" method="GET">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected hidden>Filtrar por Hotel</option>
-                                <option value="1">Hotel Mayfair Paris</option>
-                                <option value="2">Luxor Hotel</option>
-                                <option value="3">Hotel Romazzino</option>
-                                <option value="4">Asaba Ryokan</option>
-                                <option value="5">Ribera Sur Hotel</option>
-                                <option value="6">Santorini Views Resort</option>
-                                <option value="7">Sydney Harbor Hotel</option>
-                                <option value="8">Rainforest Retreat</option>
-                                <option value="9">Panama City Oasis</option>
-                            </select>
-
-                            <input type="text" class="form-control" placeholder="Buscar..."
-                                name="keyword">
-                            <button type="submit" class="btn btn-dark">
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </form>
-                    </div>
-
+                     </div>
                     <div class="card-body">
                         <table class="table table-striped ">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Lugar</th>
+                                    <th scope="col">Pais</th>
                                     <th scope="col">Hotel</th>
                                     <th scope="col">Precio</th>
                                     <th scope="col">Descuento</th>
@@ -60,10 +38,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({ id, place, hotel, price, discount }, index) => { %>
+                                <% products.forEach(({ id, country, hotel, price, discount }, index) => { %>
                                 <tr>
                                     <th scope="row"><%= index + 1 %></th>
-                                    <td><%= place %></td>
+                                    <td><%= country %></td>
                                     <td><%= hotel %></td>
                                     <td><%= price %></td>
                                     <td><%= discount %></td>
@@ -80,6 +58,7 @@
                                                     <li><a class="dropdown-item"
                                                             href="/products/detail/<%= id %>">Ver producto</a></li>
                                                     <li><a class="dropdown-item"
+                                                    
                                                             href="/products/edit/<%= id %>">Editar producto</a></li>
                                                     <li><a class="dropdown-item"
                                                             href="/products/delete/<%= id %>">Eliminar producto</a>

@@ -1,92 +1,129 @@
 [
    {
-      "id": "1",
-      "place": "Francia",
-      "hotel": "Hotel Mayfair Paris",
-      "flight": ["sin escala", "con escala"],
+      "id": 1,
+      "country": "paris",
+      "hotel": "lorem",
+      "flight": "sin-escala",
       "description": "Lorem ipsum dolor amet sit",
-      "price": 300,
+      "price": 300.16,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "2",
-      "place": "Estados Unidos",
-      "hotel": "Luxor Hotel",
-      "flight": ["sin escala", "con escala"],
+      "id": 2,
+      "country": "Estados Unidos",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 500,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "3",
-      "place": "Italia",
-      "hotel": "Hotel Romazzino",
-      "flight": ["sin escala", "con escala"],
+      "id": 3,
+      "country": "Italia",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 350,
       "discount": 20,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "4",
-      "place": "Japón",
-      "hotel": "Asaba Ryokan",
-      "flight": ["sin escala", "con escala"],
+      "id": 4,
+      "country": "Japón",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 200,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "5",
-      "place": "Argentina",
-      "hotel": "Ribera Sur Hotel",
-      "flight": ["sin escala", "con escala"],
+      "id": 5,
+      "country": "Argentina",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 150,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "6",
-      "place": "Grecia",
-      "hotel": "Santorini Views Resort",
-      "flight": ["sin escala", "con escala"],
+      "id": 6,
+      "country": "Grecia",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 400,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "7",
-      "place": "Australia",
-      "hotel": "Sydney Harbor Hotel",
-      "flight": ["sin escala", "con escala"],
+      "id": 7,
+      "country": "Australia",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 450,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "8",
-      "place": "Costa Rica",
-      "hotel": "Rainforest Retreat",
-      "flight": ["sin escala", "con escala"],
+      "id": 8,
+      "country": "Costa Rica",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 250,
       "discount": 10,
-      "image": "HOTEL.png"
+      "image": "card1.png"
    },
    {
-      "id": "9",
-      "place": "Panamá",
-      "hotel": "Panama City Oasis",
-      "flight": ["sin escala", "con escala"],
+      "id": 9,
+      "country": "Panamá",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
       "description": "Lorem ipsum dolor amet sit",
       "price": 280,
       "discount": 15,
-      "image": "HOTEL.png"
+      "image": "card1.png"
+   },
+   {
+      "id": 10,
+      "country": "Panamá",
+      "hotel": "lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
    }
 ]
