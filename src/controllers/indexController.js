@@ -1,10 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-
-const productsRouting = path.join(__dirname, '../data/products.json');
-const hotelsRouting = path.join(__dirname, '../data/hotels.json');
-const products = JSON.parse(fs.readFileSync(productsRouting, 'utf-8'));
-const hotels = JSON.parse(fs.readFileSync(hotelsRouting, 'utf-8'));
+const {readJSON} = require('../data')
+const products = readJSON('products.json');
+const hotels = readJSON('hotels.json');
 
 module.exports = {
     index : (req, res) => {
@@ -21,5 +17,13 @@ module.exports = {
         results,
         keywords
       })
-    }
+    },
+    dashboard : (req,res) => {
+
+      const products = readJSON('products.json');
+      
+      return res.render('dashboard', {
+          products
+      })
+  }
 }
