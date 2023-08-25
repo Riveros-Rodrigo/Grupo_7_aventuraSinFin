@@ -15,12 +15,10 @@ module.exports = (req, res) => {
         flight: product.flight,
         description: product.description,
         price: product.price,
-        discount: product.discount,
         image: product.image,
-        hotels: hotels.sort((a, b) =>
-            a.hotel > b.hotel ? 1 : a.hotel < b.hotel ? -1 : 0
-        ),
+        additionalImages: product.additionalImages
+        // hotels: hotels.sort((a, b) =>
+        //     a.hotel > b.hotel ? 1 : a.hotel < b.hotel ? -1 : 0
+        // ),
     });
 };
-
-

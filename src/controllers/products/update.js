@@ -1,4 +1,3 @@
-
 const { unlinkSync, existsSync } = require("fs");
 const { readJSON, writeJSON } = require("../../data");
 
@@ -6,7 +5,7 @@ module.exports = async (req, res) => {
   try {
     const products = await readJSON("products.json");
     const id = parseInt(req.params.id);
-    const { country, hotel, flight, description, price, discount } = req.body;
+    const { country, hotel, flight, description, price } = req.body;
 
     const productIndex = products.findIndex((product) => product.id === id);
 
@@ -19,8 +18,6 @@ module.exports = async (req, res) => {
     if (req.file) {
       if (existsSync(`./public/images/${product.image}`)) {
         unlinkSync(`./public/images/${product.image}`);
-      //   const additionalImages = req.files.map((file) => file.filename);
-      // product.additionalImages = additionalImages;
       }
       product.image = req.file.filename;
     }
@@ -41,11 +38,12 @@ module.exports = async (req, res) => {
     product.flight = flight;
     product.description = description.trim();
     product.price = parseFloat(price);
-    product.discount = parseInt(discount);
     product.updatedAt = new Date();
 
     products[productIndex] = product;
 
+    fs.writeFileSync(path.join(__dirname, '../data/productsDataBase.json'),JSON.stringify(productsModify,null, 3))
+		
     await writeJSON(products, "products.json");
 
     return res.redirect("/dashboard");
