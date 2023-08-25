@@ -14,7 +14,11 @@
         </div>
         <div class="product__details">
             <div class="product__title-rating">
-                <h1 class="product__title"><%=  country %></h1>
+                <% if (category === "pais") { %>
+                    <h1 class="product__title"><%= country %></h1>
+                <% } else{%>
+                    <h1 class="product__title"><%= hotel %></h1>
+                <%} %>
                 <div class="product__rating">
                     ★★★★<span class="product__star-gray">★</span> 
                 </div>
