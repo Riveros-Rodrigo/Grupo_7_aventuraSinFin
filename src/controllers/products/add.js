@@ -1,7 +1,6 @@
 const { readJSON } = require("../../data");
 
 module.exports = (req, res) => {
-    const hotels = readJSON("hotels.json");
     const products = readJSON("products.json");
 
     return res.render("productAdd", {

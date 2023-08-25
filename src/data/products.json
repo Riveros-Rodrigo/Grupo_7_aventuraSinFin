@@ -1,24 +1,26 @@
 [
    {
       "id": 1,
-      "country": "Francia segundo",
-      "hotel": "lorem",
+      "country": "Francia",
+      "category": "pais",
+      "hotel": "lorem pais",
+      "price": 50900,
+      "description": "estos siguen siendo segundos",
+      "image": "1692981514119_products_.jpg",
       "flight": "sin-escala",
-      "description": "Estos son los que salieron segundos en  2022",
-      "price": 300,
-      "discount": 15,
-      "image": "card1.png",
-      "updatedAt": "2023-08-24T18:39:43.856Z"
+      "discount": 23,
+      "updatedAt": "2023-08-25T16:38:34.124Z"
    },
    {
       "id": 2,
       "country": "Estados Unidos",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit paises",
       "price": 500,
       "discount": 10,
       "image": "card1.png"
@@ -26,12 +28,13 @@
    {
       "id": 3,
       "country": "Italia",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit paises",
       "price": 350,
       "discount": 20,
       "image": "card1.png"
@@ -39,12 +42,13 @@
    {
       "id": 4,
       "country": "Japón",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit paises",
       "price": 200,
       "discount": 10,
       "image": "card1.png"
@@ -52,89 +56,247 @@
    {
       "id": 5,
       "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit paises",
       "price": 150,
       "discount": 10,
       "image": "card1.png"
    },
    {
       "id": 6,
-      "country": "Grecia",
+      "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 400,
-      "discount": 15,
+      "description": "Lorem ipsum dolor amet sit paises",
+      "price": 150,
+      "discount": 10,
       "image": "card1.png"
    },
    {
       "id": 7,
-      "country": "Australia",
+      "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 450,
+      "description": "Lorem ipsum dolor amet sit paises",
+      "price": 150,
       "discount": 10,
       "image": "card1.png"
    },
    {
       "id": 8,
-      "country": "Costa Rica",
+      "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 250,
+      "description": "Lorem ipsum dolor amet sit paises",
+      "price": 150,
       "discount": 10,
       "image": "card1.png"
    },
    {
       "id": 9,
-      "country": "Panamá",
+      "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 280,
-      "discount": 15,
+      "description": "Lorem ipsum dolor amet sit paises",
+      "price": 150,
+      "discount": 10,
       "image": "card1.png"
    },
    {
       "id": 10,
-      "country": "Panamá",
+      "country": "Argentina",
+      "category": "pais",
       "hotel": "lorem",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit paises",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 150,
+      "discount": 10,
+      "image": "card1.png"
+   },
+   {
+      "id": 11,
+      "country": "Grecia",
+      "category": "hotel",
+      "hotel": "Ribera Sur Hotel",
+      "parts": "Lorem",
       "flight": [
          "sin escala",
          "con escala"
       ],
       "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 400,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 12,
+      "country": "Australia",
+      "category": "hotel",
+      "hotel": "The Betsy Hotel",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 450,
+      "discount": 10,
+      "image": "card1.png"
+   },
+   {
+      "id": 13,
+      "country": "Costa Rica",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 250,
+      "discount": 10,
+      "image": "card1.png"
+   },
+   {
+      "id": 14,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Hotel tres Reyes",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
       "price": 280,
       "discount": 15,
       "image": "card1.png"
    },
    {
-      "id": "e3dcb7e6-e6ff-4a81-862c-4368686de212",
-      "country": "USA",
-      "hotel": "dssd",
-      "description": "Esto es en modo de prueba para chequear que funcione okey",
-      "price": 50900,
-      "discount": 60,
-      "image": "1692884297675_products_.jpg",
-      "createdAt": "2023-08-24T13:38:17.682Z"
+      "id": 15,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 16,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Argentino Hotel",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 17,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 18,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 19,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
+   },
+   {
+      "id": 20,
+      "country": "Panamá",
+      "category": "hotel",
+      "hotel": "Vincci The Mint",
+      "parts": "Lorem",
+      "flight": [
+         "sin escala",
+         "con escala"
+      ],
+      "description": "Lorem ipsum dolor amet sit",
+      "promotion": "Habitaciones cuadruples / varios tipos de camas",
+      "price": 280,
+      "discount": 15,
+      "image": "card1.png"
    }
 ]

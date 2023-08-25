@@ -1,12 +1,10 @@
 const {readJSON} = require('../data')
 const products = readJSON('products.json');
-const hotels = readJSON('hotels.json');
 
 module.exports = {
     index : (req, res) => {
         return res.render('index', {
           products,
-          hotels
         });
       },
     search: (req, res) => {
