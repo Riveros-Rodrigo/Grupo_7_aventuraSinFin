@@ -1,6 +1,5 @@
-const path = require('path');
-const { readJSON, writeJSON } = require(path.join(__dirname, '..', '..', 'data'));
-const Product = require(path.join(__dirname, '..', '..', 'data', 'Product'));
+const { readJSON, writeJSON } = require("../../data");
+const Product = require("../../data/Product");
 
 
 module.exports = (req, res) => {
