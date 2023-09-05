@@ -7,6 +7,48 @@
         <!-- header -->
         <%- include('./partials/header') %>
 
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h2 class="text-center">Perfil de Usuario</h2>
+                    <form action="/users/profile?_method=PUT" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="name" placeholder="Ingrese su nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="surname" placeholder="Ingrese su apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" name="birthday">
+                        </div>
+                        <div class="form-group">
+                            <label>Género:</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino">
+                                <label class="form-check-label" for="generoMasculino">
+                                    Masculino
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino">
+                                <label class="form-check-label" for="generoFemenino">
+                                    Femenino
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="fotoPerfil">Foto de Perfil:</label>
+                            <input type="file" class="form-control-file" id="fotoPerfil">
+                            <img src="/images/users/PERFIL-VACIO.png" width="150px" alt="Foto de perfil" class="profile-img mt-2" id="previewFotoPerfil">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
             <!-- footer -->
     <%- include('./partials/footer') %>
