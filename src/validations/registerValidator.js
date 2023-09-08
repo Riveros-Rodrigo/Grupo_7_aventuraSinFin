@@ -33,12 +33,18 @@ module.exports = [
             return user ? false : true;
         }).withMessage('Este email ya se encuentra registrado'),
     check("password")
+        .notEmpty().withMessage('La contraseña es obligatoria')
         .isLength({
             min: 6,
             max: 12,
         })
         .withMessage("Debe tener entre 6 y 12 caracteres"),
     check("password2")
+        .notEmpty().withMessage('Debes completar el campo contraseña')
+        .isLength({
+            min: 6,
+            max: 12,
+        }).withMessage("Debe tener entre 6 y 12 caracteres")
         .custom((value, { req }) => { 
             //si el valor del input es diferente al que viene por el req.body.password me retorna false si da bien es true
             return value !== req.body.password ? false : true;
