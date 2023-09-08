@@ -1,7 +1,3 @@
-// module.exports = (req, res) => {
-//     return res.send(req.body)
-// }
-
 const {validationResult} = require('express-validator');
 const { readJSON } = require('../../data');
 
