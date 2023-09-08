@@ -1,15 +1,29 @@
-const express = require('express');
-const { register, processRegister, shoppingCart, login, processLogin, profile, updateProfile } = require('../controllers/usersController');
-const registerValidator = require('../validations/registerValidator');
+const express = require("express");
 const router = express.Router();
 
+const {
+  register,
+  processRegister,
+  login,
+  processLogin,
+  profile,
+  updateProfile,    
+shoppingCart,
+} = require("../controllers/usersController");
+const registerValidator = require("../validations/registerValidator");
+const loginValidator = require("../validations/loginValidator");
+const checkUserLogin = require("../middlewares/checkUserLogin");
+const checkNotUserLogin = require("../middlewares/checkNotUserLogin");
+
 /* /users */
-router.get('/register', register);
-router.post('/register', registerValidator, processRegister);
-router.get('/login', login);
-router.post('/login', processLogin);
-router.get('/profile', profile)
-router.put('/profile', updateProfile)
-router.get('/shoppingCart', shoppingCart);
+router
+    .get("/register",checkNotUserLogin, register)
+    .post("/register",registerValidator, processRegister)
+    .get("/login", checkNotUserLogin, login)
+    .post("/login",loginValidator, processLogin)
+    .get("/profile",checkUserLogin, profile)
+    .put("/update-profile",updateProfile)
+    .get('/shoppingCart', shoppingCart)
+
 
 module.exports = router;
