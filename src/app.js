@@ -12,6 +12,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const cookieCheck = require('./middlewares/cookieCheck');
+const updateProfile = require('./controllers/users/updateProfile');
 
 var app = express();
 
@@ -27,7 +28,7 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "aventuraSinFin",
+  secret : "aventuraSF",
   resave : true,
   saveUninitialized : true
 }));
@@ -38,6 +39,9 @@ app.use(localsCheck);
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.put('/users/profile', updateProfile);
+app.post('/users/profile', updateProfile);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

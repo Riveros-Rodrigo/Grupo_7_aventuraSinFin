@@ -1,6 +1,6 @@
 module.exports = (req,res,next) => {
-    if(req.cookies.aventuraSinFin){
-        req.session.userLogin = req.cookies.aventuraSinFin
+    if(req.cookies.aventuraSF){
+        req.session.userLogin = req.cookies.aventuraSF
     }
     next()
 }

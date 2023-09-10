@@ -10,6 +10,11 @@ module.exports = [
     body('birthday')
         .notEmpty().withMessage('La fecha de nacimiento es requerida')
         .isDate().withMessage('La fecha de nacimiento debe ser una fecha válida'),
-    body('genero')
-        .notEmpty().withMessage('El género es requerido')
+    body('telefono') // Puedes añadir validaciones para el teléfono si lo necesitas
+        .optional() // El teléfono es opcional, puedes quitar esto si es obligatorio
+        .isNumeric().withMessage('El teléfono debe ser numérico'),
+    body('asiento')
+        .notEmpty().withMessage('La preferencia de asiento es requerida'),
+    body('suscripcion')
+        .notEmpty().withMessage('La suscripción es requerida')
 ];

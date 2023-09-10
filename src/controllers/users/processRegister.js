@@ -12,7 +12,9 @@ module.exports = (req, res) => {
         users.push(newUser);
         //guardo en json
         writeJSON(users, 'users.json');
-        return res.redirect('/')
+         return res.redirect('/')
+        // return res.redirect('/profile'); // En lugar de return res.redirect('/');
+
     } else{
         // si no lo devuelve a register y con lo que completo
         return res.render('register',{
@@ -20,6 +22,8 @@ module.exports = (req, res) => {
             errors : errors.mapped() 
         })
     }
+    
+
 
     
 }
