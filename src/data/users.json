@@ -4,16 +4,26 @@
       "name": "Rodrigo",
       "surname": "Riveros",
       "email": "rodrigoezequiel.riveros@gmail.com",
-      "pasword": "$2a$10$mCG4moxLcWFgQk5C9XRUKu22.CFuSK6NDshsJFqJ.wmPrTFtK/Ppi",
-      "rol": "user"
+      "password": "$2a$10$mCG4moxLcWFgQk5C9XRUKu22.CFuSK6NDshsJFqJ.wmPrTFtK/Ppi",
+      "rol": "user",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null
    },
    {
       "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",
       "name": "Clara",
       "surname": "Zalazar",
       "email": "zalazarmariaclara@gmail.com",
-      "pasword": "$2a$10$Yl.cpyPzNHZb9XVG3oU7S.HCdFZJq1S3uKpX.kWGcFvcVmUCCYBVi",
-      "rol": "admin"
+      "password": "$2a$10$Yl.cpyPzNHZb9XVG3oU7S.HCdFZJq1S3uKpX.kWGcFvcVmUCCYBVi",
+      "rol": "admin",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null
    },
    {
       "id": "9fa8d860-329d-4e16-b0bb-93783d583174",
@@ -22,6 +32,11 @@
       "email": "liamnuske@gmail.com",
       "password": "$2a$10$.o7oNKHrKXsBUynpqLKC8.rISljFXVrZN/OFPr1fkOiV8q2EhSnem",
       "rol": "user",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null,
       "birthday": null
    },
    {
@@ -31,6 +46,11 @@
       "email": "leonuske2@gmail.com",
       "password": "$2a$10$cQvedGDSQfnnlZSaGkYNwOfSoMCJkoVz7KVI4yKJIWk3YdbpzGYqS",
       "rol": "admin",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null,
       "birthday": null
    },
    {
@@ -40,6 +60,11 @@
       "email": "cindynuske@gmail.com",
       "password": "$2a$10$U/tlij0PL6xcudgkRrAQweHNK83AW5CiTQeBqoQpcU/rcbK9UuV5K",
       "rol": "user",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null,
       "birthday": null
    },
    {
@@ -49,6 +74,11 @@
       "email": "carmencosta@gmail.com",
       "password": "$2a$10$LEwnw9R.uAGymw3UuHnYy.rNLtYZhDWtuFoDeM8T4GH2PpZlcuxae",
       "rol": "user",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null,
       "birthday": null
    }
 ]

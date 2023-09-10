@@ -15,14 +15,11 @@ const upload = multer({ storage });
 
 module.exports = async (req, res) => {
     const users = readJSON('users.json');
-    let userProfiles = readJSON('userProfiles.json'); // Asegúrate de cargar los perfiles
-
-    // Asegúrate de que Multer esté configurado correctamente en tu aplicación
 
     if (req.file) {
-      console.log('Nombre del archivo:', req.file.filename);
+        console.log('Nombre del archivo:', req.file.filename);
     } else {
-      console.log('No se cargó ningún archivo');
+        console.log('No se cargó ningún archivo');
     }
 
     const updatedUser = {
@@ -42,29 +39,6 @@ module.exports = async (req, res) => {
 
     writeJSON('users.json', users);
 
-    // Actualizar perfil en userProfiles.json
-    const updatedProfile = {
-        id: req.session.userLogin.id,
-        telefono: req.body.telefono,
-        genero: req.body.genero,
-        asiento: req.body.asiento,
-        suscripcion: req.body.suscripcion,
-        profilePicture: req.file ? req.file.filename : null
-    };
-    
-    // Verificar si el perfil ya existe
-    const profileIndex = userProfiles.findIndex(profile => profile.id === req.session.userLogin.id);
-
-    if (profileIndex !== -1) {
-        userProfiles[profileIndex] = updatedProfile;
-    } else {
-        // Si no existe, lo añadimos al arreglo
-        userProfiles.push(updatedProfile);
-    }
-
-    writeJSON('userProfiles.json', userProfiles);
-
     res.redirect('/users/profile');
 };
-
    
