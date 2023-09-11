@@ -4,6 +4,13 @@
       "name": "Rodrigo",
       "surname": "Riveros",
       "email": "rodrigoezequiel.riveros@gmail.com",
-      "pasword": "$2a$10$mCG4moxLcWFgQk5C9XRUKu22.CFuSK6NDshsJFqJ.wmPrTFtK/Ppi"
+      "password": "$2a$10$mCG4moxLcWFgQk5C9XRUKu22.CFuSK6NDshsJFqJ.wmPrTFtK/Ppi"
+   },
+   {
+      "id": "a42419a9-79a3-4f38-b7e3-4524519ee3d0",
+      "name": "Ezequiel",
+      "surname": "Riveros",
+      "email": "eze@gmail.com",
+      "password": "$2a$10$LNeqj2OV9K9R2psfbjpThuodPdtb.UnyXi/o3QaY9wXnYcO.1iALq"
    }
 ]

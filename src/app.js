@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 
 app.use(methodOverride('_method'));
 app.use(session({
-  secret : "aventuraSinFin",
+  secret : "aventuraS",
   resave : true,
   saveUninitialized : true
 }));

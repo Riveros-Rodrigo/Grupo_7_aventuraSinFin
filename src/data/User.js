@@ -6,7 +6,7 @@ const User = function({name, surname, email, password}){
     this.name= name.trim();
     this.surname = surname.trim();
     this.email = email.trim();
-    this.pasword = hashSync(password.trim(),10);
+    this.password = hashSync(password.trim(),10);
 }
 
 module.exports = User;
