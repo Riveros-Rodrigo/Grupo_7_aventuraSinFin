@@ -17,11 +17,12 @@ module.exports = (req,res) => {
             rol
         }
 
-        remember !== undefined && res.cookie('aventuraSinFin',req.session.userLogin,{
-            maxAge : 2000 * 60
+        remember !== undefined && res.cookie('aventuraSF',req.session.userLogin,{
+            maxAge : 1000 * 60
         })
 
-        return res.redirect('/')
+        return res.redirect('/users/profile'); // Redirige al perfil del usuario
+        // return res.redirect('/')
 
     }else {
         return res.render('login',{
