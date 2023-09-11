@@ -13,10 +13,17 @@
             </ul>
             <hr>
             <ul>
-                <li><a href="/users/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
-                <li><a href="/users/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="/users/profile">Perfil</a><i class="fa-solid fa-user"></i></i></li>
-                <li><a href="/dashboard">Admin</a><i class="fa-solid fa-gears"></i></li>
+                <% if (!locals.userLogin) { %>
+                    <li><a href="/users/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
+                    <li><a href="/users/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="/users/profile">Perfil</a><i class="fa-solid fa-user"></i></i></li>
+                <% } else { %>
+                    <% if (userLogin.rol === "admin") { %>
+                        <li><a href="/dashboard">Admin</a><i class="fa-solid fa-gears"></i></li>
+                    <% } %>
+                    <li><a href="/users/profile">Hola <%= userLogin.name %>!</a><i class="fa-solid fa-user"></i></li>
+                    <li><a href="/users/logout">Salir</a></li>
+                <% } %>
             </ul>
         </div>
     </div>
