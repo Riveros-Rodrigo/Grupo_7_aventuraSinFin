@@ -10,15 +10,15 @@ module.exports = (req,res) => {
         const {email, remember} = req.body
         const user = users.find(user => user.email === email);
         const {id, name, rol} = user;
-
+        // guardo en session esta info
         req.session.userLogin = {
             id,
             name,
             rol
         }
-
+        // guardo la cookie
         remember !== undefined && res.cookie('aventuraSF',req.session.userLogin,{
-            maxAge : 1000 * 60
+            maxAge: 1000 * 60 * 3 // 3 minutos
         })
 
         return res.redirect('/users/profile'); // Redirige al perfil del usuario
