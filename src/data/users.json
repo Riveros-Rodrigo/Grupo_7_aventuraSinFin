@@ -16,8 +16,8 @@
       "password": "$2a$10$Yl.cpyPzNHZb9XVG3oU7S.HCdFZJq1S3uKpX.kWGcFvcVmUCCYBVi",
       "rol": "admin",
       "telefono": null,
+      "address": null,
       "genero": null,
-      "asiento": null,
       "suscripcion": null,
       "fotoPerfil": null
    },
@@ -29,8 +29,8 @@
       "password": "$2a$10$.o7oNKHrKXsBUynpqLKC8.rISljFXVrZN/OFPr1fkOiV8q2EhSnem",
       "rol": "user",
       "telefono": null,
+      "address": null,
       "genero": null,
-      "asiento": null,
       "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
@@ -43,8 +43,8 @@
       "password": "$2a$10$cQvedGDSQfnnlZSaGkYNwOfSoMCJkoVz7KVI4yKJIWk3YdbpzGYqS",
       "rol": "admin",
       "telefono": null,
+      "address": null,
       "genero": null,
-      "asiento": null,
       "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
@@ -57,8 +57,8 @@
       "password": "$2a$10$U/tlij0PL6xcudgkRrAQweHNK83AW5CiTQeBqoQpcU/rcbK9UuV5K",
       "rol": "user",
       "telefono": null,
+      "address": null,
       "genero": null,
-      "asiento": null,
       "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
@@ -71,8 +71,8 @@
       "password": "$2a$10$LEwnw9R.uAGymw3UuHnYy.rNLtYZhDWtuFoDeM8T4GH2PpZlcuxae",
       "rol": "user",
       "telefono": null,
+      "address": null,
       "genero": null,
-      "asiento": null,
       "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null

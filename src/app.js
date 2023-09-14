@@ -5,14 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
-// requiero middleware de locals
-const localsCheck = require('./middlewares/localsCheck');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const cookieCheck = require('./middlewares/cookieCheck');
 const updateProfile = require('./controllers/users/updateProfile');
+const localsCheck = require('./middlewares/localsCheck');
 
 var app = express();
 
