@@ -22,7 +22,6 @@ module.exports = (req,res) => {
         })
 
         return res.redirect('/users/profile'); // Redirige al perfil del usuario
-        // return res.redirect('/')
 
     }else {
         return res.render('login',{

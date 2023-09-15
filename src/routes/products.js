@@ -1,11 +1,9 @@
 const express = require('express');
-const methodOverride = require('method-override');
 const { detail, add, edit, create, update, remove } = require('../controllers/productsController');
 const router = express.Router();
 const upload = require('../middlewares/upload');
 const productAddValidator = require('../validations/productAddValidator');
 
-router.use(methodOverride('_method'));
 
 router
     .get('/detail/:id', detail)
