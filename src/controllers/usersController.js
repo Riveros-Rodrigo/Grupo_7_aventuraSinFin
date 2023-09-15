@@ -5,8 +5,7 @@ module.exports = {
     processLogin : require('./users/processLogin'),
     profile : require('./users/profile'),
     updateProfile : require('./users/updateProfile'),
-    shoppingCart: (req, res) => {
-      return res.render('shoppingCart');
-    },
-    logout : require('./users/logout')
+  shoppingCart: (req, res) => {
+    return res.render('shoppingCart');
+  },
 };
