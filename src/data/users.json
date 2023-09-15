@@ -1,16 +1,12 @@
 [
    {
-      "id": "4050a146-8973-4c6f-9aef-5c63bc4e097a",
+      "id": "eaaf662d-29ee-461f-8bae-365eb476b7a6",
       "name": "Rodrigo",
       "surname": "Riveros",
       "email": "rodrigoezequiel.riveros@gmail.com",
-      "password": "$2a$10$mCG4moxLcWFgQk5C9XRUKu22.CFuSK6NDshsJFqJ.wmPrTFtK/Ppi",
-      "rol": "user",
-      "telefono": null,
-      "genero": null,
-      "asiento": null,
-      "suscripcion": null,
-      "fotoPerfil": null
+      "password": "$2a$10$qxNOnmVMLEMrO0UXthN5IuCnEChcsaUvnF.A8/W1haYNhvgnX0Xpm",
+      "rol": "admin",
+      "birthday": null
    },
    {
       "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",

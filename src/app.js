@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
-
+// requiero middleware de locals
 const localsCheck = require('./middlewares/localsCheck');
 
 var indexRouter = require('./routes/index');
@@ -32,7 +32,7 @@ app.use(session({
   resave : true,
   saveUninitialized : true
 }));
-
+// referencia a los check
 app.use(cookieCheck);
 app.use(localsCheck);
 
