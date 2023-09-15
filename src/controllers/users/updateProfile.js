@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
     const userIndex = users.findIndex(user => user.id === req.session.userLogin.id);
     users[userIndex] = updatedUser;
 
-    writeJSON('users.json', users);
+    writeJSON(users, 'users.json');
 
     res.redirect('/users/profile');
 };
