@@ -8,7 +8,7 @@ module.exports = [
         })
         .withMessage("Debe tener como mínimo tres letras")
         .bail()
-        //para que me lea los caracteres como el ascento o ñ
+        //para que me lea los caracteres como el acento o ñ
         .isAlpha('es-ES')
         .withMessage("Solo se permiten caracteres alfabéticos"),
     check("surname")
