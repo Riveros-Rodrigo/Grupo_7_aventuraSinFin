@@ -10,8 +10,8 @@ const User = function ({name, surname, email, password, telefono, genero, asient
     this.rol = password.trim() === 'aventuraSF' ? 'admin' : 'user'; // Determina el rol en base a la contraseña
     this.birthday = null;
     this.telefono = telefono;
-    this.address = address;
     this.genero = genero;
+    this.asiento = asiento;
     this.suscripcion = suscripcion;
     this.fotoPerfil = fotoPerfil;
 }

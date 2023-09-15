@@ -6,12 +6,13 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
+const localsCheck = require('./middlewares/localsCheck');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
 const cookieCheck = require('./middlewares/cookieCheck');
 const updateProfile = require('./controllers/users/updateProfile');
-const localsCheck = require('./middlewares/localsCheck');
 
 var app = express();
 
@@ -31,7 +32,7 @@ app.use(session({
   resave : true,
   saveUninitialized : true
 }));
-// referencia a los check
+
 app.use(cookieCheck);
 app.use(localsCheck);
 

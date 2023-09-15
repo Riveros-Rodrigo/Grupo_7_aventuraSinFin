@@ -28,8 +28,8 @@ module.exports = async (req, res) => {
         surname: req.body.surname,
         birthday: req.body.birthday,
         telefono: req.body.telefono,
-        address: req.body.address,
         genero: req.body.genero,
+        asiento: req.body.asiento,
         suscripcion: req.body.suscripcion,
         profilePicture: req.file ? req.file.filename : null
     };
