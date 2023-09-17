@@ -14,27 +14,20 @@
         </div>
         <div class="product__details">
             <div class="product__title-rating">
-                <h1 class="product__title"><%=  country %></h1>
+                <% if (category === "pais") { %>
+                    <h1 class="product__title"><%= country %></h1>
+                <% } else{%>
+                    <h1 class="product__title"><%= hotel %></h1>
+                <%} %>
                 <div class="product__rating">
                     ★★★★<span class="product__star-gray">★</span> 
                 </div>
             </div>
             <p class="product__description"><%= description %></p>
-            <p class="product__additional-info">Habitaciones cuádruples / Varios tipos de camas.</p>
+            <% if (category === "hotel") { %>
+                <p class="product__additional-info">Habitaciones cuádruples / Varios tipos de camas.</p>
+            <% } %>
             <p class="product__additional-info product__price"><strong>U$S<%= price %></strong></p> 
- 
-<!-- Mostrar imágenes adicionales -->
-<% if (additionalImages && additionalImages.length > 0) { %>
-    <div class="product__additional-images">
-        <h3>Imágenes adicionales</h3>
-        <div class="additional-images-container">
-            <% additionalImages.forEach(image => { %>
-                <img src="/images/<%= image %>" alt="Imagen Adicional">
-            <% }) %>
-        </div>
-    </div>
-<% } %>
-
             <button class="product__button">RESERVAR</button>
         </div>
     </main>
@@ -42,3 +35,4 @@
     <%- include('partials/footer') %>
 </body>
 </html>
+
