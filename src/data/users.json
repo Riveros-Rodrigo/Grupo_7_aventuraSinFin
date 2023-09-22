@@ -10,16 +10,7 @@
    },
    {
       "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",
-      "name": "Clara",
-      "surname": "Zalazar",
-      "email": "zalazarmariaclara@gmail.com",
-      "password": "$2a$10$Yl.cpyPzNHZb9XVG3oU7S.HCdFZJq1S3uKpX.kWGcFvcVmUCCYBVi",
-      "rol": "admin",
-      "telefono": null,
-      "genero": null,
-      "asiento": null,
-      "suscripcion": null,
-      "fotoPerfil": null
+      "profilePicture": null
    },
    {
       "id": "9fa8d860-329d-4e16-b0bb-93783d583174",
