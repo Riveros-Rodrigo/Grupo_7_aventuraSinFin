@@ -1,12 +1,7 @@
 [
    {
       "id": "eaaf662d-29ee-461f-8bae-365eb476b7a6",
-      "name": "Rodrigo",
-      "surname": "Riveros",
-      "email": "rodrigoezequiel.riveros@gmail.com",
-      "password": "$2a$10$qxNOnmVMLEMrO0UXthN5IuCnEChcsaUvnF.A8/W1haYNhvgnX0Xpm",
-      "rol": "admin",
-      "birthday": null
+      "profilePicture": null
    },
    {
       "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",
