@@ -21,7 +21,7 @@
         </div>
 <section class="contenedor-card">
     <% if (results.length) { %>
-        <h3>Hoteles Recomendados para ti en <%= keywords %> </h3>
+        <h3>Hoteles recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>
                 <% if (product.category === "hotel") { %>
@@ -38,7 +38,7 @@
 
 <section class="contenedor-card">
     <% if (results.length) { %>
-        <h3>Lugares Recomendados para ti en <%= keywords %> </h3>
+        <h3>Lugares recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>
                 <% if (product.category !== "hotel") { %>
