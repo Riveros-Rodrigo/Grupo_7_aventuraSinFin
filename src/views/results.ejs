@@ -20,7 +20,7 @@
             </label>
         </div>
 <section class="contenedor-card">
-    <% if (results.length) { %>
+    <% if (keywords && results.length) { %>
         <h3>Hoteles recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>
@@ -30,14 +30,14 @@
                             ...product
                         }) %>
                     </div>
-                <% } %>
+                <% }%>
             <% }) %>
         </div>
     <% } %>
 </section>
 
 <section class="contenedor-card">
-    <% if (results.length) { %>
+    <% if (keywords && results.length) { %>
         <h3>Lugares recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>

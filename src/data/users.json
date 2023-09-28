@@ -67,5 +67,14 @@
       "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
+   },
+   {
+      "id": "011d1cd1-9e5e-4047-b930-af231ba3329a",
+      "name": "sergio",
+      "surname": "prieto",
+      "email": "sergio@gmail.com",
+      "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
+      "rol": "user",
+      "birthday": null
    }
 ]
