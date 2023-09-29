@@ -1,5 +1,5 @@
 const express = require("express");
-const uploadProfile = require('../middlewares/uploadProfile')
+const upload = require('../middlewares/upload')
 const router = express.Router();
 
 const {
@@ -27,7 +27,7 @@ router
   .get("/profile", checkUserLogin, profile)
   .put("/profile", profileValidator, updateProfile)
   .put("/update-profile", profileValidator, updateProfile)
-  .post("/profile",uploadProfile.single('profilePicture'), profileValidator, updateProfile)
+  .post("/profile",upload.single('profilePicture'), profileValidator, updateProfile)
   .get('/shoppingCart', shoppingCart)
   .get('/logout',logout)
 

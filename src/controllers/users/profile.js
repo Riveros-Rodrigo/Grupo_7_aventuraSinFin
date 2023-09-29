@@ -6,7 +6,6 @@ const { readJSON } = require("../../data")
     
         return res.render('profile', {
             ...user,
-            asiento: user.asiento // Asegúrate de que `user` tenga una propiedad `asiento`
         })
     }
     

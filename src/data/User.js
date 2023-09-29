@@ -1,7 +1,7 @@
 const {v4 : uuidv4} = require('uuid');
 const {hashSync} = require('bcryptjs');
 
-const User = function ({name, surname, email, password, telefono, genero, fotoPerfil}) {
+const User = function ({name, surname, email, password, telefono, genero, profilePicture}) {
     this.id = uuidv4();
     this.name = name.trim();
     this.surname = surname.trim();
@@ -11,8 +11,7 @@ const User = function ({name, surname, email, password, telefono, genero, fotoPe
     this.birthday = null;
     this.telefono = telefono;
     this.genero = genero;
-    this.fotoPerfil = fotoPerfil;
+    this.profilePicture = profilePicture;
 }
-
 
 module.exports = User

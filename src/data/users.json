@@ -65,11 +65,12 @@
    {
       "id": "011d1cd1-9e5e-4047-b930-af231ba3329a",
       "name": "sergio",
-      "surname": "prieto",
+      "surname": "Prieto",
       "email": "sergio@gmail.com",
       "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
       "rol": "user",
       "telefono": "",
-      "birthday": ""
+      "birthday": "",
+      "profilePicture": "1696003726679_products_.jpg"
    }
 ]
