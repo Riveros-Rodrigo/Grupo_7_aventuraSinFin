@@ -22,18 +22,17 @@ const { readJSON, writeJSON } = require("../../data");
          telefono, 
          genero, 
          asiento, 
-         suscripcion, 
-         profilePicture 
+         suscripcion,
      } = req.body;
 
      const updatedUser = users.map(user => {
         if (user.id === req.session.userLogin.id) {
             return {
                 ...user,
-                name: name ? name.trim() : (user.name ? user.name.trim() : user.name),
-                surname: surname ? surname.trim() : (user.surname ? user.surname.trim() : user.surname),
+                name: name ? name.trim() : user.name,
+                surname: surname ? surname.trim() : user.surname,
                 birthday: birthday || user.birthday,
-                telefono: telefono ? telefono.trim() : (user.telefono ? user.telefono.trim() : user.telefono),
+                telefono: telefono ? telefono.trim() : user.telefono,
                 genero: genero || user.genero,
                 asiento: asiento || user.asiento,
                 suscripcion: suscripcion || user.suscripcion,
