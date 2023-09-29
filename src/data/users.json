@@ -6,6 +6,8 @@
       "email": "rodrigoezequiel.riveros@gmail.com",
       "password": "$2a$10$qxNOnmVMLEMrO0UXthN5IuCnEChcsaUvnF.A8/W1haYNhvgnX0Xpm",
       "rol": "admin",
+      "telefono": null,
+      "genero": null,
       "birthday": null
    },
    {
@@ -21,8 +23,6 @@
       "rol": "user",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -35,8 +35,6 @@
       "rol": "admin",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -49,8 +47,6 @@
       "rol": "user",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -63,8 +59,6 @@
       "rol": "user",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -75,6 +69,7 @@
       "email": "sergio@gmail.com",
       "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
       "rol": "user",
-      "birthday": null
+      "telefono": "",
+      "birthday": ""
    }
 ]
