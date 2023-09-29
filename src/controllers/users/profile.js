@@ -27,4 +27,3 @@ const { readJSON } = require("../../data")
             birthday: user.birthday
         })
     }
-    

@@ -1,7 +1,12 @@
 [
    {
       "id": "eaaf662d-29ee-461f-8bae-365eb476b7a6",
-      "profilePicture": null
+      "name": "Rodrigo",
+      "surname": "Riveros",
+      "email": "rodrigoezequiel.riveros@gmail.com",
+      "password": "$2a$10$qxNOnmVMLEMrO0UXthN5IuCnEChcsaUvnF.A8/W1haYNhvgnX0Xpm",
+      "rol": "admin",
+      "birthday": null
    },
    {
       "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",
@@ -37,36 +42,48 @@
    },
    {
       "id": "911f75f9-b226-4496-b628-f58df998c535",
-      "profilePicture": null
+      "name": "cindy",
+      "surname": "nunske",
+      "email": "cindynuske@gmail.com",
+      "password": "$2a$10$U/tlij0PL6xcudgkRrAQweHNK83AW5CiTQeBqoQpcU/rcbK9UuV5K",
+      "rol": "user",
+      "telefono": null,
+      "genero": null,
+      "asiento": null,
+      "suscripcion": null,
+      "fotoPerfil": null,
+      "birthday": null
    },
    {
       "id": "a4766a85-ceec-4c71-8adb-de6a36d68736",
-      "profilePicture": null
+      "email": "carmencosta@gmail.com",
+      "password": "$2a$10$LEwnw9R.uAGymw3UuHnYy.rNLtYZhDWtuFoDeM8T4GH2PpZlcuxae",
+      "rol": "user",
+      "telefono": null,
+      "fotoPerfil": null
    },
    {
-      "id": "6ac0ba88-fb71-4c22-9cef-d4bf60427d19",
-      "profilePicture": null
+      "id": "011d1cd1-9e5e-4047-b930-af231ba3329a",
+      "name": "sergio",
+      "surname": "prieto",
+      "email": "sergio@gmail.com",
+      "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
+      "rol": "user",
+      "birthday": null
    },
    {
-      "id": "16ee9e6b-190b-44ad-957a-49d0c7bf536f",
-      "profilePicture": null
+      "id": "4f762b2f-9cdd-46a2-b808-e2c730613016",
+      "email": "clarazalazar@gmail.com",
+      "password": "$2a$10$9qxeeA3e4KqKY6meVK712eyW07LHP9Y/vphoD00DyrIkv4JJf3MSS",
+      "rol": "admin"
    },
    {
-      "id": "de29928f-4898-4e46-8f6e-8bb63e359da2",
-      "profilePicture": null
-   },
-   {
-      "id": "2799db10-8c12-4552-b3d3-5c7abc31faef",
-      "profilePicture": null
-   },
-   {
-      "id": "8560fe80-d56a-46a8-9dc8-c6e8cc5a3c46",
-      "profilePicture": null
-   },
-   {
-      "id": "321f8ff5-a733-4038-9ca2-58517be12d11",
-      "email": "franciscozalazar@gmail.com",
-      "password": "$2a$10$5QW34wxFTxp0anKzduFkWOectyHeLeF49YPLdgtEmNrlxwaEL4Uqu",
-      "rol": "user"
+      "id": "c939b269-72fb-4250-a638-c1c3b137d7a8",
+      "name": "Juan",
+      "surname": "Zalazar",
+      "email": "juanzalazar@gmail.com",
+      "password": "$2a$10$orPmNtE00RhFqKFL6OChRefRFZThs/rKAejQeW5zJcYo6fQaoFLFS",
+      "rol": "user",
+      "birthday": null
    }
 ]

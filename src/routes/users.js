@@ -14,7 +14,7 @@ const {
 
 const registerValidator = require("../validations/registerValidator");
 const loginValidator = require("../validations/loginValidator");
-const profileValidator = require("../validations/profileValidator"); 
+const profileValidator = require("../validations/profileValidator");
 const checkUserLogin = require("../middlewares/checkUserLogin");
 const checkNotUserLogin = require("../middlewares/checkNotUserLogin");
 
@@ -24,11 +24,9 @@ router
   .get("/login", checkNotUserLogin, login)
   .post("/login", loginValidator, processLogin)
   .get("/profile", checkUserLogin, profile)
-  .put("/profile", profileValidator, updateProfile)
-  .put("/update-profile", profileValidator, updateProfile)
-  .post("/profile", profileValidator, updateProfile)
+  .put("/update-profile",updateProfile)
   .get('/shoppingCart', shoppingCart)
   .get('/logout',logout)
- 
-module.exports = router;
 
+
+module.exports = router;
