@@ -52,8 +52,12 @@
         </div>
     <% } else { %>
         <div class="col-12 text-center mt-4 mb-4">
-            <h2 class="products-title" style="color: var(--colorPrincipal);">Lo sentimos, no hay lugares que coincidan con <%= keywords %></h2>
-            <img src="/images/no-hay-viajes.png" alt="">
+            <% if (!keywords) { %>
+                <h2 class="products-title" style="color: var(--colorPrincipal);">Lo sentimos, no hay lugares que coincidan</h2>
+            <% } else{ %>
+                <h2 class="products-title" style="color: var(--colorPrincipal);">Lo sentimos, no hay lugares que coincidan con <%= keywords %></h2>
+                <% } %>
+            <img class="result-img" src="/images/no-hay-viajes.png" alt="">
         </div>
     <% } %>
 </section>
