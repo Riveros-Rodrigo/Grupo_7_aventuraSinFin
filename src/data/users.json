@@ -63,5 +63,15 @@
    {
       "id": "2799db10-8c12-4552-b3d3-5c7abc31faef",
       "profilePicture": null
+   },
+   {
+      "id": "8560fe80-d56a-46a8-9dc8-c6e8cc5a3c46",
+      "profilePicture": null
+   },
+   {
+      "id": "321f8ff5-a733-4038-9ca2-58517be12d11",
+      "email": "franciscozalazar@gmail.com",
+      "password": "$2a$10$5QW34wxFTxp0anKzduFkWOectyHeLeF49YPLdgtEmNrlxwaEL4Uqu",
+      "rol": "user"
    }
 ]

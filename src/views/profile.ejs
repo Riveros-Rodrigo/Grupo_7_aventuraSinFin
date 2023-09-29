@@ -22,18 +22,22 @@
                         <h4 class="card-title">Perfil de Usuario</h4>
                     </div>
                     <div class="card-body">
+                        
                         <form action="" method="POST" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" class="form-control" id="nombre" name="name"
-                                    placeholder="Ingrese su nombre" value="<%= name %>">
-                            </div>
 
-                            <div class="form-group">
-                                <label for="apellido">Apellido:</label>
-                                <input type="text" class="form-control" id="apellido" name="surname"
-                                    placeholder="Ingrese su apellido" value="<%= surname %>">
-                            </div>
+                           
+
+<div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" class="form-control" id="nombre" name="name" placeholder="Ingrese su nombre" value="<%= typeof name !== 'undefined' ? name : '' %>">
+</div>
+
+<div class="form-group">
+    <label for="apellido">Apellido:</label>
+    <input type="text" class="form-control" id="apellido" name="surname" placeholder="Ingrese su apellido" value="<%= typeof surname !== 'undefined' ? surname : '' %>">
+</div>
+
+
 
                             <div class="form-group">
                                 <label for="fechaNacimiento">Fecha de Nacimiento:</label>
@@ -91,10 +95,9 @@
                             <div class="form-group">
                                 <label for="fotoPerfil">Foto de Perfil:</label>
                                 <input type="file" class="form-control-file" id="fotoPerfil" name="profilePicture">
-                                <img src="/images/users/PERFIL-VACIO.png" width="150px" alt="Foto de perfil"
-                                    class="profile-img mt-2" id="previewFotoPerfil">
+                                <img src="/images/<%= profilePicture || 'PERFIL-VACIO.png' %>" width="150px" alt="Foto de perfil" class="profile-img mt-2" id="previewFotoPerfil">
                             </div>
-                        
+                                                    
                             <!-- <button type="submit">Guardar</button> -->
                             <div class="d-flex justify-content-between mb-3">
                                 <button class="btn btn-dark" type="submit">Guardar</button>
