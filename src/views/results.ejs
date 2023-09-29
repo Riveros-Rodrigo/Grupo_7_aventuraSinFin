@@ -25,7 +25,7 @@
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>
                 <% if (product.category === "hotel") { %>
-                    <div class="col">
+                    <div class="col mx-auto">
                         <%- include('./partials/cards-hotel-index', {
                             ...product
                         }) %>
@@ -42,7 +42,7 @@
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
             <% results.forEach(product => { %>
                 <% if (product.category !== "hotel") { %>
-                    <div class="col">
+                    <div class="col mx-auto">
                         <%- include('./partials/cards-lugar-index', {
                             ...product
                         }) %>
@@ -57,6 +57,41 @@
         </div>
     <% } %>
 </section>
+<!-- mobile -->
+        <!-- Hoteles recomendados mobile slider -->
+        <section class="contenedor-primer-carrusel">
+            <% if (keywords && results.length) { %>
+            <div class="swiper-container mySwiper">
+                <h3 class="text-center">Hoteles recomendados para ti <%= keywords %> </h3>
+                <div class="swiper-wrapper d-flex justify-content-center">
+                    <% results.forEach(product => { %>
+                        <% if (product.category === "hotel") { %>
+                        <%-include('./partials/cards-slider-hotel-mobile',{
+                            ...product
+                        }) %>
+                    <% }%>
+                <% }) %>
+                </div>
+            </div>
+            <% } %>
+        </section>
+        <!-- lugares recomendados mobile slider -->
+        <section class="contenedor-primer-carrusel">
+            <% if (keywords && results.length) { %>
+            <div class="swiper-container mySwiper">
+                <h3 class="text-center">Hoteles recomendados para ti <%= keywords %> </h3>
+                <div class="swiper-wrapper d-flex justify-content-center">
+                    <% results.forEach(product => { %>
+                        <% if (product.category === "pais") { %>
+                        <%-include('./partials/cards-slider-lugar-mobile',{
+                            ...product
+                        }) %>
+                    <% }%>
+                <% }) %>
+                </div>
+            </div>
+            <% } %>
+        </section>
 </main>
 
         <!-- footer -->
