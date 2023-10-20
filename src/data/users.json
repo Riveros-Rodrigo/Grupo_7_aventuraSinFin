@@ -69,11 +69,6 @@
       "email": "sergio@gmail.com",
       "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
       "rol": "user",
-<<<<<<< HEAD
-      "telefono": "",
-      "birthday": "",
-      "profilePicture": "1696003726679_products_.jpg"
-=======
       "birthday": null
    },
    {
@@ -84,6 +79,5 @@
       "password": "$2a$10$Axtx5bs05p6iEJTp739ch.8jWY4dsJfuM7du2Zmi1VNNe6F/lb3n6",
       "rol": "user",
       "birthday": null
->>>>>>> develop
    }
 ]
