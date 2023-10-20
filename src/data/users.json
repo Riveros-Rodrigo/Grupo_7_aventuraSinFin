@@ -76,5 +76,14 @@
       "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
       "rol": "user",
       "birthday": null
+   },
+   {
+      "id": "919692c4-37f0-425e-b355-d356fa03532d",
+      "name": "Ema",
+      "surname": "Arroyo",
+      "email": "ema@gmail.com",
+      "password": "$2a$10$Axtx5bs05p6iEJTp739ch.8jWY4dsJfuM7du2Zmi1VNNe6F/lb3n6",
+      "rol": "user",
+      "birthday": null
    }
 ]

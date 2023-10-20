@@ -6,7 +6,7 @@ const router = express.Router();
 /* GET home page. */
 router.get('/', index );
 router.get('/search', search); 
-router.get('/dashboard',checkAdmin,dashboard)
+router.get('/dashboard/:category?',(req,res,next) => {console.log(req.params.category);next();},checkAdmin,dashboard)
 router.get('/vuelos', vuelos)
 
 module.exports = router;

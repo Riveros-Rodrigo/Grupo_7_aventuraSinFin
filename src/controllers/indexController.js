@@ -17,11 +17,19 @@ module.exports = {
       })
     },
     dashboard : (req,res) => {
-
+      const {category} = req.params
       const products = readJSON('products.json');
+      let categoryDefault = 'pais'
+
+      if(category) {
+        categoryDefault = category
+      }
       
+      const productsFilter = products.filter((p) =>  categoryDefault === p.category)
+ 
       return res.render('dashboard', {
-          products
+          products: productsFilter,
+          categorySelected:categoryDefault
       })
   },
   vuelos : (req, res) => {

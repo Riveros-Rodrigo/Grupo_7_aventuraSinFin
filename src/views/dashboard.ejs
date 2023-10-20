@@ -8,17 +8,18 @@
 
             <main class="container">
                 <div class="row mt-5">
+              
                     <div class="col-12 col-md-12  mx-auto">
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
-                                aria-selected="true">Vuelos</button>
-                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-profile" type="button" role="tab"
-                                aria-controls="nav-profile" aria-selected="false">Hoteles</button>
-                            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab"
-                                data-bs-target="#nav-contact" type="button" role="tab"
-                                aria-controls="nav-contact" aria-selected="false">Paquetes</button>
+                            <a class="nav-link <%= locals.categorySelected === 'pais' ||  !locals.categorySelected && 'active' %>" 
+                                href="/dashboard/pais"
+                                aria-selected="true">Vuelos</a>
+                            <a class="nav-link  <%= locals.categorySelected === 'hotel' && 'active' %>" 
+                                href="/dashboard/hotel" 
+                                aria-controls="nav-profile" aria-selected="false">Hoteles</a>
+                            <a class="nav-link  <%= locals.categorySelected === 'paquete' && 'active' %>" 
+                               href="/dashboard/paquete"
+                                aria-controls="nav-contact" aria-selected="false">Paquetes</a>
                         </div>
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
