@@ -5,6 +5,10 @@ module.exports = [
         .notEmpty().withMessage('Es obligatorio agregar el lugar'),
     check('hotel')
         .notEmpty().withMessage('Es obligatorio agregar el hotel'),
+    check('category')
+        .notEmpty().withMessage('Es obligatorio agregar la categoria'),
+    check('flights')
+        .notEmpty().withMessage('Es obligatorio agregar el vuelo'),
     check('description')
         .notEmpty().withMessage('La desscripción es requerida').bail()
         .isLength({

@@ -11,17 +11,37 @@ module.exports = {
       },
       categoryId: {
         type: Sequelize.INTEGER,
+        referencer : {
+          model: {
+            tableName:'Categories'
+          }
+        }
       },
       countryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        referencer : {
+          model: {
+            tableName:'Countries'
+          }
+        }
       },
       hotelId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        referencer : {
+          model: {
+            tableName:'Hotels'
+          }
+        }
       },
       flightId: {
         type: Sequelize.INTEGER,
+        referencer : {
+          model: {
+            tableName:'Flights'
+          }
+        }
       },
       description: {
         type: Sequelize.TEXT,
