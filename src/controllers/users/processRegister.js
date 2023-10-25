@@ -1,25 +1,35 @@
-const {validationResult} = require('express-validator')
-const User = require('../../data/User')
-const { readJSON, writeJSON } = require('../../data')
+const {validationResult} = require('express-validator');
+const db = require('../../database/models');
+const { hashSync } = require('bcryptjs');
 
-module.exports = (req, res) => {
-    let errors = validationResult(req)
-    //si los errores estan vacios muestra lo que viene por el body
+module.exports = (req,res) => {
+
+    let errors = validationResult(req);
     if(errors.isEmpty()){
-        const users = readJSON('users.json');
-        //paso nueva instancia de la funcion constructora
-        const newUser = new User(req.body);
-        users.push(newUser);
-        //guardo en json
-        writeJSON(users, 'users.json');
-         return res.redirect('/')
-        // return res.redirect('/profile'); // En lugar de return res.redirect('/');
+        
+        const {name, surname, email, password} = req.body;
 
-    } else{
-        // si no lo devuelve a register y con lo que completo
-        return res.render('register',{
+        db.User.create({
+            name : name.trim(),
+            surname : surname.trim(),
+            email : email.trim(),
+            password : hashSync(password, 10),
+            roleId : 2
+        })
+            .then(user => {
+                db.Address.create({
+                    userId : user.id
+                })
+                .then(() => res.redirect('/'))
+            })
+            .catch(error => console.log(error))
+ 
+
+    }else {
+        return res.render('register', {
             old : req.body,
-            errors : errors.mapped() 
+            errors : errors.mapped()
         })
     }
+    
 }
