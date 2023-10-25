@@ -16,5 +16,4 @@ const User = function ({name, surname, email, password, telefono, genero, asient
     this.profilePicture = profilePicture;
 }
 
-
 module.exports = User

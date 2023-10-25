@@ -16,6 +16,7 @@ const { readJSON } = require("../../data")
 
         return res.render('profile', {
             ...user,
+<<<<<<< HEAD
             name: user.name,
             surname: user.surname,
             email: user.email,
@@ -25,5 +26,7 @@ const { readJSON } = require("../../data")
             suscripcion: user.suscripcion,
             profilePicture: user.profilePicture,
             birthday: user.birthday
+=======
+>>>>>>> rama-rodrigo
         })
     }

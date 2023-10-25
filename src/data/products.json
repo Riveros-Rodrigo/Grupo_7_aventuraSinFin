@@ -3,13 +3,13 @@
       "id": "186aa48f-7c62-cc-ab84-b13cbfc6f5a8",
       "country": "Francia",
       "category": "pais",
-      "hotel": "Transilvania",
+      "hotel": "Transilvania - Categoria Vuelo",
       "price": 50900,
       "description": "Viaja a parís un lugar divino para pasar tus vacaciones!",
       "image": "1694793867152_products_.jpg",
       "flight": "sin-escala",
       "discount": 10,
-      "updatedAt": "2023-09-15T16:26:35.359Z"
+      "updatedAt": "2023-09-29T21:36:31.685Z"
    },
    {
       "id": "975aa21f-7c62-cc-ab84-j13cbfc6f5a8",
@@ -239,5 +239,16 @@
       "discount": 20,
       "image": "1692990690223_products_.jpg",
       "updatedAt": "2023-08-25T19:11:30.229Z"
+   },
+   {
+      "id": "54c58820-02f5-483f-9772-9fddc66813f8",
+      "country": "Argentina",
+      "category": "pais",
+      "hotel": "Holanda City",
+      "description": "dssdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd",
+      "price": 100000,
+      "discount": 5,
+      "image": "1696029499378_products_.jpeg",
+      "createdAt": "2023-09-29T23:18:19.388Z"
    }
 ]

@@ -40,20 +40,22 @@
                         <!-- categoria -->
                         <div class="mb-3">
                             <label for="categoryName" class="form-label">Categoria</label>
-                            <select class="form-select" id="categoryName" name="category">
+                            <select class="form-select <%= locals.errors ? (errors.category ? 'is-invalid' : 'is-valid') : '' %>" id="categoryName" name="category">
                                 <option selected hidden value="">Seleccione...</option>
                                 <option value="pais">Pais</option>
                                 <option value="hotel">Hotel</option>
                             </select>
+                            <small class="text-warning fs-6"> <%= locals.errors && (errors.category && errors.category.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
                             <label for="flights" class="form-label">Vuelos</label>
-                            <select class="form-select" id="flights" name="flights">
+                            <select class="form-select <%= locals.errors ? (errors.flights ? 'is-invalid' : 'is-valid') : '' %>" id="flights" name="flights">
                                 <option selected hidden value="">Seleccione...</option>
                                 <option value="sin-escala">Sin escala</option>
                                 <option value="con-escala">Con escala</option>
                             </select>
+                            <small class="text-warning fs-6"> <%= locals.errors && (errors.flights && errors.flights.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
@@ -88,7 +90,8 @@
             </div>
         </div>
     </div>
-</div></main>
+</div>
+</main>
 
             <%- include('partials/footer') %>
     </body>

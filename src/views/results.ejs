@@ -66,7 +66,7 @@
         <section class="contenedor-primer-carrusel">
             <% if (keywords && results.length) { %>
             <div class="swiper-container mySwiper">
-                <h3 class="text-center">Hoteles recomendados para ti <%= keywords %> </h3>
+                <h3 class="text-center">Hoteles recomendados para ti en <%= keywords %> </h3>
                 <div class="swiper-wrapper d-flex justify-content-center">
                     <% results.forEach(product => { %>
                         <% if (product.category === "hotel") { %>
@@ -83,7 +83,7 @@
         <section class="contenedor-primer-carrusel">
             <% if (keywords && results.length) { %>
             <div class="swiper-container mySwiper">
-                <h3 class="text-center">Hoteles recomendados para ti <%= keywords %> </h3>
+                <h3 class="text-center">Lugares recomendados para ti en <%= keywords %> </h3>
                 <div class="swiper-wrapper d-flex justify-content-center">
                     <% results.forEach(product => { %>
                         <% if (product.category === "pais") { %>

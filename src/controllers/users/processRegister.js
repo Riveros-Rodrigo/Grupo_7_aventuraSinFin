@@ -22,8 +22,4 @@ module.exports = (req, res) => {
             errors : errors.mapped() 
         })
     }
-    
-
-
-    
 }
