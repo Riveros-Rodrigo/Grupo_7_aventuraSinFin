@@ -40,9 +40,9 @@ module.exports = {
       gender: {
         type: Sequelize.STRING
       },
-      seat: {
-        type: Sequelize.STRING
-      },
+      // seat: {
+      //   type: Sequelize.STRING
+      // },
       subscription: {
         type: Sequelize.STRING
       },

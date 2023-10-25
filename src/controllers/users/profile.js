@@ -1,20 +1,18 @@
-const { readJSON } = require("../../data")
+const db = require('../../database/models');
 
-    module.exports = (req,res) => {
-        const users = readJSON('users.json');
-        const user = users.find(user => user.id === req.session.userLogin.id)
-        const name = "Nombre de usuario"; 
-        const surname = "Apellido del usuario";
-        const email = "email del usuario";
-        const telefono = "telefono del usuario";
-        const genero = "genero del usuario";
-        const asiento = "preferencia de asiento del usuario";
-        const suscripcion = "preferencia de suscripcion del usuario";
-        const profilePicture = "foto del perfil del usuario";
-        const birthday = "cumpleaños del usuario";
-
-
-        return res.render('profile', {
-            ...user,
+module.exports = (req,res) => {
+    
+    db.User.findByPk(req.session.userLogin.id)
+        .then(user => {
+            const birthday = new Date(user.birthday).toISOString();
+            console.log(birthday)
+            return res.render('profile', {
+                ...user.dataValues,
+                birthday : birthday.split('T')[0]
+            })
         })
-    }
+        .catch(error => console.log(error))
+
+
+   
+}
