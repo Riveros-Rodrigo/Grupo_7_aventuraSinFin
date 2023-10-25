@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Flight.init({
-    requires: DataTypes.TINYINT,
+    require: DataTypes.TINYINT,
     product_id: DataTypes.INTEGER,
   }, {
     sequelize,

@@ -11,7 +11,7 @@ module.exports = {
       },
       categoryId: {
         type: Sequelize.INTEGER,
-        referencer : {
+        references : {
           model: {
             tableName:'Categories'
           }
@@ -20,7 +20,7 @@ module.exports = {
       countryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        referencer : {
+        references : {
           model: {
             tableName:'Countries'
           }
@@ -29,7 +29,7 @@ module.exports = {
       hotelId: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        referencer : {
+        references : {
           model: {
             tableName:'Hotels'
           }
@@ -37,26 +37,28 @@ module.exports = {
       },
       flightId: {
         type: Sequelize.INTEGER,
-        referencer : {
+        references : {
           model: {
             tableName:'Flights'
           }
         }
       },
       description: {
-        type: Sequelize.TEXT,
-        allowNull: false,
+        type: Sequelize.TEXT
       },
       price: {
         type: Sequelize.INTEGER.UNSIGNED,
-        allowNull: false,
       },
       discount: {
         type: Sequelize.INTEGER.UNSIGNED,
-        defaultValue: 0,
       },
       packageId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName:'Packages'
+          }
+        }
       },
       createdAt: {
         allowNull: false,

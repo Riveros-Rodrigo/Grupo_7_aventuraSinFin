@@ -15,14 +15,6 @@ module.exports = {
       main: {
         type: Sequelize.STRING
       },
-      product_id: {
-        type: Sequelize.INTEGER,
-        referencer : {
-          model: {
-            tableName:'Products'
-          }
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -5,20 +5,15 @@ module.exports = {
   async up (queryInterface, Sequelize) {
    
     await queryInterface.bulkInsert(
-      "Categories",
+      "Countries",
       [
         {
-          name: "Hotels",
+          name: "Argentina",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
-          name: "Flights",
-          createdAt: new Date(),
-          updatedAt: new Date(),
-        },
-        {
-          name: "Packages",
+          name: "Francia",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -29,8 +24,7 @@ module.exports = {
 
   async down (queryInterface, Sequelize) {
     
-     await queryInterface.bulkDelete('Categories', null, {});
+     await queryInterface.bulkDelete('Countries', null, {});
      
   }
 };
-

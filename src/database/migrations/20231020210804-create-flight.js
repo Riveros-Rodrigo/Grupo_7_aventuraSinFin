@@ -9,16 +9,8 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      requires: {
+      require: {
         type: Sequelize.TINYINT
-      },
-      product_id: {
-        type: Sequelize.INTEGER,
-        referencer : {
-          model: {
-            tableName:'Products'
-          }
-        }
       },
       createdAt: {
         allowNull: false,
