@@ -35,10 +35,10 @@ module.exports = (req, res) => {
             db.Image.bulkCreate(images, {
               validate : true
             }).then(response => {
-              return res.redirect('/admin');
+              return res.redirect('/dashboard');
             })
           }else{
-            return res.redirect('/admin');
+            return res.redirect('/dashboard');
 
           }
         })
@@ -57,15 +57,15 @@ module.exports = (req, res) => {
         order : ['name']
       });
   
-      const categories = db.Categorie.findAll({
+      const countries = db.Countrie.findAll({
         order : ['name']
       });
   
-      Promise.all([hotels, categorie])
-        .then(([hotels, categories]) => {
+      Promise.all([hotels, countrie])
+        .then(([hotels, countries]) => {
           return res.render("productAdd", {
             hotels,
-            categories,
+            countries,
             errors : errors.mapped(),
             old : req.body
           });

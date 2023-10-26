@@ -14,8 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Package.init({
-    name: DataTypes.STRING,
-    product_id: DataTypes.INTEGER,
+    name: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Package',

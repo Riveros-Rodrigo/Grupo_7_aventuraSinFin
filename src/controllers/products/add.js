@@ -6,15 +6,15 @@ module.exports = (req, res) => {
       order : ['name']
     });
 
-    const categories = db.Categorie.findAll({
+    const countries = db.Countrie.findAll({
       order : ['name']
     });
 
-    Promise.all([hotels, categories])
-      .then(([hotels, categories]) => {
+    Promise.all([hotels, countries])
+      .then(([hotels, countries]) => {
         return res.render("productAdd", {
           hotels,
-          categories
+          countries
         });
       })
       .catch(error => console.log(error))

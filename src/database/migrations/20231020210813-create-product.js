@@ -60,6 +60,14 @@ module.exports = {
           }
         }
       },
+      imageId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName:'Images'
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

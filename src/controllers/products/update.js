@@ -1,32 +1,64 @@
 const { unlinkSync, existsSync } = require("fs");
-const { readJSON, writeJSON } = require("../../data");
+const db = require("../../database/models");
 
-module.exports = async (req, res) => {
-    const products = await readJSON("products.json");
-    const id = req.params.id;
-    const { country, hotel, flight, description, price, discount } = req.body;
+module.exports = (req, res) => {
+  const id = req.params.id;
+  const { countrie,hotel,categorie,flight,description,price,discount,package } = req.body;
 
-    const productsModify = products.map((product) => {
-      if (product.id === id) {
-  
-        req.file &&
-          existsSync(`./public/images/${product.image}`) &&
-          unlinkSync(`./public/images/${product.image}`);
-  
-        product.country = country.trim();
-        product.hotel = hotel;
-        product.flight = flight;
-        product.description = description.trim();
-        product.price = +price;
-        product.discount = +discount;
-        product.updatedAt = new Date();
-        product.image = req.file ? req.file.filename : product.image;
-      }
-  
-      return product;
-    });
+  db.Product.findByPk(id, {
+    include: ["images"],
+  })
+    .then((product) => {
+      req.files.image &&
+        existsSync(`./public/images/${product.image}`) &&
+        unlinkSync(`./public/images/${product.image}`);
 
-    writeJSON(productsModify, "products.json");
+      db.Product.update(
+        {
+        categoryId : categorie,
+        countryId : countrie,
+        hotelId : hotel, 
+        flightId : flight,
+        description : description.trim(),
+        price,
+        discount : discount || 0,
+        packageId : package,
+        image : req.files.image ? req.files.image[0].filename : product.image,
+        },
+        {
+          where: {
+            id,
+          },
+        }
+      ).then(() => {
+        if (req.files.images) {
+          product.images.forEach((image) => {
+            existsSync(`./public/images/${image.file}`) &&
+              unlinkSync(`./public/images/${image.file}`);
+          });
 
-    return res.redirect("/dashboard");
+          db.Image.destroy({
+            where: {
+              productId: id,
+            },
+          }).then(() => {
+            const images = req.files.images.map((file) => {
+              return {
+                file: file.filename,
+                main: false,
+                productId: product.id,
+              };
+            });
+            db.Image.bulkCreate(images, {
+              validate: true,
+            }).then((response) => {
+              return res.redirect("/dashboard");
+            });
+          });
+        } else {
+          return res.redirect("/dashboard");
+        }
+      });
+    })
+    .catch((error) => console.log(error));
 };
