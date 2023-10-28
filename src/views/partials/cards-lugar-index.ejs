@@ -1,13 +1,13 @@
 
-    <% if (category === "pais") { %>
+    <% if (products.id === products.countryId) { %>
         <div class="card">
-            <img src="/images/<%= image || 'card1.png' %>" class="card-img-top" alt="...">
+            <img src="/images/<%= products.image || 'card1.png' %>" class="card-img-top" alt="...">
             <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                <h5 class="card-title text-white"><%= country %></h5>
+                <h5 class="card-title text-white"><%= products.country %></h5>
                 <ul class="card-text text-white">
-                    <li>Hotel: <%= hotel %></li>
-                    <li>Precio: <%= price %></li>
-                    <li>Descripción: <%= description %></li>
+                    <li>Hotel: <%= products.hotel %></li>
+                    <li>Precio: <%= products.price %></li>
+                    <li>Descripción: <%= products.description %></li>
                     <div class="estrellas">
                         <i class="fa-sharp fa-solid fa-star"></i>
                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -15,7 +15,7 @@
                         <i class="fa-sharp fa-solid fa-star"></i>
                         <i class="fa-sharp fa-solid fa-star"></i>
                     </div>
-                    <a class="pointer btn btn-primary mt-2" href="/products/detail/<%= id %>">Mas Detalles</a>
+                    <a class="pointer btn btn-primary mt-2" href="/products/detail/<%= products.id %>">Mas Detalles</a>
                 </ul>
             </div>                        
         </div>
