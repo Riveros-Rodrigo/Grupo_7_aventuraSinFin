@@ -9,11 +9,13 @@ module.exports = {
       [
         {
           require: true,
+          name: "Clara",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           require: false,
+          name: "Rodrigo",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

@@ -9,11 +9,19 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      userId: {
+      productId: {
         type: Sequelize.INTEGER,
         references :{
           model:{
-            tableName : 'Users'
+            tableName : 'Products'
+          }
+        }
+      },
+      reservationId: {
+        type: Sequelize.INTEGER,
+        references :{
+          model:{
+            tableName : 'Reservations'
           }
         }
       },

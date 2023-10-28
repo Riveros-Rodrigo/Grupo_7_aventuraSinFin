@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cart.init({
-    user_id: DataTypes.INTEGER,
+    prodcutId: DataTypes.INTEGER,
+    reservationId: DataTypes.INTEGER,
     subtotal: DataTypes.INTEGER
   }, {
     sequelize,
