@@ -10,21 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       date: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
+      },
+      quantity: {
+        type: Sequelize.INTEGER
       },
       userId: {
         type: Sequelize.INTEGER,
         references :{
           model:{
             tableName : 'Users'
-          }
-        }
-      },
-      cartId: {
-        type: Sequelize.INTEGER,
-        references :{
-          model:{
-            tableName : 'Carts'
           }
         }
       },

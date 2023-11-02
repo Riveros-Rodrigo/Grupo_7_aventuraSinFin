@@ -12,6 +12,10 @@ module.exports = {
       require: {
         type: Sequelize.TINYINT
       },
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
