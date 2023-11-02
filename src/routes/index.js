@@ -8,5 +8,6 @@ router.get('/', index );
 router.get('/search', search); 
 router.get('/dashboard/:category?',(req,res,next) => {console.log(req.params.category);next();},checkAdmin,dashboard)
 router.get('/vuelos', vuelos)
+router.get('/hotels', hotels)
 
 module.exports = router;
