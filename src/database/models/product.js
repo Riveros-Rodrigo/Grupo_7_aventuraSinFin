@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
        foreignKey : 'categoryId'
      });
 
-     Product.belongsTo(models.Countries, {
+     Product.belongsTo(models.Countrie, {
        as : 'countrie',
        foreignKey : 'countryId'
      });
@@ -49,7 +49,6 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
     packageId: DataTypes.INTEGER,
-    imageId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Product',
