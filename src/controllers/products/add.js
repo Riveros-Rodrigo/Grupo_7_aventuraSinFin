@@ -1,11 +1,23 @@
-const { readJSON } = require("../../data");
+const db = require('../../database/models')
 
 module.exports = (req, res) => {
-    const products = readJSON("products.json");
-
-    return res.render("productAdd", {
-        products: products.sort((a, b) =>
-        a.hotel > b.hotel ? 1 : a.hotel < b.hotel ? -1 : 0
-      ),
+    
+    const hotels = db.Hotel.findAll({
+      order : ['name']
     });
+
+    const countries = db.Countrie.findAll({
+      order : ['name']
+    });
+
+    Promise.all([hotels, countries])
+      .then(([hotels, countries]) => {
+        return res.render("productAdd", {
+          hotels,
+          countries
+        });
+      })
+      .catch(error => console.log(error))
+
+   
   }

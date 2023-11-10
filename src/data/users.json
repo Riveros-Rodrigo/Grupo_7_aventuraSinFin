@@ -1,18 +1,5 @@
 [
    {
-      "id": "eaaf662d-29ee-461f-8bae-365eb476b7a6",
-      "name": "Rodrigo",
-      "surname": "Riveros",
-      "email": "rodrigoezequiel.riveros@gmail.com",
-      "password": "$2a$10$qxNOnmVMLEMrO0UXthN5IuCnEChcsaUvnF.A8/W1haYNhvgnX0Xpm",
-      "rol": "admin",
-      "birthday": null
-   },
-   {
-      "id": "5c9f8307-0d77-4f6e-a092-8361dcf1bec8",
-      "profilePicture": null
-   },
-   {
       "id": "9fa8d860-329d-4e16-b0bb-93783d583174",
       "name": "Liam",
       "surname": "Nuske",
@@ -21,8 +8,6 @@
       "rol": "user",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -35,8 +20,6 @@
       "rol": "admin",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
@@ -49,29 +32,25 @@
       "rol": "user",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
    {
-      "id": "a4766a85-ceec-4c71-8adb-de6a36d68736",
-      "name": "Carmen",
-      "surname": "Costa",
-      "email": "carmencosta@gmail.com",
-      "password": "$2a$10$LEwnw9R.uAGymw3UuHnYy.rNLtYZhDWtuFoDeM8T4GH2PpZlcuxae",
-      "rol": "user",
+      "id": "546f5a33-1e0c-425b-a5eb-39c0e4a887f0",
+      "name": "Clara",
+      "surname": "Zalazar",
+      "email": "clarazalazar@gmail.com",
+      "password": "$2a$10$Y/pM0ltIQnxowMnZjH5wguzwEoNyRwoK5G9TCS3v7m93UpVc7.sFW",
+      "rol": "admin",
       "telefono": null,
       "genero": null,
-      "asiento": null,
-      "suscripcion": null,
       "fotoPerfil": null,
       "birthday": null
    },
    {
       "id": "011d1cd1-9e5e-4047-b930-af231ba3329a",
       "name": "sergio",
-      "surname": "prieto",
+      "surname": "Prieto",
       "email": "sergio@gmail.com",
       "password": "$2a$10$9lIR3aHaD9TrCdwY0S6HzuDNaXyj/zdvPELtnqCWN8dIIsiYYp2eW",
       "rol": "user",

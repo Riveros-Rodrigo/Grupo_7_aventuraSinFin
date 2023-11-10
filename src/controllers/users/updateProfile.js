@@ -1,44 +1,45 @@
-const { readJSON, writeJSON } = require("../../data");
-const multer = require('multer');
-const path = require('path');
+const { validationResult } = require('express-validator');
+const db = require('../../database/models');
 
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(__dirname, '..', '..', 'uploads'));
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+module.exports = (req,res) => {
+    
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()){
+        const {name, surname, birthday, gender, phone, subscription, address, city, province} = req.body
+       
+        db.User.update(
+            {
+                name : name.trim(),
+                surname: surname.trim(),
+                birthday,
+                gender,
+                phone,
+                subscription,
+            },
+            {
+                where : {
+                    id : req.session.userLogin.id
+                }
+            }
+        )
+            .then(response => {
+                console.log(response);
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
+       
+    }else {
+        db.User.findByPk(req.session.userLogin.id)
+        .then(user => {
+            return res.render('profile', {
+                ...user.dataValues,
+                errors : errors.mapped()
+            })
+        })
+        .catch(error => console.log(error))
     }
-});
 
-const upload = multer({ storage });
-
-module.exports = async (req, res) => {
-    const users = readJSON('users.json');
-
-    if (req.file) {
-        console.log('Nombre del archivo:', req.file.filename);
-    } else {
-        console.log('No se cargó ningún archivo');
-    }
-
-    const updatedUser = {
-        id: req.session.userLogin.id,
-        name: req.body.name,
-        surname: req.body.surname,
-        birthday: req.body.birthday,
-        telefono: req.body.telefono,
-        genero: req.body.genero,
-        asiento: req.body.asiento,
-        suscripcion: req.body.suscripcion,
-        profilePicture: req.file ? req.file.filename : null
-    };
-
-    const userIndex = users.findIndex(user => user.id === req.session.userLogin.id);
-    users[userIndex] = updatedUser;
-
-    writeJSON(users, 'users.json');
-
-    res.redirect('/users/profile');
-};
-   
+    
+}
+    

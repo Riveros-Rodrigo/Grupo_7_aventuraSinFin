@@ -1,5 +1,5 @@
 const express = require('express');
-const { index, search, dashboard, vuelos } = require('../controllers/indexController');
+const { index, search, dashboard, vuelos, hotels } = require('../controllers/indexController');
 const checkAdmin = require('../middlewares/checkAdmin');
 const router = express.Router();
 
@@ -8,5 +8,6 @@ router.get('/', index );
 router.get('/search', search); 
 router.get('/dashboard/:category?',(req,res,next) => {console.log(req.params.category);next();},checkAdmin,dashboard)
 router.get('/vuelos', vuelos)
+router.get('/hotels', hotels)
 
 module.exports = router;

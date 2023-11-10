@@ -1,16 +1,16 @@
-<% if (category === "hotel") { %>
+<% if (products.id === products.hotelId) { %>
     <div class="swiper-slide">
-        <img src="/images/<%= image || 'card1.png' %>"
+        <img src="/images/<%= products.image || 'card1.png' %>"
             alt="">
         <div class="card-description">
             <div class="card-title">
-                <h4>Descripción</h4>
+                <h4><%= products.hotel %></h4>
             </div>
             <div class="card-text">
-                <p><%= description %></p>
+                <p><%= products.description %></p>
             </div>
             <div class="card-link">
-                <a href="/products/detail/<%= id %>">Ver más</a>
+                <a href="/products/detail/<%= products.id %>">Ver más</a>
             </div>
         </div>
     </div>

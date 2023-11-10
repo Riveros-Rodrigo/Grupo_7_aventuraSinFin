@@ -1,10 +1,14 @@
 const {check} = require('express-validator')
 
 module.exports = [
-    check('country')
+    check('countrie')
         .notEmpty().withMessage('Es obligatorio agregar el lugar'),
     check('hotel')
         .notEmpty().withMessage('Es obligatorio agregar el hotel'),
+    check('categorie')
+        .notEmpty().withMessage('Es obligatorio agregar la categoria'),
+    check('flight')
+        .notEmpty().withMessage('Es obligatorio agregar el vuelo'),
     check('description')
         .notEmpty().withMessage('La desscripción es requerida').bail()
         .isLength({
@@ -14,7 +18,7 @@ module.exports = [
     check('price')
         .notEmpty().withMessage('Debes indicar el precio').bail()
         .isDecimal().withMessage('El precio debe ser un número'),
-    check('productImage')
+    check('images')
         .custom((value, {req}) =>{
             if(req.file){
                 return true

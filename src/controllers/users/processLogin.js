@@ -1,28 +1,32 @@
 const {validationResult} = require('express-validator');
-const { readJSON } = require('../../data');
-
+const db = require('../../database/models');
 module.exports = (req,res) => {
 
     const errors = validationResult(req);
 
     if(errors.isEmpty()){
-        const users = readJSON('users.json');
         const {email, remember} = req.body
-        const user = users.find(user => user.email === email);
-        const {id, name, rol} = user;
-        // guardo en session esta info
-        req.session.userLogin = {
-            id,
-            name,
-            rol
-        }
-        // guardo la cookie
-        remember !== undefined && res.cookie('aventuraSF',req.session.userLogin,{
-            maxAge: 1000 * 60 * 3 // 3 minutos
+
+        db.User.findOne({
+            where : {
+                email
+            }
         })
-
-        return res.redirect('/users/profile'); // Redirige al perfil del usuario
-
+            .then(user => {
+                req.session.userLogin = {
+                    id : user.id,
+                    name : user.name,
+                    rol : user.rolId
+                }
+        
+                remember !== undefined && res.cookie('aventuraSF',req.session.userLogin,{
+                    maxAge : 1000 * 60 * 3
+                })
+        
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
+      
     }else {
         return res.render('login',{
             errors : errors.mapped()

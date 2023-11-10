@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head -->
+<%- include('./partials/head',{ title : 'Hoteles' }) %>
+
+    <body>
+        <!-- header -->
+        <%- include('./partials/header') %>
+            <!-- cuerpo de pagina -->
+            <main>
+                <div class="contenedor">
+                    <label class="buscador">
+                        <form action="/search" method="get">
+                            <input type="text" name="keywords" placeholder="Buscar...">
+                            <button type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </label>
+                    <!-- banner slider -->
+                    <section class="container-slider">
+                        <%-include('./partials/slider-banner') %>
+                    </section>
+                    <section class="banner">
+                        <div class="destinos">
+                            <p>Ida y vuelta</p>
+                            <p>Solo ida</p>
+                            <p>Multidestino</p>
+                        </div>
+                        <article class="vuelos">
+                            <div class="argentina">
+                                <p class="bue">BUE</p>
+                                <p>Buenos Aires, Arg</p>
+                            </div>
+                            <div class="brasil">
+                                <p class="rio">RIO</p>
+                                <p>Rio de janeiro, Brasil</p>
+                            </div>
+                        </article>
+                        <article class="formas">
+                            <div class="calendario">
+                                <div class="ida">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>Ida</p>
+                                </div>
+                                <div class="vuelta">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <p>Vuelta</p>
+                                </div>
+                            </div>
+                            <div class="pasajeros">
+                                <p class="pasajero">1 Pasajero</p>
+                                <p>Económica</p>
+                            </div>
+                        </article>
+                        <label style=" padding: 0px 0px 20px 0px;">
+                            <input type="checkbox" name="hobby" value="Pescar">Ver fechas más baratas
+                        </label>
+                    </section>
+                </div>
+                <!-- Carrusel top destinos -->
+                <div class="contenedor-desktop">
+                    <section class="contenedor-segundo-carrusel">
+                        <h1>Top destinos más buscados hoy</h1>
+                        <!-- carrusel top destinos desktop -->
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                            <%-include('./partials/slider-desk-top') %>
+                        </div>
+                        <!-- carrusel top destinos mobile y tablet -->
+                        <div id="carouselExampleCaptions" class="carousel slide carrusel-mobile">
+                            <%-include('./partials/slider-mobile-top') %>
+                        </div>
+                    </section>
+                    <!-- Seccion ofertas -->
+                    <section class="ofertas">
+                        <h2>Ofertas que no pueden esperar</h2>
+                        <article>
+                            <img src="/images/oferta.jpg" alt="Hombre descansando">
+                            <div class="boton">
+                                <button>Ver Ofertas</button>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+        <!-- Hoteles recomendados mobile slider -->
+        <section class="contenedor-primer-carrusel">
+            <div class="swiper-container mySwiper">
+                <h3>Hoteles recomendados para ti </h3>
+                <div class="swiper-wrapper">
+                    <% products.forEach(product => { %>
+                        <%-include('./partials/cards-slider-hotel-mobile',{
+                            ...product
+                        }) %>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
+    <!-- cards solo vista desktop HOTELES  -->
+    <section class="contenedor-card">
+        <h3>Hoteles recomendados para ti</h3>
+        <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+            <% products.forEach(product => { %>
+                <div class="col">
+                    <%-include('./partials/cards-hotel-index',{
+                        ...product
+                    }) %>
+                </div>
+            <% }) %>
+        </div>
+    </section>
+</main>
+
+
+    <!-- footer -->
+    <%- include('./partials/footer') %>
+    <!-- scripts-->
+    <%- include('./partials/scripts') %>
+    </body>
+
+</html>

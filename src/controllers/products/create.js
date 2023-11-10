@@ -1,43 +1,76 @@
-const {validationResult} = require('express-validator')
-const { readJSON, writeJSON } = require("../../data");
-const {existsSync, unlinkSync} = require('fs');
-const Product = require("../../data/Product");
-
+const {validationResult} = require('express-validator');
+const {existsSync, unlinkSync} = require('fs')
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
-
-    const errors = (validationResult(req)); //guardo en la constante errors lo que devuelve validationResult
-
-    if(errors.isEmpty()){ //si no hay error hace todo esto:
-        const products = readJSON("products.json"); //traigo el producto del json
-
-        const data = { //creo un objeto nuevo
-            ...req.body,
-            image : req.file ? req.file.filename : null
-        }
     
-        let newProduct = new Product(data); //el obj que cree anteriormente lo paso como parametro para que la funcion constructora haga lo suyo
-        products.push(newProduct); //esa instancia es la que se pushea
-    
-        writeJSON(products, 'products.json'); //guardo lo que hice
-    
-        return res.redirect('/dashboard');
-    } else{
-        // si en algun lugar del form hay error la imagen que subi se va a eliminar, de esta manera no se guarda basura en el proyecto
-    if(req.file){
-        existsSync('./public/images/' + req.file.filename) && unlinkSync('./public/images/' + req.file.filename)
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()){
+      
+      const {countrie,hotel,categorie,flight,description,price,discount,package} = req.body
+
+      db.Product.create({
+        categoryId : categorie,
+        countryId : countrie,
+        hotelId : hotel, 
+        flightId : flight,
+        description : description.trim(),
+        price,
+        discount : discount || 0,
+        packageId : package,
+        image : req.files.image ? req.files.image[0].filename : null
+      })
+        .then(product => {
+
+          if(req.files.images){
+            const images = req.files.images.map((file) => {
+                return {
+                  file : file.filename,
+                  main : false,
+                  productId : product.id,
+                }
+            })
+
+            db.Image.bulkCreate(images, {
+              validate : true
+            }).then(response => {
+              return res.redirect('/dashboard');
+            })
+          }else{
+            return res.redirect('/dashboard');
+
+          }
+        })
+        .catch(error => console.log(error))
+     
+
+    }else {
+
+      if(req.files.length){
+        req.files.forEach(file => {
+          existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
+        });
+      }
+
+      const hotels = db.Hotel.findAll({
+        order : ['name']
+      });
+  
+      const countries = db.Countrie.findAll({
+        order : ['name']
+      });
+  
+      Promise.all([hotels, countrie])
+        .then(([hotels, countries]) => {
+          return res.render("productAdd", {
+            hotels,
+            countries,
+            errors : errors.mapped(),
+            old : req.body
+          });
+        })
+        .catch(error => console.log(error))
     }
-
-        const products = readJSON("products.json");
-
-    return res.render("productAdd", {
-        products: products.sort((a, b) =>
-        a.hotel > b.hotel ? 1 : a.hotel < b.hotel ? -1 : 0
-        ),
-        errors : errors.mapped(),
-        old: req.body //lo que recibo del form lo envio otra vez, basicamente para que no se borre todo
-    });
-    }
-
-
-}
+  
+  }
