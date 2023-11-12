@@ -4,7 +4,7 @@ module.exports = {
   development: {
     username: 'root',
     password: 'root',
-    database: 'aventurasinfin_c20',
+    database: 'aventurasinfin_db',
     host: 'localhost',
     port : 3306,
     dialect: "mysql",
