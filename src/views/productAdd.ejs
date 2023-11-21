@@ -28,13 +28,13 @@
                         <div class="mb-3">
                             <label for="countrie" class="form-label">Lugar</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.countrie ? 'is-invalid' : 'is-valid') : '' %>" id="countrie" name="countrie" value="<%= locals.old && (old.countrie && old.countrie) %>"/>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.countrie && errors.countrie.msg) %> </small>
+                            <small id="nameLugar" class="text-warning fs-6"> <%= locals.errors && (errors.countrie && errors.countrie.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
                             <label for="hotel" class="form-label">Hotel</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.hotel ? 'is-invalid' : 'is-valid') : '' %>" id="hotel" name="hotel" value="<%= locals.old && (old.hotel && old.hotel) %>"/>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.hotel && errors.hotel.msg) %> </small>
+                            <small id="hotelErrors" class="text-warning fs-6"> <%= locals.errors && (errors.hotel && errors.hotel.msg) %> </small>
                         </div>
 
                         <!-- categoria -->
@@ -45,7 +45,7 @@
                                 <option value="pais">Pais</option>
                                 <option value="hotel">Hotel</option>
                             </select>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.categorie && errors.categorie.msg) %> </small>
+                            <small id="categoryErrors" class="text-warning fs-6"> <%= locals.errors && (errors.categorie && errors.categorie.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
@@ -61,13 +61,13 @@
                         <div class="mb-3">
                             <label for="description" class="form-label">Descripción</label>
                             <textarea class="form-control <%= locals.errors ? (errors.description ? 'is-invalid' : 'is-valid') : '' %>" id="description" style="resize: none" name="description"><%= locals.old && (old.description && old.description) %></textarea>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.description && errors.description.msg) %> </small>
+                            <small id="descriptionErrors" class="text-warning fs-6"> <%= locals.errors && (errors.description && errors.description.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
                             <label for="price" class="form-label">Precio</label>
                             <input type="number" class="form-control <%= locals.errors ? (errors.price ? 'is-invalid' : 'is-valid') : '' %>" id="productPrice" name="price" min="0" step="0.01" value="<%= locals.old && (old.price && old.price) %>"/>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.price && errors.price.msg) %> </small>
+                            <small id="priceErrors" class="text-warning fs-6"> <%= locals.errors && (errors.price && errors.price.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
@@ -94,6 +94,7 @@
 </main>
 
             <%- include('partials/footer') %>
+            <script src="/javascripts/validations/validationProductAdd.js"></script>
     </body>
 
 </html>

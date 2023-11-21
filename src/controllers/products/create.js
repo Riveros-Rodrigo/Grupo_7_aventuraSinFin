@@ -47,11 +47,11 @@ module.exports = (req, res) => {
 
     }else {
 
-      if(req.files.length){
-        req.files.forEach(file => {
-          existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
-        });
-      }
+      // if(req.files.length){
+      //   req.files.forEach(file => {
+      //     existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
+      //   });
+      // }
 
       const hotels = db.Hotel.findAll({
         order : ['name']
@@ -61,7 +61,7 @@ module.exports = (req, res) => {
         order : ['name']
       });
   
-      Promise.all([hotels, countrie])
+      Promise.all([hotels, countries])
         .then(([hotels, countries]) => {
           return res.render("productAdd", {
             hotels,

@@ -19,23 +19,23 @@
                         <!-- nombre -->
                         <label for="name">Nombre</label>
                         <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="name" name="name" value="<%= locals.old && (old.name && old.name) %>">
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
+                        <small id="msgError-name" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
                         <!-- apellido -->
-                        <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control <%= locals.errors ? (errors.surname ? 'is-invalid' : 'is-valid') : '' %>" id="apellido" name="surname" value="<%= locals.old && (old.name && old.surname) %>">
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.surname && errors.surname.msg) %> </small>
+                        <label for="surname">Apellido</label>
+                        <input type="text" class="form-control <%= locals.errors ? (errors.surname ? 'is-invalid' : 'is-valid') : '' %>" id="surname" name="surname" value="<%= locals.old && (old.name && old.surname) %>">
+                        <small id="msgError-surname" class="text-warning fs-6"> <%= locals.errors && (errors.surname && errors.surname.msg) %> </small>
                         <!-- correo -->
                         <label for="email">Correo</label>
                         <input type="email" class="form-control <%= locals.errors ? (errors.email ? 'is-invalid' : 'is-valid') : '' %>" id="email" name="email" value="<%= locals.old && (old.email && old.email) %>">
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.email && errors.email.msg) %> </small>
+                        <small id="msgError-email" class="text-warning fs-6"> <%= locals.errors && (errors.email && errors.email.msg) %> </small>
                         <!-- contraseña -->
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control <%= locals.errors ? (errors.password ? 'is-invalid' : 'is-valid') : '' %>" value="<%= locals.old && (old.password && old.password) %>" id="password" type="password" name="password">
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.password && errors.password.msg) %> </small>
+                        <small id="msgError-password" class="text-warning fs-6"> <%= locals.errors && (errors.password && errors.password.msg) %> </small>
                         <!-- contraseña2 -->
                         <label for="password2">Confirmar Contraseña</label>
                         <input type="password" class="form-control <%= locals.errors ? (errors.password2 ? 'is-invalid' : 'is-valid') : '' %>" id="password2" type="password2" name="password2" value="<%= locals.old && (old.password2 && old.password2) %>">
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.password2 && errors.password2.msg) %> </small>
+                        <small id="msgError-password2" class="text-warning fs-6"> <%= locals.errors && (errors.password2 && errors.password2.msg) %> </small>
                     </div>
                     <div class="boton__registro">
                         <button type="submit">Registrate</button>
@@ -59,6 +59,7 @@
 <!-- footer -->
 <%- include('partials/footer') %>
 <!-- scripts-->
+<script src="/javascripts/validations/validationRegister.js"></script>
 <%- include('./partials/scripts') %>
 </body>
 </html>
