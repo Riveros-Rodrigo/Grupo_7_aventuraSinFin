@@ -19,7 +19,7 @@ module.exports = (req, res) => {
         price,
         discount : discount || 0,
         packageId : package,
-        image : req.files.image ? req.files.image[0].filename : null
+        images : req.files.images ? req.files.images[0].filename : null
       })
         .then(product => {
 
@@ -32,7 +32,7 @@ module.exports = (req, res) => {
                 }
             })
 
-            db.Image.bulkCreate(images, {
+            db.Images.bulkCreate(images, {
               validate : true
             }).then(response => {
               return res.redirect('/dashboard');

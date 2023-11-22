@@ -16,6 +16,9 @@ module.exports = (req,res) => {
                 gender,
                 phone,
                 subscription,
+                address,
+                city,
+                province
             },
             {
                 where : {

@@ -11,9 +11,9 @@ const User = function ({name, surname, email, password, telefono, genero, asient
     this.birthday = null;
     this.telefono = telefono.trim();
     this.genero = genero;
-    this.asiento = asiento;
+    //this.asiento = asiento;
     this.suscripcion = suscripcion;
-    this.profilePicture = profilePicture;
+    this.images = images;
 }
 
 module.exports = User

@@ -9,9 +9,9 @@ module.exports = (req, res) => {
     include: ["images"],
   })
     .then((product) => {
-      req.files.image &&
-        existsSync(`./public/images/${product.image}`) &&
-        unlinkSync(`./public/images/${product.image}`);
+      req.files.images &&
+        existsSync(`./public/images/${product.images}`) &&
+        unlinkSync(`./public/images/${product.images}`);
 
       db.Product.update(
         {
@@ -23,7 +23,7 @@ module.exports = (req, res) => {
         price,
         discount : discount || 0,
         packageId : package,
-        image : req.files.image ? req.files.image[0].filename : product.image,
+        images : req.files.images ? req.files.images[0].filename : product.images,
         },
         {
           where: {
@@ -32,12 +32,12 @@ module.exports = (req, res) => {
         }
       ).then(() => {
         if (req.files.images) {
-          product.images.forEach((image) => {
-            existsSync(`./public/images/${image.file}`) &&
-              unlinkSync(`./public/images/${image.file}`);
+          product.images.forEach((images) => {
+            existsSync(`./public/images/${images.file}`) &&
+              unlinkSync(`./public/images/${images.file}`);
           });
 
-          db.Image.destroy({
+          db.Images.destroy({
             where: {
               productId: id,
             },
@@ -49,7 +49,7 @@ module.exports = (req, res) => {
                 productId: product.id,
               };
             });
-            db.Image.bulkCreate(images, {
+            db.Images.bulkCreate(images, {
               validate: true,
             }).then((response) => {
               return res.redirect("/dashboard");

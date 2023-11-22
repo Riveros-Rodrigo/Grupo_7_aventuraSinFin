@@ -25,30 +25,30 @@
                             <form action="/products/update/<%= product.id %>?_method=PUT" method="POST" class="row" enctype="multipart/form-data">
 
                                 <div class="mb-3">
-                                    <img src="/images/<%= product.image %>" alt="" class="img-fluid">
+                                    <img src="/images/<%= product.images %>" alt="" class="img-fluid">
                                 </div>
 
                                 <div class="mb-3">
-                                    <button class="btn btn-secondary" type="button" onclick="document.getElementById('productImage').click();">Editar imagen</button>
-                                    <input type="file" class="form-control" id="productImage" name="productImage" style="display: none;">
+                                    <button class="btn btn-secondary" type="button" onclick="document.getElementById('images').click();">Editar imagen</button>
+                                    <input type="file" class="form-control" id="images" name="images" style="display: none;">
                                 </div>
 
-                                <div class="mb-3">
+                                <!-- <div class="mb-3">
                                     <button class="btn btn-secondary" type="button" id="addImageBtn">Agregar otra imagen</button>                                    
                                     <input type="file" class="form-control" id="additionalImages" name="additionalImages" multiple style="display: none;"> 
-                                    <!-- <input type="file" class="form-control" id="additionalImages" name="additionalImages" multiple> -->
-                                    <div id="additionalImagesContainer"></div>
+                                    <input type="file" class="form-control" id="additionalImages" name="additionalImages" multiple> -->
+                                    <!-- <div id="additionalImagesContainer"></div>
+                                </div> -->
+
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label">País</label>
+                                    <input type="text" class="form-control" id="countryName" name="countrie"
+                                        value="<%= product.countrie %>" required>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="countryName" class="form-label">País</label>
-                                    <input type="text" class="form-control" id="countryName" name="country"
-                                        value="<%= product.country %>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="hotelName" class="form-label">Hotel</label>
-                                    <input type="text" class="form-control" id="hotelName" name="hotel"
+                                    <label for="Name" class="form-label">Hotel</label>
+                                    <input type="text" class="form-control" id="Name" name="hotel"
                                         value="<%= product.hotel %>" required>
                                 </div>
 
@@ -61,8 +61,8 @@
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="productDescription" class="form-label">Descripción</label>
-                                    <textarea class="form-control" id="productDescription" style="resize: none;"
+                                    <label for="Description" class="form-label">Descripción</label>
+                                    <textarea class="form-control" id="Description" style="resize: none;"
                                         name="description" required><%= product.description %></textarea>
                                 </div>
 
