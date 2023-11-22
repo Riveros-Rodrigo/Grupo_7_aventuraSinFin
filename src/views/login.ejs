@@ -13,22 +13,23 @@
             <section>
                 <div class="form-box">
                     <div class="form-value">
-                        <form method="post">
+                        <form method="post" id="login_form">
                             <h2 class="h2">Ingresá a tu cuenta</h2>
                             <div class="inputbox">
                                 <label for="">Email</label>
                                 <input type="email" class="form-control <%= locals.errors && (errors.email && 'is-invalid') %>"  id="email" name="email">
-                                <small class="text-warning fs-6"> <%= locals.errors && (errors.email && errors.email.msg) %> </small>
+                                <small id="errorEmail" class="text-warning fs-6"> <%= locals.errors && (errors.email && errors.email.msg) %> </small>
                             </div>
                             <div class="inputbox">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control <%= locals.errors && (errors.password && 'is-invalid') %>" id="password" name="password">
-                                <small class="text-warning fs-6"> <%= locals.errors && (errors.password && errors.password.msg) %> </small>
+                                <small id="passError" class="text-warning fs-6"> <%= locals.errors && (errors.password && errors.password.msg) %> </small>
                             </div>
                             <div class="forget__checkbox">
                                 <input type="checkbox" value="" id="remember" name="remember">
                                 <label for="remember">Recuerdame</label>
                             </div>
+                            <small id="submitErrors"  class="text-danger fs-6 ms-2" ></small>
                             <div class="botton__login">
                                 <button type="submit">Ingresar</button>
                             </div>
@@ -57,5 +58,6 @@
     </main>
     <!-- footer -->
     <%- include('./partials/footer') %>
+    <script src="/javascripts/validations/validationLogin.js"></script>
 </body>
 </html>

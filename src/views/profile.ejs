@@ -59,12 +59,12 @@
                                         <label>Género:</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino"
-                                                <%= genero === 'Masculino' ? 'checked' : '' %>>
+                                                <%= gender === 'Masculino' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="generoMasculino">Masculino</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino"
-                                                <%= genero === 'Femenino' ? 'checked' : '' %>>
+                                                <%= gender === 'Femenino' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="generoFemenino">Femenino</label>
                                         </div>
                                     </div>
@@ -90,28 +90,19 @@
                                         </div>
                                     </div>
                                     
-                                    <!-- <div class="mb-3">
-                                        <label for="asiento" class="form-label">Preferencias de asiento en vuelos</label>
-                                        <select class="form-select" id="asiento" name="asiento">
-                                            <option value="ventana" <%= asiento === 'ventana' ? 'selected' : '' %>>ventana</option>
-                                            <option value="pasillo" <%= asiento === 'pasillo' ? 'selected' : '' %>>pasillo</option>
-                                        </select>
-                                    </div> -->
-                                    
                                     <div class="form-group">
                                         <label for="suscripcion">Quiero recibir más información con ofertas y descuentos de paquetes:</label>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="suscripcion" id="suscripcionSi" value="si"
-                                                <%= suscripcion === 'si' ? 'checked' : '' %>>
+                                                <%= subscription === 'si' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="suscripcionSi">Sí</label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="suscripcion" id="suscripcionNo" value="no"
-                                                <%= suscripcion === 'no' ? 'checked' : '' %>>
+                                                <%= subscription === 'no' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="suscripcionNo">No</label>
                                         </div>
                                     </div>
-                                                                  
                                     <div class="form-group">
                                         <label for="images">Foto de Perfil:</label>
                                         <input type="file" class="form-control-file" id="images"
