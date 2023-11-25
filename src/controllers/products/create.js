@@ -8,17 +8,14 @@ module.exports = (req, res) => {
 
     if(errors.isEmpty()){
       
-      const {countrie,hotel,categorie,flight,description,price,discount,package} = req.body
+      const {countrie,hotel,description,price,discount} = req.body
 
       db.Product.create({
-        categoryId : categorie,
         countryId : countrie,
         hotelId : hotel, 
-        flightId : flight,
         description : description.trim(),
         price,
         discount : discount || 0,
-        packageId : package,
         images : req.files.images ? req.files.images[0].filename : null
       })
         .then(product => {
@@ -35,6 +32,7 @@ module.exports = (req, res) => {
             db.Images.bulkCreate(images, {
               validate : true
             }).then(response => {
+
               return res.redirect('/dashboard');
             })
           }else{
@@ -46,12 +44,6 @@ module.exports = (req, res) => {
      
 
     }else {
-
-      // if(req.files.length){
-      //   req.files.forEach(file => {
-      //     existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
-      //   });
-      // }
 
       const hotels = db.Hotel.findAll({
         order : ['name']

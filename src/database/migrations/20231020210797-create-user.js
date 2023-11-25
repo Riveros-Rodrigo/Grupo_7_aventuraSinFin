@@ -37,24 +37,26 @@ module.exports = {
       phone: {
         type: Sequelize.STRING
       },
+      
       gender: {
         type: Sequelize.STRING
       },
-      // seat: {
-      //   type: Sequelize.STRING
-      // },
+
       subscription: {
         type: Sequelize.STRING
       },
-      profilePhoto: {
+
+      image: {
         type: Sequelize.STRING
       },
       birthday: {
         type: Sequelize.DATE
+
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
+
       },
       updatedAt: {
         allowNull: false,

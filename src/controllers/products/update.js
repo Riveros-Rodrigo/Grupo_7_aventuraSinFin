@@ -3,7 +3,7 @@ const db = require("../../database/models");
 
 module.exports = (req, res) => {
   const id = req.params.id;
-  const { countrie,hotel,categorie,flight,description,price,discount,package } = req.body;
+  const { countrie,hotel,description,price,discount } = req.body;
 
   db.Product.findByPk(id, {
     include: ["images"],
@@ -15,14 +15,11 @@ module.exports = (req, res) => {
 
       db.Product.update(
         {
-        categoryId : categorie,
         countryId : countrie,
         hotelId : hotel, 
-        flightId : flight,
         description : description.trim(),
         price,
         discount : discount || 0,
-        packageId : package,
         images : req.files.images ? req.files.images[0].filename : product.images,
         },
         {

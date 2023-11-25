@@ -8,9 +8,9 @@ const router = express.Router();
 router
     .get('/detail/:id', detail)
     .get('/add', add)
-    .post('/add', upload.single('Images'), productAddValidator, create)
+    .post('/add', upload.single('images'), productAddValidator, create)
     .get('/edit/:id', edit)
-    .put('/update/:id', upload.single('Images'), update) // actualización
+    .put('/update/:id', upload.single('images'), update) // actualización
     .delete('/remove/:id', remove)
     .get('/filter',filter)
 

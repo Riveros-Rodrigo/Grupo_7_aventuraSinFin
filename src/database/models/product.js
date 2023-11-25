@@ -15,40 +15,20 @@ module.exports = (sequelize, DataTypes) => {
          as : 'hotel',
          foreignKey : 'hotelId'
        });
-     Product.belongsTo(models.Flight, {
-       as : 'flight',
-       foreignKey : 'flightId'
-     });
-
-     Product.belongsTo(models.Package, {
-       as : 'package',
-       foreignKey : 'packageId'
-     });
-     Product.belongsTo(models.Categorie, {
-       as : 'categorie',
-       foreignKey : 'categoryId'
-     });
 
      Product.belongsTo(models.Countrie, {
        as : 'countrie',
        foreignKey : 'countryId'
-     });
-
-     Product.hasMany(models.Image, {
-       as : 'images',
-       foreignKey : 'productId'
      })
    }
    }
   Product.init({
-    categoryId: DataTypes.INTEGER,
     countryId: DataTypes.INTEGER,
     hotelId: DataTypes.INTEGER,
-    flightId: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     price: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
-    packageId: DataTypes.INTEGER,
+    image : DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Product',

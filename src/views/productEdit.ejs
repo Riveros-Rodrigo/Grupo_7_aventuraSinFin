@@ -33,12 +33,6 @@
                                     <input type="file" class="form-control" id="images" name="images" style="display: none;">
                                 </div>
 
-                                <!-- <div class="mb-3">
-                                    <button class="btn btn-secondary" type="button" id="addImageBtn">Agregar otra imagen</button>                                    
-                                    <input type="file" class="form-control" id="additionalImages" name="additionalImages" multiple style="display: none;"> 
-                                    <input type="file" class="form-control" id="additionalImages" name="additionalImages" multiple> -->
-                                    <!-- <div id="additionalImagesContainer"></div>
-                                </div> -->
 
                                 <div class="mb-3">
                                     <label for="Name" class="form-label">País</label>
@@ -50,14 +44,6 @@
                                     <label for="Name" class="form-label">Hotel</label>
                                     <input type="text" class="form-control" id="Name" name="hotel"
                                         value="<%= product.hotel %>" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="flight" class="form-label">Vuelos</label>
-                                    <select class="form-select" id="flight" name="flight">
-                                        <option value="sin-escala" <%= product.flight === 'sin escala' ? 'selected' : '' %>>Sin escala</option>
-                                        <option value="con-escala" <%= product.flight === 'con escala' ? 'selected' : '' %>>Con escala</option>
-                                    </select>
                                 </div>
 
                                 <div class="mb-3">

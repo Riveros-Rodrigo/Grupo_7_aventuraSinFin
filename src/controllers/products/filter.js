@@ -1,9 +1,9 @@
 const db = require("../../database/models");
 
 module.exports = (req,res) => {
-    const categories = db.Categorie.findAll();
+    const countries = db.Countries.findAll();
     const products = db.Product.findAll({
-        include : ['hotel','countrie','images'],
+        include : ['hotel','countrie'/*,'images'*/],
         where : {
             hotelId : req.query.hotel
         }
@@ -12,13 +12,12 @@ module.exports = (req,res) => {
         order : ['name']
     })
 
-    Promise.all([categories,products, hotels])
-        .then(([categories, products, hotels]) => {
+    Promise.all([products, hotels])
+        .then(([products, hotels]) => {
             return res.render('dashboard', {
                 products,
-                categories,
                 hotels,
-                Hotel: req.query.brand
+                Hotel: req.query.countries
             })
         })
         .catch(error => console.log(error))

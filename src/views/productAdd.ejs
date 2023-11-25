@@ -33,29 +33,8 @@
 
                         <div class="mb-3">
                             <label for="hotel" class="form-label">Hotel</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.hotel ? 'is-invalid' : 'is-valid') : '' %>" id="hotel" name="hotel" value="<%= locals.old && (old.hotel && old.hotel) %>"/>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.hotel ? 'is-invalid' : 'is-valid') : '' %>" id="hotel" name="hotelId" value="<%= locals.old && (old.hotel && old.hotel) %>"/>
                             <small id="hotelErrors" class="text-warning fs-6"> <%= locals.errors && (errors.hotel && errors.hotel.msg) %> </small>
-                        </div>
-
-                        <!-- categoria -->
-                        <div class="mb-3">
-                            <label for="categorie" class="form-label">Categoria</label>
-                            <select class="form-select <%= locals.errors ? (errors.categorie ? 'is-invalid' : 'is-valid') : '' %>" id="categorie" name="categorie">
-                                <option selected hidden value="">Seleccione...</option>
-                                <option value="pais">Pais</option>
-                                <option value="hotel">Hotel</option>
-                            </select>
-                            <small id="categoryErrors" class="text-warning fs-6"> <%= locals.errors && (errors.categorie && errors.categorie.msg) %> </small>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="flight" class="form-label">Vuelos</label>
-                            <select class="form-select <%= locals.errors ? (errors.flight ? 'is-invalid' : 'is-valid') : '' %>" id="flight" name="flight">
-                                <option selected hidden value="">Seleccione...</option>
-                                <option value="sin-escala">Sin escala</option>
-                                <option value="con-escala">Con escala</option>
-                            </select>
-                            <small class="text-warning fs-6"> <%= locals.errors && (errors.flights && errors.flights.msg) %> </small>
                         </div>
 
                         <div class="mb-3">

@@ -9,14 +9,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      categoryId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model: {
-            tableName:'Categories'
-          }
-        }
-      },
+      
       countryId: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -35,14 +28,7 @@ module.exports = {
           }
         }
       },
-      flightId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model: {
-            tableName:'Flights'
-          }
-        }
-      },
+    
       description: {
         type: Sequelize.TEXT
       },
@@ -52,18 +38,12 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER.UNSIGNED,
       },
-      packageId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model: {
-            tableName:'Packages'
-          }
-        }
-      },
+     
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
+      
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
