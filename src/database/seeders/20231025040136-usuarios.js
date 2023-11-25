@@ -17,7 +17,7 @@ module.exports = {
           gender: null,
           // seat: null,
           subscription: null,
-          profilePhoto: null,
+          image: null,
           birthday: null,
           createdAt : new Date,
           updatedAt : new Date
@@ -33,7 +33,7 @@ module.exports = {
             gender: null,
             // seat: null,
             subscription: null,
-            profilePhoto: null,
+            image: null,
             birthday: null,
           createdAt : new Date,
           updatedAt : new Date

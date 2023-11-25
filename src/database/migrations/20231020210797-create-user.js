@@ -51,7 +51,6 @@ module.exports = {
       },
       birthday: {
         type: Sequelize.DATE
-
       },
       createdAt: {
         allowNull: false,

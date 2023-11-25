@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
    }
    }
   Product.init({
+    name: DataTypes.STRING,
     countryId: DataTypes.INTEGER,
     hotelId: DataTypes.INTEGER,
     description: DataTypes.TEXT,

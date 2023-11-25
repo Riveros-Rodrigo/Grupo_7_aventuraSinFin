@@ -7,14 +7,24 @@ module.exports = {
       "Products",
       [
         {
-          categoryId: 1,
+          name: 'vuelo a Paris',
           countryId: 1,
           hotelId: 1,
-          flightId: 1,
-          description: null,
-          price: null,
-          discount: null,
-          packageId: 1,
+          description: 'Viaje a pais all include',
+          price: 1000,
+          discount: 0,
+          image: 'francia-banner.jpg',
+          createdAt : new Date,
+          updatedAt : new Date
+        },
+        {
+          name: 'vuelo a Brasil',
+          countryId: 1,
+          hotelId: 1,
+          description: 'Viaje a pais all include',
+          price: 1000,
+          discount: 0,
+          image: 'img-banner.jpg',
           createdAt : new Date,
           updatedAt : new Date
         },
