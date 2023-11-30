@@ -9,11 +9,25 @@ module.exports = {
       [
         {
           name: "Argentina",
+          image: 'Argentina.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           name: "Francia",
+          image: 'franciaEifel.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Uruguay",
+          image: 'uruguay.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Brasil",
+          image: 'brasil.jpg',
           createdAt: new Date(),
           updatedAt: new Date(),
         },

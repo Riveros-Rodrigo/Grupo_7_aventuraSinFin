@@ -42,6 +42,10 @@ module.exports = {
       discount: {
         type: Sequelize.INTEGER.UNSIGNED,
       },
+
+      image: {
+        type: Sequelize.STRING
+      },
      
       createdAt: {
         allowNull: false,
