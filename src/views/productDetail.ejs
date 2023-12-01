@@ -10,22 +10,20 @@
     <!-- cuerpo de pagina -->
     <main class="product__container">
         <div class="product__images">
-            <img src="/images/<%= images || 'card1.png' %>" alt="">
+            <img src="/images/<%= image || 'card1.png' %>" alt="">
         </div>
         <div class="product__details">
             <div class="product__title-rating">
-                <% if (categorie === "pais") { %>
-                    <h1 class="product__title"><%= countrie %></h1>
-                <% } else{%>
-                    <h1 class="product__title"><%= hotel %></h1>
-                <%} %>
+                    <h1 class="product__title"><%= countrie ? `${name} | ${countrie.name}`  : hotel.name %></h1>
+
                 <div class="product__rating">
                     ★★★★<span class="product__star-gray">★</span> 
                 </div>
             </div>
             <p class="product__description"><%= description %></p>
-            <% if (categorie === "hotel") { %>
+            <% if (hotel) { %>
                 <p class="product__additional-info">Habitaciones cuádruples / Varios tipos de camas.</p>
+
             <% } %>
             <p class="product__additional-info product__price"><strong>U$S<%= price %></strong></p> 
             <button class="product__button">RESERVAR</button>

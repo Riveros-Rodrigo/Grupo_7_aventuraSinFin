@@ -31,6 +31,18 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Perú",
+          image: 'machupichu.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Panamá",
+          image: 'HardRockPanamá.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
