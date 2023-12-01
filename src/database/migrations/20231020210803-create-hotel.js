@@ -13,7 +13,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-
+      countrieId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName:'Countries'
+          }
+        }
+      },
       image: {
         type: Sequelize.STRING
       },

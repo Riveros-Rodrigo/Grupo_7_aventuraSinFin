@@ -115,10 +115,10 @@
         <section class="contenedor-card"> 
             <h3>Lugares recomendados para ti </h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <% products.forEach(product => { %>
+                <% products.filter(product => product.countrie).forEach(product => { %>
                     <div class="col">
                         <%-include('./partials/cards-lugar-index',{
-                            ...product
+                            ...product.dataValues
                         }) %>
                     </div>
                 <% }) %>
@@ -128,10 +128,10 @@
         <section class="contenedor-card">
             <h3>Hoteles recomendados para ti</h3>
             <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <% products.forEach(product => { %>
+                <% products.filter(product => product.hotel).forEach(product => { %>
                     <div class="col">
                         <%-include('./partials/cards-hotel-index',{
-                            ...product
+                            ...product.dataValues
                         }) %>
                     </div>
                 <% }) %>

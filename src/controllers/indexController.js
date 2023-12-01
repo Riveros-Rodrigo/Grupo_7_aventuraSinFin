@@ -3,7 +3,9 @@ const db = require("../database/models");
 module.exports = {
   index: async (req, res) => {
     try {
-      const products = await db.Product.findAll();
+      const products = await db.Product.findAll({
+        include : ['hotel','countrie']
+      });
       return res.render('index', {
         products,
       });
@@ -40,10 +42,21 @@ module.exports = {
 
   dashboard: async (req, res) => {
     try {
-      const productsFilter = await db.Product.findAll();
+      const products = await db.Product.findAll({
+        include : [
+        {
+          association : 'hotel',
+          include : ['countrie']
+
+        },
+        {
+          association : 'countrie'
+        }
+      ]
+      });
   
       return res.render('dashboard', {
-        products: productsFilter,
+        products,
       });
     } catch (error) {
       console.error(error);
@@ -53,7 +66,9 @@ module.exports = {
   
   vuelos: async (req, res) => {
     try {
-      const products = await db.Product.findAll();
+      const products = await db.Product.findAll({
+        include : ['countrie','hotel']
+      });
       return res.render('vuelos', {
         products,
       });
@@ -65,7 +80,9 @@ module.exports = {
 
   hotels: async (req, res) => {
     try {
-      const products = await db.Product.findAll();
+      const products = await db.Product.findAll({
+        include : ['countrie','hotel']
+      });
       return res.render('hotels', {
         products,
       });

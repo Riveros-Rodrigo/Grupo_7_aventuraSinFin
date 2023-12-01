@@ -2,12 +2,12 @@ const db = require("../../database/models");
 
 module.exports = (req, res) => {
     
-   db.Product.findByPk(req.params.id, {
-    include : ['images']
+   db.Product.findByPk(req.params.id,{
+    include : ['countrie', 'hotel']
    })
     .then(product => {
       return res.render("productDetail", {
-        product,
+        ...product.dataValues,
       });
     })
     .catch(error => console.log(error))

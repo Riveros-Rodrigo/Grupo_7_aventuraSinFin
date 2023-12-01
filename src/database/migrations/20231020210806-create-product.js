@@ -16,7 +16,6 @@ module.exports = {
       },
       countryId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references : {
           model: {
             tableName:'Countries'
@@ -25,7 +24,6 @@ module.exports = {
       },
       hotelId: {
         type: Sequelize.INTEGER,
-        allowNull: false,
         references : {
           model: {
             tableName:'Hotels'
