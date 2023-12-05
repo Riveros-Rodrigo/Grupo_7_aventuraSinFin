@@ -98,7 +98,7 @@
                             </div>
                             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                                 <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
-                                    <a href="/products/add" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                    <a href="/products/add/hoteles" class="btn btn-dark"><i class="fas fa-plus"></i>
                                         Agregar</a>
                                 </div>
                             <div class="card-body">
@@ -116,7 +116,7 @@
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
-                                    <!-- tabla de vuelos -->
+                                    <!-- tabla de hoteles -->
                                     <tbody>
                                         <% products.filter(product => product.hotel && !product.countrie).forEach(({ id,hotel, price, name, discount }, index)=> { %>
                                             <tr>
@@ -176,7 +176,7 @@
                             </div>
                             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
                                 <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
-                                    <a href="/products/add" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                    <a href="/products/add/paquetes" class="btn btn-dark"><i class="fas fa-plus"></i>
                                         Agregar</a>
                                 </div>
                             <div class="card-body">
