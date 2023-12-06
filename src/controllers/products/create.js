@@ -8,15 +8,15 @@ module.exports = (req, res) => {
 
     if(errors.isEmpty()){
       
-      const {countrie,hotel,description,price,discount} = req.body
+      const {countrieId,hotelId,description,price,discount} = req.body
 
       db.Product.create({
-        countryId : countrie,
-        hotelId : hotel, 
+        countrieId ,
+        hotelId, 
         description : description.trim(),
         price,
         discount : discount || 0,
-        images : req.files.images ? req.files.images[0].filename : null
+        image : req.files.images ? req.files.images[0].filename : null
       })
         .then(product => {
 

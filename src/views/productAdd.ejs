@@ -25,16 +25,28 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="countrie" class="form-label">País</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.countrie ? 'is-invalid' : 'is-valid') : '' %>" id="countrie" name="countrie" value="<%= locals.old && (old.countrie && old.countrie) %>"/>
-                            <small id="nameLugar" class="text-warning fs-6"> <%= locals.errors && (errors.countrie && errors.countrie.msg) %> </small>
+                        <div class="mb-2">
+                            <label for="countrie" class="form-label" >Países</label>
+                            <select class="form-select <%= locals.errors && (errors.countrie && 'is-invalid') %>" aria-label="Default select example" name="countrieId" id="countrieId">
+                                <option selected hidden value="">Seleccione...</option>
+                                <% countries.forEach(countrie=> { %>
+                                  <option value="<%= countrie.id %>" <%= locals.old && (old.countrie === countrie.id && 'selected' )%> >
+                                    <%= countrie.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="hotel" class="form-label">Hotel</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.hotel ? 'is-invalid' : 'is-valid') : '' %>" id="hotel" name="hotelId" value="<%= locals.old && (old.hotel && old.hotel) %>"/>
-                            <small id="hotelErrors" class="text-warning fs-6"> <%= locals.errors && (errors.hotel && errors.hotel.msg) %> </small>
+                        <div class="mb-2">
+                            <label for="countrie" class="form-label" >Hoteles</label>
+                            <select class="form-select <%= locals.errors && (errors.countrie && 'is-invalid') %>" aria-label="Default select example" name="hotelId" id="hotelId">
+                                <option selected hidden value="">Seleccione...</option>
+                                <% hotels.forEach(hotel=> { %>
+                                  <option value="<%= hotel.id %>" <%= locals.old && (old.hotel === hotel.id && 'selected' )%> >
+                                    <%= hotel.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
                         </div>
 
                         <div class="mb-3">
@@ -73,7 +85,7 @@
 </main>
 
             <%- include('partials/footer') %>
-            <script src="/javascripts/validations/validationProductAdd.js"></script>
+            <!-- <script src="/javascripts/validations/validationProductAdd.js"></script> -->
     </body>
 
 </html>
