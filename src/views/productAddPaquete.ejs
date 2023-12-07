@@ -21,20 +21,42 @@
         <div class="col-md-6 col-lg-4 mx-auto">
             <div class="card border rounded">
                 <div class="card-header bg-white">
-                    <h4 class="card-title">Agregar producto paquetes</h4>
+                    <h4 class="card-title">Agregar producto paquete</h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="mb-3">
-                            <label for="countrie" class="form-label">País</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.countrie ? 'is-invalid' : 'is-valid') : '' %>" id="countrie" name="countrie" value="<%= locals.old && (old.countrie && old.countrie) %>"/>
-                            <small id="nameLugar" class="text-warning fs-6"> <%= locals.errors && (errors.countrie && errors.countrie.msg) %> </small>
-                        </div>
 
                         <div class="mb-3">
-                            <label for="hotel" class="form-label">Hotel</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.hotel ? 'is-invalid' : 'is-valid') : '' %>" id="hotel" name="hotelId" value="<%= locals.old && (old.hotel && old.hotel) %>"/>
-                            <small id="hotelErrors" class="text-warning fs-6"> <%= locals.errors && (errors.hotel && errors.hotel.msg) %> </small>
+                            <label for="name" class="form-label">Nombre del paquete</label>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="productName" name="name" value="<%= locals.old && (old.name && old.name) %>"/>
+                            <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="country" class="form-label" >Países</label>
+                            <select class="form-select <%= locals.errors && (errors.country && 'is-invalid') %>" aria-label="Default select example" name="country" id="country">
+                                <option selected hidden value="">Seleccione...</option>
+                                <% countries.forEach(country=> { %>
+                                  <option value="<%= country.id %>" <%= locals.old && (old.country === country.id && 'selected' )%> >
+                                    <%= country.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+                              <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.country && errors.country.msg) %> </small>
+
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="hotelId" class="form-label" >Hoteles</label>
+                            <select class="form-select <%= locals.errors && (errors.hotelId && 'is-invalid') %>" aria-label="Default select example" name="hotelId" id="hotelId">
+                                <option selected hidden value="">Seleccione...</option>
+                                <% hotels.forEach(hotel=> { %>
+                                  <option value="<%= hotel.id %>" <%= locals.old && (old.hotel === hotel.id && 'selected' )%> >
+                                    <%= hotel.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+                              <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.hotelId && errors.hotelId.msg) %> </small>
                         </div>
 
                         <div class="mb-3">
