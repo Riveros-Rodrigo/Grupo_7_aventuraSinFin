@@ -1,16 +1,16 @@
 const {check} = require('express-validator')
 
 module.exports = [
-    check('countrie')
-        .notEmpty().withMessage('Es obligatorio agregar el lugar'),
-    check('hotel')
+    check('name')
+        .notEmpty().withMessage('Es obligatorio agregar el nombre del vuelo'),
+    check('country')
+        .notEmpty().withMessage('Es obligatorio agregar el país'),
+    check('hotelId')
         .notEmpty().withMessage('Es obligatorio agregar el hotel'),
-    check('categorie')
-        .notEmpty().withMessage('Es obligatorio agregar la categoria'),
     check('flight')
         .notEmpty().withMessage('Es obligatorio agregar el vuelo'),
     check('description')
-        .notEmpty().withMessage('La desscripción es requerida').bail()
+        .notEmpty().withMessage('La descripción es requerida').bail()
         .isLength({
             min: 20,
             max: 300
