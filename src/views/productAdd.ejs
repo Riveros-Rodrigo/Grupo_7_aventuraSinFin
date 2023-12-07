@@ -25,13 +25,20 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
+
+                        <div class="mb-3">
+                            <label for="price" class="form-label">Nombre</label>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="productName" name="name" value="<%= locals.old && (old.name && old.name) %>"/>
+                            <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
+                        </div>
+
                         <div class="mb-2">
-                            <label for="countrie" class="form-label" >Países</label>
-                            <select class="form-select <%= locals.errors && (errors.countrie && 'is-invalid') %>" aria-label="Default select example" name="countrieId" id="countrieId">
+                            <label for="country" class="form-label" >Países</label>
+                            <select class="form-select <%= locals.errors && (errors.country && 'is-invalid') %>" aria-label="Default select example" name="country" id="country">
                                 <option selected hidden value="">Seleccione...</option>
-                                <% countries.forEach(countrie=> { %>
-                                  <option value="<%= countrie.id %>" <%= locals.old && (old.countrie === countrie.id && 'selected' )%> >
-                                    <%= countrie.name %>
+                                <% countries.forEach(country=> { %>
+                                  <option value="<%= country.id %>" <%= locals.old && (old.country === country.id && 'selected' )%> >
+                                    <%= country.name %>
                                   </option>
                                   <% }) %>
                               </select>
