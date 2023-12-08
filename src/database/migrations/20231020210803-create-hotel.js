@@ -21,6 +21,15 @@ module.exports = {
           }
         }
       },
+      description: {
+        type: Sequelize.TEXT
+      },
+      price: {
+        type: Sequelize.INTEGER.UNSIGNED,
+      },
+      discount: {
+        type: Sequelize.INTEGER.UNSIGNED,
+      },
       image: {
         type: Sequelize.STRING
       },

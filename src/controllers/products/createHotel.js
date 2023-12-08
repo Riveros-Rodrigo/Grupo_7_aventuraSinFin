@@ -3,14 +3,16 @@ const db = require('../../database/models')
 module.exports = async(req, res) => {
     
    try {
-    const {hotel,countrieId} = req.body
-    
+    const {hotelId,country,name,description,price,discount} = req.body
     const newHotel = await db.Hotel.create({
-        name: hotel,
-        countrieId,
-        image: req.file?.filename
+        hotelId,
+        countryId: country ? +country : null,
+        name,
+        description : description.trim(),
+        price,
+        discount : discount || 0,
+        image : req.file ? req.file.filename : null
     });
-    console.log(newHotel);
     return res.redirect('/dashboard')
    } catch (error) {
     console.log(error);
