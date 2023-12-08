@@ -4,6 +4,7 @@ module.exports = {
   addHotel: require('./products/addHotel'),
   createHotel: require('./products/createHotel'),
   addPaquete: require('./products/addPaquete'),
+  createPaquete: require('./products/createPaquete'),
   create: require('./products/create'),
   edit: require('./products/edit'),
   update : require('./products/update'),
