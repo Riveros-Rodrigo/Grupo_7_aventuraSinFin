@@ -27,7 +27,7 @@
                     <form action="" method="POST" enctype="multipart/form-data">
 
                         <div class="mb-3">
-                            <label for="price" class="form-label">Nombre</label>
+                            <label for="name" class="form-label">Destino</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="productName" name="name" value="<%= locals.old && (old.name && old.name) %>"/>
                             <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
                         </div>
@@ -42,18 +42,7 @@
                                   </option>
                                   <% }) %>
                               </select>
-                        </div>
-
-                        <div class="mb-2">
-                            <label for="countrie" class="form-label" >Hoteles</label>
-                            <select class="form-select <%= locals.errors && (errors.countrie && 'is-invalid') %>" aria-label="Default select example" name="hotelId" id="hotelId">
-                                <option selected hidden value="">Seleccione...</option>
-                                <% hotels.forEach(hotel=> { %>
-                                  <option value="<%= hotel.id %>" <%= locals.old && (old.hotel === hotel.id && 'selected' )%> >
-                                    <%= hotel.name %>
-                                  </option>
-                                  <% }) %>
-                              </select>
+                              <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.country && errors.country.msg) %> </small>
                         </div>
 
                         <div class="mb-3">

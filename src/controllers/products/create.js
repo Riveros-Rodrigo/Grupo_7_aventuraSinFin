@@ -1,5 +1,4 @@
 const {validationResult} = require('express-validator');
-const {existsSync, unlinkSync} = require('fs')
 const db = require('../../database/models');
 
 module.exports = async (req,res) =>{
