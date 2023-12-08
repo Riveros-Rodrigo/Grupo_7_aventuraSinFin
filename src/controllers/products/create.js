@@ -6,7 +6,6 @@ module.exports = async (req,res) =>{
 
   if(errors.isEmpty()){
     const {country,hotelId,description,price,discount,name} = req.body;
-
     //creo el nuevo producto en la base de dato.
     //usando async y await nos evitamos llenar el codigo de promesas, de esta manera nos evitamos la anidacion de .then()
     
