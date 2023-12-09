@@ -89,7 +89,7 @@
                 <div class="swiper-wrapper">
                     <% products.filter(product => product.hotel).forEach(product => { %>
                         <%-include('./partials/cards-slider-hotel-mobile',{
-                            ...product
+                            ...product.dataValues
                         }) %>
                     <% }) %>
                 </div>
