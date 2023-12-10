@@ -14,8 +14,8 @@ router
     .get('/add/hoteles', addHotel)
     .post('/add/hoteles', upload.single('images'), productAddValidatorHotel ,createHotel)
     .get('/add/paquetes', addPaquete)
-    .post('/add/paquetes', productAddValidatorPaquete,createPaquete)
-    .get('/edit/:id', edit)
+    .post('/add/paquetes',upload.single('images'), productAddValidatorPaquete,createPaquete)
+    .get('/edit/:id',upload.single('images'), edit)
     .put('/update/:id', upload.single('images'), update) // actualización
     .delete('/remove/:id', remove)
     .get('/filter',filter)
