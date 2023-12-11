@@ -13,7 +13,7 @@ module.exports =  (req, res) => {
     
     Promise.all([product, hotels, countries])
       .then(([product, hotels, countries]) => {
-        return res.render("productEdit", {
+        return res.render("productEditPaquete", {
           ...product.dataValues,
           hotels,
           countries

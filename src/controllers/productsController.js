@@ -7,6 +7,8 @@ module.exports = {
   createPaquete: require('./products/createPaquete'),
   create: require('./products/create'),
   edit: require('./products/edit'),
+  editPaquete: require('./products/editPaquete'),
+  editHotel: require('./products/editHotel'),
   update : require('./products/update'),
   remove : require('./products/remove'),
   filter: require('./products/filter')
