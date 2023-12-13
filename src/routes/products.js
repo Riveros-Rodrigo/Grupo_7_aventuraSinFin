@@ -18,7 +18,7 @@ router
     .get('/edit/:id',upload.single('images'), edit)
     .get('/editPaquete/:id',upload.single('images'), editPaquete)
     .get('/editHotel/:id',upload.single('images'), editHotel)
-    .put('/update/:id', upload.single('images'), update) // actualización
+    .put('/update/:id', upload.single('image'), update) // actualización
     .delete('/remove/:id', remove)
     .get('/filter',filter)
 
