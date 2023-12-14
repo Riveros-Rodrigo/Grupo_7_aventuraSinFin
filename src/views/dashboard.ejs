@@ -155,7 +155,7 @@
                                                                         href="/products/detail/<%= id %>">Ver
                                                                         producto</a></li>
                                                                 <li><a class="dropdown-item"
-                                                                        href="/products/edit/<%= id %>">Editar
+                                                                        href="/products/editHotel/<%= id %>">Editar
                                                                         producto</a></li>
                                                                 <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
                                                                     <button>
@@ -194,7 +194,7 @@
                                             <th scope="col">Acciones</th>
                                         </tr>
                                     </thead>
-                                    <!-- tabla de vuelos -->
+                                    <!-- tabla de paquetes -->
                                     <tbody>
                                         <% products.filter(product => product.hotel && product.countrie).forEach(({ id,hotel,countrie, price, name, discount }, index)=> { %>
                                             <tr>
@@ -233,7 +233,7 @@
                                                                         href="/products/detail/<%= id %>">Ver
                                                                         producto</a></li>
                                                                 <li><a class="dropdown-item"
-                                                                        href="/products/edit/<%= id %>">Editar
+                                                                        href="/products/editPaquete/<%= id %>">Editar
                                                                         producto</a></li>
                                                                 <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
                                                                     <button>

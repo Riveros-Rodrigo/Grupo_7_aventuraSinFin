@@ -1,61 +1,42 @@
-const { unlinkSync, existsSync } = require("fs");
+const { existsSync, unlinkSync } = require("fs");
 const db = require("../../database/models");
 
-module.exports = (req, res) => {
-  const id = req.params.id;
-  const { countrie,hotel,description,price,discount } = req.body;
+module.exports = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const {  countryId, description, price, discount } = req.body;
+    
+    // Obtengo el producto con sus datos actuales
+    const product = await db.Product.findByPk(id);
+    
+    // Verifica si el producto existe antes de continuar
+    if (!product) {
+      return res.status(404).send("Producto no encontrado");
+    }
 
-  db.Product.findByPk(id, {
-    include: ["images"],
-  })
-    .then((product) => {
-      req.files.images &&
-        existsSync(`./public/images/${product.images}`) &&
-        unlinkSync(`./public/images/${product.images}`);
+    // Elimino la imagen anterior si se proporciona una nueva y si la imagen anterior existe
+    if (req.file && req.file.image && existsSync(`./public/images/${product.image}`)) {
+      unlinkSync(`./public/images/${product.image}`);
+    }
 
-      db.Product.update(
-        {
-        countryId : countrie,
-        hotelId : hotel, 
-        description : description.trim(),
+    // Actualizar el producto
+    await db.Product.update(
+      {
         price,
-        discount : discount || 0,
-        images : req.files.images ? req.files.images[0].filename : product.images,
+        discount,
+        countryId,
+        description: description.trim(),
+        image: req.file ? req.file.filename : product.image,
+      },
+      {
+        where: {
+          id,
         },
-        {
-          where: {
-            id,
-          },
-        }
-      ).then(() => {
-        if (req.files.images) {
-          product.images.forEach((images) => {
-            existsSync(`./public/images/${images.file}`) &&
-              unlinkSync(`./public/images/${images.file}`);
-          });
-
-          db.Images.destroy({
-            where: {
-              productId: id,
-            },
-          }).then(() => {
-            const images = req.files.images.map((file) => {
-              return {
-                file: file.filename,
-                main: false,
-                productId: product.id,
-              };
-            });
-            db.Images.bulkCreate(images, {
-              validate: true,
-            }).then((response) => {
-              return res.redirect("/dashboard");
-            });
-          });
-        } else {
-          return res.redirect("/dashboard");
-        }
-      });
-    })
-    .catch((error) => console.log(error));
+      }
+    );
+    return res.redirect('/dashboard')
+  } catch (error) {
+    console.log(error);
+    return res.status(500).send("Internal Server Error");
+  }
 };

@@ -1,5 +1,5 @@
 const express = require('express');
-const { detail, add, addHotel , addPaquete , edit, create, update, remove, filter, createHotel, createPaquete } = require('../controllers/productsController');
+const { detail, add, addHotel , addPaquete , edit, create, update, remove, filter, createHotel, createPaquete, editPaquete, editHotel } = require('../controllers/productsController');
 const upload = require('../middlewares/upload');
 const productAddValidator = require('../validations/productAddValidator');
 const productAddValidatorHotel = require('../validations/productAddValidatorHotel');
@@ -14,9 +14,11 @@ router
     .get('/add/hoteles', addHotel)
     .post('/add/hoteles', upload.single('images'), productAddValidatorHotel ,createHotel)
     .get('/add/paquetes', addPaquete)
-    .post('/add/paquetes', productAddValidatorPaquete,createPaquete)
-    .get('/edit/:id', edit)
-    .put('/update/:id', upload.single('images'), update) // actualización
+    .post('/add/paquetes',upload.single('images'), productAddValidatorPaquete,createPaquete)
+    .get('/edit/:id',upload.single('images'), edit)
+    .get('/editPaquete/:id',upload.single('images'), editPaquete)
+    .get('/editHotel/:id',upload.single('images'), editHotel)
+    .put('/update/:id', upload.single('image'), update) // actualización
     .delete('/remove/:id', remove)
     .get('/filter',filter)
 
