@@ -4,7 +4,7 @@ const db = require("../../database/models");
 module.exports = async (req, res) => {
   try {
     const id = req.params.id;
-    const { name, countryId, description, price, discount } = req.body;
+    const { name,countryId, hotelId, description, price, discount } = req.body;
     
     // Obtengo el producto con sus datos actuales
     const product = await db.Product.findByPk(id);
@@ -20,6 +20,7 @@ module.exports = async (req, res) => {
         name: name.trim(),
         price,
         discount,
+        hotelId,
         countryId,
         description: description.trim(),
         image: req.file ? req.file.filename : product.image,
