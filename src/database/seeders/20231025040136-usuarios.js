@@ -16,7 +16,7 @@ module.exports = {
           phone: null,
           gender: null,
           subscription: null,
-          image: null,
+          image: 'default.png',
           birthday: null,
           createdAt : new Date,
           updatedAt : new Date
@@ -32,7 +32,7 @@ module.exports = {
             gender: null,
             subscription: null,
             birthday: null,
-            image: null,
+            image: 'default.png',
           createdAt : new Date,
           updatedAt : new Date
         },

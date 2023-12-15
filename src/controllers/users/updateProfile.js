@@ -7,11 +7,13 @@ module.exports = async (req, res) => {
 
         if (errors.isEmpty()) {
             const { name, surname, birthday, gender, phone, subscription, address, city, province } = req.body;
-            
+
             if (req.session.userLogin && req.session.userLogin.id) {
                 const userId = req.session.userLogin.id;
 
-                const [_, response] = await db.User.update(
+                const user = await db.User.findByPk(userId);
+
+                await db.User.update(
                     {
                         name: name.trim(),
                         surname: surname.trim(),
@@ -21,7 +23,8 @@ module.exports = async (req, res) => {
                         subscription,
                         address,
                         city,
-                        province
+                        province,
+                        image: req.file ? req.file.filename : user.image
                     },
                     {
                         where: {
@@ -30,7 +33,6 @@ module.exports = async (req, res) => {
                     }
                 );
 
-                console.log(response);
                 return res.redirect('/');
             } else {
                 return res.status(401).send('Usuario no autenticado');
