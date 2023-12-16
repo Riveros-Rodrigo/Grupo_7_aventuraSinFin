@@ -10,6 +10,8 @@ module.exports = async (req, res) => {
 
             if (req.session.userLogin && req.session.userLogin.id) {
                 const userId = req.session.userLogin.id;
+                //llamo al usuario buscandolo por userId para luego utilizar ese dato y capturar la imagen del usuario.
+                const user = await db.User.findByPk(userId);
 
                 await db.User.update(
                     {
@@ -27,14 +29,14 @@ module.exports = async (req, res) => {
                     }
                 );
 
-                await db.Address.update({
+               await db.Address.update({
                     address,
                     city,
                     province,
                 },
                 {
                     where: {
-                        id: userId
+                        userId,
                     }
                 }
                 )
