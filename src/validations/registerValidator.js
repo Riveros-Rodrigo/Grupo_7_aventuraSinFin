@@ -12,7 +12,7 @@ module.exports = [
     .withMessage("Solo se permiten caracteres alfabéticos"),
   check("surname")
     .isLength({
-      min: 2,
+      min: 2, 
     })
     .withMessage("Debe tener como mínimo dos letras")
     .bail()
