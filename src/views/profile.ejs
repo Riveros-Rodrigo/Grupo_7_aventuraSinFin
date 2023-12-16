@@ -49,21 +49,14 @@
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="telefono">Número de teléfono:</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono"
-                                            placeholder="Ingrese su Número de teléfono"
-                                            value="<%= typeof telefono !== 'undefined' ? telefono : '' %>">
-                                    </div>
-                                    
-                                    <div class="form-group">
                                         <label>Género:</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="genero" id="generoMasculino" value="Masculino"
+                                            <input class="form-check-input" type="radio" name="gender" id="generoMasculino" value="Masculino"
                                                 <%= gender === 'Masculino' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="generoMasculino">Masculino</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="genero" id="generoFemenino" value="Femenino"
+                                            <input class="form-check-input" type="radio" name="gender" id="generoFemenino" value="Femenino"
                                                 <%= gender === 'Femenino' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="generoFemenino">Femenino</label>
                                         </div>
@@ -73,7 +66,7 @@
                                         <div class="row">
                                             <div class="col-12 mb-3">
                                                 <label for="address">Domicilio</label>
-                                                <input type="text" class="form-control" name="address">
+                                                <input type="text" class="form-control" name="address" value="<%= address %>">
                                             </div>
                                             <div class="col-12 mb-3">
                                               <label for="province">Provincia</label>
@@ -93,21 +86,22 @@
                                     <div class="form-group">
                                         <label for="suscripcion">Quiero recibir más información con ofertas y descuentos de paquetes:</label>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="suscripcion" id="suscripcionSi" value="si"
+                                            <input class="form-check-input" type="radio" name="subscription" id="suscripcionSi" value="si"
                                                 <%= subscription === 'si' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="suscripcionSi">Sí</label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="suscripcion" id="suscripcionNo" value="no"
+                                            <input class="form-check-input" type="radio" name="subscription" id="suscripcionNo" value="no"
                                                 <%= subscription === 'no' ? 'checked' : '' %>>
                                             <label class="form-check-label" for="suscripcionNo">No</label>
                                         </div>
                                     </div>
+
                                     <div class="form-group">
                                         <label for="images">Foto de Perfil:</label>
                                         <input type="file" class="form-control-file" id="images"
-                                            name="images">
-                                        <img src="/images/users/<%= image || 'PERFIL-VACIO.png' %>" width="150px"
+                                            name="image">
+                                        <img src="/images/users/<%= image || 'default.png' %>" width="150px"
                                             alt="images" class="profile-img mt-2" id="images">
                                     </div>
 
