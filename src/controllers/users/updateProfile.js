@@ -6,12 +6,10 @@ module.exports = async (req, res) => {
         const errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            const { name, surname, birthday, gender, phone, subscription, address, city, province } = req.body;
+            const { name, surname, birthday, gender, subscription, address, city, province } = req.body;
 
             if (req.session.userLogin && req.session.userLogin.id) {
                 const userId = req.session.userLogin.id;
-
-                const user = await db.User.findByPk(userId);
 
                 await db.User.update(
                     {
@@ -19,11 +17,7 @@ module.exports = async (req, res) => {
                         surname: surname.trim(),
                         birthday,
                         gender,
-                        phone,
                         subscription,
-                        address,
-                        city,
-                        province,
                         image: req.file ? req.file.filename : user.image
                     },
                     {
@@ -32,6 +26,18 @@ module.exports = async (req, res) => {
                         }
                     }
                 );
+
+                await db.Address.update({
+                    address,
+                    city,
+                    province,
+                },
+                {
+                    where: {
+                        id: userId
+                    }
+                }
+                )
 
                 return res.redirect('/');
             } else {

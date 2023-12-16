@@ -34,10 +34,6 @@ module.exports = {
           }
         }
       },
-      phone: {
-        type: Sequelize.STRING
-      },
-      
       gender: {
         type: Sequelize.STRING
       },
@@ -49,7 +45,6 @@ module.exports = {
       birthday: {
         type: Sequelize.DATE
       },
-
       image: {
         type: Sequelize.STRING
       },
