@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
     if(productToDelete){
         existsSync(`./public/images/${productToDelete.image}`) &&
         unlinkSync(`./public/images/${productToDelete.image}`);
-        productToDelete.destroy();
+        await productToDelete.destroy();
         
         return res.redirect("/dashboard");
     }
