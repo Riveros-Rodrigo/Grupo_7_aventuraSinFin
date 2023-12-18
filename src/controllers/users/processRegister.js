@@ -14,7 +14,8 @@ module.exports = (req,res) => {
             surname : surname.trim(),
             email : email.trim(),
             password : hashSync(password, 10),
-            rolId : 2
+            rolId : 2,
+            image: 'default.png'
         })
             .then(user => {
                 db.Address.create({

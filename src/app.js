@@ -14,6 +14,8 @@ var productsRouter = require('./routes/products');
 const apiRouter = require('./routes/apis');
 const cartRouter = require('./routes/cart');
 const cookieCheck = require('./middlewares/cookieCheck');
+const ApiRouter = require('./routes/api');
+
 
 
 var app = express();
