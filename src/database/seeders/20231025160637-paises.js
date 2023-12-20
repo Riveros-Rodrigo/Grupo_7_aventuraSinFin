@@ -49,6 +49,34 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          name: "Italia",
+          image: null,
+          flag : 'flag_italia.png',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Japon",
+          image: null,
+          flag : 'flag_japon.png',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "Estados Unidos",
+          image: null,
+          flag : 'flag_estados-unidos.png',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          name: "México",
+          image: null,
+          flag : 'flag_mexico.png',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );

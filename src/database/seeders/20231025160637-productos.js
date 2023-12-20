@@ -55,6 +55,54 @@ module.exports = {
           updatedAt : new Date
         },
         {
+          name: 'Venecia, 100 islas pequeñas en una laguna del mar Adriático.',
+          city: "Venecia",
+          countryId: 7,
+          lodging: false,
+          description: 'Venecia, la capital de la región de Véneto en el norte de Italia, abarca más de 100 islas pequeñas en una laguna del mar Adriático. No tiene caminos, sino solo canales, incluida la vía pública del Gran Canal, bordeada de palacios renacentistas y góticos.',
+          phone: null,
+          address:null,
+          image: 'venecia.webp',
+          createdAt : new Date,
+          updatedAt : new Date
+        },
+        {
+          name: 'Tokyo, templo Zojoji',
+          city: "Tokyo",
+          countryId: 8,
+          lodging: false,
+          description: 'Descubrí uno de los templos más importantes y la historia de la capital de Japón en este tour privado por Tokio, una introducción perfecta a esta la megalópolis.',
+          phone: null,
+          address:null,
+          image: 'tokyo-zojoji.jpg',
+          createdAt : new Date,
+          updatedAt : new Date
+        },
+        {
+          name: 'Miami, disfruta de las playas',
+          city: "Miami",
+          countryId: 9,
+          lodging: false,
+          description: 'Vení a disfrutar de Miami Beach, sus largas playas se extienden desde el North Shore Open Space Park, pasa por Lummus Park, bordeado de palmeras, y llegan a South Pointe Park',
+          phone: null,
+          address:null,
+          image: 'miami.jpg',
+          createdAt : new Date,
+          updatedAt : new Date
+        },
+        {
+          name: 'Cancún, península de Yucatán',
+          city: "Cancún",
+          countryId: 10,
+          lodging: false,
+          description: 'Vení a cancún es conocida por sus playas, los numerosos centros turísticos y la vida nocturna. No te podes peder el hermoso lugar y los buenos momentos que te hace sentir.',
+          phone: null,
+          address:null,
+          image: 'cancun.jpg',
+          createdAt : new Date,
+          updatedAt : new Date
+        },
+        {
           name: 'Hotel Peyris Opera',
           city: "Paris",
           countryId: 2,

@@ -14,9 +14,13 @@ module.exports = (sequelize, DataTypes) => {
   
 
      Product.belongsTo(models.Countrie, {
-       as : 'countrie',
-       foreignKey : 'countryId'
+        as : 'countrie',
+        foreignKey : 'countryId'
      })
+     Product.belongsTo(models.Hotel, {
+        as: 'hotel', 
+        foreignKey: 'countryId' 
+      });
      Product.hasMany(models.Flight, {
       as : 'flights',
       foreignKey : 'productId'
