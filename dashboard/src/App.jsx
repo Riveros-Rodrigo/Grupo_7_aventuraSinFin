@@ -11,20 +11,20 @@ function App() {
 
   return (
     <Row>
-      <SideBar  show={show} setShow={setShow}/>
+      <SideBar show={show} setShow={setShow} />
       <Col sm={12}>
-      <TopBar setShow={setShow}/>
-      
+        <TopBar setShow={setShow} />
+
       </Col>
       <Col sm={12}>
-      <Container>
-      <Outlet/>
-      </Container>
+        <Container>
+          <Outlet />
+        </Container>
       </Col>
       <Col>
-      <Footer />
+        <Footer />
       </Col>
-      </Row>
+    </Row>
   )
 }
 

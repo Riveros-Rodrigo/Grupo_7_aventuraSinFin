@@ -24,119 +24,119 @@ export const FormProduct = ({
   setFormValues,
   products,
 }) => {
-  const [data, setData] = useState({
-    hotels: [],
-    countries: [],
-    loading: true,
-  });
+  // const [data, setData] = useState({
+  //   hotels: [],
+  //   countries: [],
+  //   loading: true,
+  // });
 
-  const imgPrev = useRef(null);
-  const btnPrev = useRef(null);
-  const inputImage = useRef(null);
-  const [changeImage, setChangeImage] = useState(false);
+  // const imgPrev = useRef(null);
+  // const btnPrev = useRef(null);
+  // const inputImage = useRef(null);
+  // const [changeImage, setChangeImage] = useState(false);
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const countries = await getSections();
-        const hotels = await getBrands();
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const countries = await getSections();
+  //       const hotels = await getBrands();
 
-        if (!countries) throw new Error("Error al traer los paises");
-        if (!hotels) throw new Error("Error al traer los hoteles");
+  //       if (!countries) throw new Error("Error al traer los paises");
+  //       if (!hotels) throw new Error("Error al traer los hoteles");
 
-        if (sections.ok && brands.ok) {
-          setData({
-            ...data,
-            countries: sections.data,
-            hotels: brands.data,
-            loading: false,
-          });
-        }
-      } catch (error) {
-        console.error;
-      }
-    };
-    getData();
-  }, []);
+  //       if (sections.ok && brands.ok) {
+  //         setData({
+  //           ...data,
+  //           countries: sections.data,
+  //           hotels: brands.data,
+  //           loading: false,
+  //         });
+  //       }
+  //     } catch (error) {
+  //       console.error;
+  //     }
+  //   };
+  //   getData();
+  // }, []);
 
-  const handleInputChange = ({ target }) => {
-    setFormValues({
-      ...formValues,
-      [target.name]:  target.value,
-    });
-  };
+  // const handleInputChange = ({ target }) => {
+  //   setFormValues({
+  //     ...formValues,
+  //     [target.name]:  target.value,
+  //   });
+  // };
 
-  const handleCleanForm = () => {
-    setFormValues({
-      id: null,
-      name: "",
-      price: "",
-      discount: "",
-      hotelId: "",
-      countryId: "",
-      description: "",
-      image: "",
-    });
-    btnPrev.current.classList.remove('fa-sync-alt');
-    imgPrev.current.src = "/images/producto-sin-imagen.png";
-    setChangeImage(false)
+  // const handleCleanForm = () => {
+  //   setFormValues({
+  //     id: null,
+  //     name: "",
+  //     price: "",
+  //     discount: "",
+  //     hotelId: "",
+  //     countryId: "",
+  //     description: "",
+  //     image: "",
+  //   });
+  //   btnPrev.current.classList.remove('fa-sync-alt');
+  //   imgPrev.current.src = "/images/producto-sin-imagen.png";
+  //   setChangeImage(false)
 
-  };
+  // };
 
-  const handleSubmitForm = async (event) => {
-    event.preventDefault();
+  // const handleSubmitForm = async (event) => {
+  //   event.preventDefault();
 
-    if (formValues.id) {
-      const result = await updateProduct(formValues, formValues.id);
+  //   if (formValues.id) {
+  //     const result = await updateProduct(formValues, formValues.id);
 
-      const productsUpdated = products.map((product) => {
-        if (product.id === formValues.id) {
-          product = result.data;
-        }
-        return product;
-      });
+  //     const productsUpdated = products.map((product) => {
+  //       if (product.id === formValues.id) {
+  //         product = result.data;
+  //       }
+  //       return product;
+  //     });
 
-      setProducts(productsUpdated);
-    } else {
-      const result = await createProduct(formValues);
-      setProducts([...products, result.data]);
-    }
-    handleCleanForm();
-  };
+  //     setProducts(productsUpdated);
+  //   } else {
+  //     const result = await createProduct(formValues);
+  //     setProducts([...products, result.data]);
+  //   }
+  //   handleCleanForm();
+  // };
 
-  const handleImagePrev = ({target}) => {
-    setFormValues({
-      ...formValues,
-      [target.name]:  target.files[0],
-    });
+  // const handleImagePrev = ({target}) => {
+  //   setFormValues({
+  //     ...formValues,
+  //     [target.name]:  target.files[0],
+  //   });
 
-    setChangeImage(true)
-    btnPrev.current.classList.add("fa-sync-alt")
+  //   setChangeImage(true)
+  //   btnPrev.current.classList.add("fa-sync-alt")
 
    
-  };
+  // };
 
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{formValues.id ? "Editar" : "Agregar"} Producto</CardTitle>
+        <CardTitle>{formValues?.id ? "Editar" : "Agregar"} Producto</CardTitle>
       </CardHeader>
       <CardBody>
-        <Form className="row" onSubmit={handleSubmitForm}>
+        <Form className="row" onSubmit={() => console.log('handleSubmitForm')}>
           <div className="d-flex mb-3 col-12">
            
               <div
                 className="mr-2 d-flex flex-column justify-content-center position-relative"
                 style={{ height: "100px" }}
               >
-                <img
-                  src={changeImage? URL.createObjectURL(formValues.image) : formValues.id ? formValues.image : "/images/producto-sin-imagen.png"}
+                {/* <img
+                  src={changeImage? URL.createObjectURL(formValues?.image) : formValues?.id ? formValues?.image : "/images/producto-sin-imagen.png"}
                   alt=""
                   height={150}
                   width={100}
                   style={{objectFit:"cover"}}
                   ref={imgPrev}
-                />
+                /> */}
                 <FormLabel
                   htmlFor="file"
                   className="rounded rounded-circle btn btn-sm btn-primary"
@@ -148,8 +148,8 @@ export const FormProduct = ({
                     cursor: "pointer",
                   }}
                 >
-                  <i  ref={btnPrev} className={`fas ${formValues.id && formValues.image ? 'fa-sync-alt' : 'fa-plus' } `}></i>    
-                  <input ref={inputImage} type="file" hidden id="file" name="image" onChange={handleImagePrev}/>
+                  {/* <i  ref={btnPrev} className={`fas ${formValues?.id && formValues?.image ? 'fa-sync-alt' : 'fa-plus' } `}></i>     */}
+                  {/* <input ref={inputImage} type="file" hidden id="file" name="image" onChange={() => console.log('handleImagePrev')}/> */}
 
                 </FormLabel>                  
 
@@ -161,8 +161,8 @@ export const FormProduct = ({
               <Form.Control
                 type="text"
                 name="name"
-                onChange={handleInputChange}
-                value={formValues.name}
+                onChange={() => console.log('handleInputChange')}
+                value={formValues?.name}
               />
             </Form.Group>
           </div>
@@ -172,8 +172,8 @@ export const FormProduct = ({
             <Form.Control
               type="number"
               name="price"
-              onChange={handleInputChange}
-              value={formValues.price}
+              onChange={() => console.log('handleInputChange')}
+              value={formValues?.price}
             />
           </Form.Group>
           <Form.Group className="mb-3 col-12 col-md-6">
@@ -181,8 +181,8 @@ export const FormProduct = ({
             <Form.Control
               type="number"
               name="discount"
-              onChange={handleInputChange}
-              value={formValues.discount}
+              onChange={() => console.log('handleInputChange')}
+              value={formValues?.discount}
             />
           </Form.Group>
           <Form.Group className="mb-3 col-12">
@@ -190,9 +190,9 @@ export const FormProduct = ({
             <Form.Select
               className={`form-control`}
               name="hotelId"
-              onChange={handleInputChange}
+              onChange={() => console.log('handleInputChange')}
             >
-              {data.loading ? (
+              {/* {data?.loading ? (
                 <option hidden defaultValue>
                   Cargando...
                 </option>
@@ -201,8 +201,8 @@ export const FormProduct = ({
                   <option hidden defaultValue>
                     Seleccione...
                   </option>
-                  {data.hotels.map(({ id, name }) =>
-                    formValues.hotelId == id ? (
+                  {data?.hotels.map(({ id, name }) =>
+                    formValues?.hotelId == id ? (
                       <option key={id} selected value={id}>
                         {name}
                       </option>
@@ -213,7 +213,7 @@ export const FormProduct = ({
                     )
                   )}
                 </>
-              )}
+              )} */}
             </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3 col-12">
@@ -221,14 +221,14 @@ export const FormProduct = ({
             <Form.Select
               className={`form-control`}
               name="countryId"
-              onChange={handleInputChange}
+              onChange={() => console.log('handleInputChange')}
             >
               <option hidden defaultValue>
                 Selecciona el Pais...
               </option>
-              {data.countries &&
+              {/* {data.countries &&
                 data.countries.map(({ id, name }) =>
-                  formValues.countryId == id ? (
+                  formValues?.countryId == id ? (
                     <option key={id} selected value={id}>
                       {name}
                     </option>
@@ -237,7 +237,7 @@ export const FormProduct = ({
                       {name}
                     </option>
                   )
-                )}
+                )} */}
             </Form.Select>
           </Form.Group>
           <Form.Group className="mb-3 col-12">
@@ -247,8 +247,8 @@ export const FormProduct = ({
               className={`form-control`}
               name="description"
               rows={4}
-              onChange={handleInputChange}
-              value={formValues.description}
+              onChange={() => console.log('handleInputChange')}
+              value={formValues?.description}
               style={{ resize: "none" }}
             ></Form.Control>
           </Form.Group>
@@ -258,7 +258,7 @@ export const FormProduct = ({
               type="button"
               className="py-0"
               variant="outline-secondary"
-              onClick={handleCleanForm}
+              onClick={() => console.log('handleCleanForm')}
             >
               Cancelar
             </Button>
