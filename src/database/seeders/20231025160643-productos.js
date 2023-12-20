@@ -18,7 +18,7 @@ module.exports = {
           updatedAt : new Date
         },
         {
-          name: 'Río de Janeiro, la tierra del carnaval carioca',
+          name: 'Río de Janeiro, tierra del carnaval',
           countryId: 4,
           hotelId: null,
           description: 'Viví momentos únicos en la Ciudad Maravillosa. Relajate en sus largas playas de arena blanca y aguas transparentes. Disfruta las vistas desde el Corcovado y el Pan de Azúcar, además de conectarte con la cultura local en barrios como Urca y Santa Teresa. Y si te gusta el fútbol, ¡no podés perderte una visita al Maracaná!',
