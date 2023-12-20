@@ -1,36 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- head -->
-    <%- include('./partials/head',{
-        title : 'Product Detail'
-    }) %>
-<body>
-    <!-- header -->
-    <%- include('./partials/header') %>
-    <!-- cuerpo de pagina -->
-    <main class="product__container">
-        <div class="product__image">
-            <img width="100%" src="/images/<%= image || 'card1.png' %>" alt="">
-        </div>
-        <div class="product__details">
-            <div class="product__title-rating">
-                    <h1 class="product__title"><%= countrie ? `${name} | ${countrie.name}`  : hotel.name %></h1>
+<!-- head -->
+<%- include('./partials/head',{ title : 'Product Detail' }) %>
 
-                <div class="product__rating">
-                    ★★★★<span class="product__star-gray">★</span> 
+    <body>
+        <!-- header -->
+        <%- include('./partials/header') %>
+            <!-- cuerpo de pagina -->
+            <main class="container">
+                <div class="row mt-4">
+                    <div class="col-12 ">
+                        <div class="row ">
+
+                            <div class="col-12 col-md-5 col-lg-6">
+
+
+                                <div class="card ">
+                                        <img class="card-img-top" width="100%" src="/images/<%= image || 'card1.png' %>"
+                                            alt="">
+                                            <div class="card-body">
+
+                                        <h3 class="card-title text-center">
+                                            <%= name %>
+                                        </h3>
+
+                                        <div class="product__rating text-center">
+                                            ★★★★<span class="product__star-gray">★</span>
+                                        </div>
+                                        <p class="small">
+                                            <%= description %>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7 col-lg-6">
+
+
+                                <% flights.forEach(fly=> { %>
+
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-column align-items-center"
+                                                    style="height: 100px;">
+                                                    <img src="/images/<%= fly.airline.image %>" alt="">
+                                                    <p class="text-secondary">
+                                                        <%= fly.airline.name %>
+                                                    </p>
+                                                </div>
+                                                <div class="d-flex flex-column align-items-end">
+                                                    <h4>
+                                                        <%= moment(fly.date).locale('es').format('DD/MM/YY') %>
+                                                    </h4>
+
+                                                    <div class="d-flex gap-3">
+                                                        <div class="d-flex flex-column align-items-center">
+                                                            <h3 class="m-0">
+                                                                <%= fly.departure.slice(0,5) %>
+                                                            </h3>
+                                                            <small style="font-size: 10px;">Buenos Aires</small>
+                                                        </div>
+                                                        <h3> <i class="fa-solid fa-arrow-right-long"></i></h3>
+                                                        <div class="d-flex flex-column align-items-center">
+                                                            <h3 class="m-0">
+                                                                <%= fly.arrival.slice(0,5) %>
+                                                            </h3>
+                                                            <small style="font-size: 10px;">
+                                                                <%= city %>
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <p class="d-flex align-items-center gap-2">
+                                                    <span>u$s</span> 
+                                                    <span class="fs-1 fw-1">
+                                                        <%= toThousand(fly.price) %>
+                                                    </span> </p>
+                                                <button class="btn btn-primary btn-sm">Reservar</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <% }) %>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <p class="product__description"><%= description %></p>
-            <% if (hotel) { %>
-                <p class="product__additional-info">Habitaciones cuádruples / Varios tipos de camas.</p>
 
-            <% } %>
-            <p class="product__additional-info product__price"><strong>U$S<%= price %></strong></p> 
-            <button class="product__button">RESERVAR</button>
-        </div>
-    </main>
-    <!-- footer -->
-    <%- include('partials/footer') %>
-</body>
+            </main>
+            <!-- footer -->
+            <%- include('partials/footer') %>
+    </body>
+
 </html>
-
