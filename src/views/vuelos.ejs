@@ -16,7 +16,7 @@
                 <h3>Vuelos Recomendados para ti</h3>
                 <div class="swiper-wrapper">
                     <% products.filter(product => product.countrie).forEach(product => { %>
-                        <%-include('./partials/cards-slider-hotel-mobile',{
+                        <%-include('./partials/cards-slider-lugar-mobile',{
                             ...product.dataValues
                         }) %>
                     <% }) %>
@@ -26,7 +26,7 @@
         <!-- cards solo vista desktop LUGARES -->
         <section class="contenedor-card"> 
             <h3>Vuelos Recomendados para ti </h3>
-            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
+            <div class="row segunda-tarjeta-desktop">
                 <% products.filter(product => product.countrie).forEach(product => { %>
                     <div class="col d-flex">
                         <%-include('./partials/cards-lugar-index',{
