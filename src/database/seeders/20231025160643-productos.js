@@ -7,139 +7,50 @@ module.exports = {
       "Products",
       [
         {
-          name: 'Vuelo a Paris',
+          name: 'París, la ciudad de las luces',
           countryId: 2,
           hotelId: null,
-          description: 'Viaje a Paris all include',
-          price: 1000,
+          description: 'Paris es un lugar de ensueño. Es un lugar que tiene historia y buenos momentos en cada esquina. Es algo más que la Torre Eiffel y el Arco del Triunfo. Paris es historia y buenos momentos. Es un lugar detenido en el tiempo, digno de visitar nuevamente',
+          price: 120000,
           discount: 0,
           image: 'francia-banner.jpg',
           createdAt : new Date,
           updatedAt : new Date
         },
         {
-          name: 'Vuelo a Brasil',
+          name: 'Río de Janeiro, tierra del carnaval',
           countryId: 4,
           hotelId: null,
-          description: 'Viaje a pais all include',
-          price: 1000,
+          description: 'Viví momentos únicos en la Ciudad Maravillosa. Relajate en sus largas playas de arena blanca y aguas transparentes. Disfruta las vistas desde el Corcovado y el Pan de Azúcar, además de conectarte con la cultura local en barrios como Urca y Santa Teresa. Y si te gusta el fútbol, ¡no podés perderte una visita al Maracaná!',
+          price: 800000,
           discount: 0,
-          image: 'brasil.jpg',
+          image: 'Rio_de_Janeiro.jpg',
           createdAt : new Date,
           updatedAt : new Date
         },
         {
-          name: 'Vuelo a Machupichu',
+          name: 'Cusco, capital del imperio Inca',
           countryId: 5,
           hotelId: null,
-          description: 'Tu Viaje soñado a Machupichu all include',
-          price: 1000,
+          description: 'Cusco es el destino perfecto para una aventura llena de historia y escenarios de película. Recorré los atractivos de esta ciudad, declarada Patrimonio de la Humanidad por la UNESCO y uno de los destinos más visitados de Sudamérica.Vas a elegir entre visitar la hermosa Laguna de Humantay, desafiar tus límites en la Montaña Arco Iris o caminar por la increíble ciudad de Machu Picchu. ¡Vení a descubrir la capital del Imperio Inca!',
+          price: 500000,
           discount: 0,
-          image: 'machupichu.jpg',
+          image: 'MachuPicchu.jpg',
           createdAt : new Date,
           updatedAt : new Date
         },
         {
-          name: 'Vuelo a Panamá',
+          name: 'Roma, un museo a cielo abierto',
           countryId: 6,
           hotelId: null,
-          description: 'Viaje a Panamá con estadía en el hotel Hard Rock',
-          price: 1000,
+          description: 'Caminar por Roma es como estar caminando por un museo, sus plazas, sus fuentes, sus ruinas, su Coliseo que siglos atrás era testigo de luchas interminables por los entonces llamados gladiadores romanos. Pasear por sus calles, es pasear por miles de años de historia.',
+          price: 130000,
           discount: 0,
-          image: 'HardRockPanamá.jpg',
+          image: 'roma.jpg',
           createdAt : new Date,
           updatedAt : new Date
-        },
-        {
-          name: '3 días y 2 noches en París',
-          countryId: null,
-          hotelId: 1,
-          description: 'Desayuno incluido',
-          price: 1000,
-          discount: 0,
-          image: 'francia-banner.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: '3 días y 2 noches en Río de Janeiro',
-          countryId: null,
-          hotelId: 2,
-          description: 'Desayuno incluido',
-          price: 1000,
-          discount: 0,
-          image: 'brasil.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: 'Noches misteriosas incaicas',
-          countryId: null,
-          hotelId: 3,
-          description: 'Desayuno incluido',
-          price: 1000,
-          discount: 0,
-          image: 'machupichu.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: '3 noches en el Pacífico',
-          countryId: null,
-          hotelId: 4,
-          description: 'Desayuno incluido',
-          price: 1000,
-          discount: 0,
-          image: 'HardRockPanamá.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: 'Viaje y estadía familiar',
-          countryId: 1,
-          hotelId: 1,
-          description: 'Vuelo directo con estadía 5 estrellas',
-          price: 1000,
-          discount: 0,
-          image: 'francia-banner.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: 'Viaje en solitario',
-          countryId: 2,
-          hotelId: 2,
-          description: 'Incluye visita a las pirámies Gizeh',
-          price: 1000,
-          discount: 0,
-          image: 'brasil.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: 'Stoneage Day',
-          countryId: 3,
-          hotelId: 3,
-          description: 'Tour místico',
-          price: 1000,
-          discount: 0,
-          image: 'machupichu.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-        {
-          name: 'Isla de Pascua',
-          countryId: 4,
-          hotelId: 4,
-          description: 'Los Moai que no se mueven',
-          price: 1000,
-          discount: 0,
-          image: 'HardRockPanamá.jpg',
-          createdAt : new Date,
-          updatedAt : new Date
-        },
-      ],
-      {}
+        }
+      ]
     );
   },
 
