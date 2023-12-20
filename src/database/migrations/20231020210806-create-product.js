@@ -18,6 +18,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      lodging: {
+        type: Sequelize.BOOLEAN,
+      },
       countryId: {
         type: Sequelize.INTEGER,
         references : {
@@ -26,23 +29,14 @@ module.exports = {
           }
         }
       },
-      hotelId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model: {
-            tableName:'Hotels'
-          }
-        }
-      },
-    
       description: {
         type: Sequelize.TEXT
       },
-      price: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      phone: {
+        type: Sequelize.STRING,
       },
-      discount: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      address: {
+        type: Sequelize.STRING,
       },
 
       image: {
