@@ -23,6 +23,11 @@ main .contenedor .buscador input{
     border: none;
     border-radius: 1rem;
     padding: 0.2rem 0rem;
+    padding: 10px;
+}
+
+main .contenedor .buscador input:focus{
+   outline: none;
 }
 main .contenedor .buscador i{
     position: relative;

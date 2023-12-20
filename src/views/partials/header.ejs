@@ -7,16 +7,16 @@
         <input type="checkbox" id="menu" class="nav__input"> 
         <div class="nav__menu">
             <ul>
-                <li><a href="/vuelos">Vuelos</a><i class="fas fa-plane" ></i></li>
-                <li><a href="/hotels">Hoteles</a><i class="fas fa-hotel" id="hotel"></i></li>
-                <li><a href="">Paquetes</a><i class="fas fa-briefcase" id="paquetes"></i></li>
+                <li><a href="/vuelos" ><span>Vuelos</span><span><i class="fas fa-plane fa-lg"></i></span></a></li>
+                <li><a href="/hotels" ><span>Hoteles</span><span><i class="fas fa-hotel fa-lg" id="hotel"></i></span></a></li>
+                <li><a href="" ><span>Paquetes</span><span><i class="fas fa-briefcase fa-lg" id="paquetes"></i></span></a></li>
             </ul>
             <hr>
             <ul>
                 <!-- si no existe el locals.userlogin me muesta en la vista para que se logee  -->
                 <% if (!locals.userLogin) { %>
-                    <li><a href="/users/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
-                    <li><a href="/users/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="/users/shoppingCart">Carrito<i class="fas fa-cart-arrow-down fa-lg"></i></a></li>
+                    <li><a href="/users/login">Ingresar<i class="fas fa-sign-in-alt fa-lg"></i></a></li>
                 <% } else { %>
                     <!-- si existe me muestra estas opciones la de profile y salir -->
                     <% if (userLogin.rol === 1) { %>
