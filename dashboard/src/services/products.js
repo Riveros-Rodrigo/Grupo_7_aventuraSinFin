@@ -11,7 +11,7 @@ export const getProducts = async () => {
     }
 }
 
-export const getSections = async() => {
+export const getCountries = async() => {
     try {
 
         const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/countries`)
@@ -24,7 +24,7 @@ export const getSections = async() => {
     }
 }
 
-export const getBrands = async() => {
+export const getHotels = async() => {
     try {
 
         const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/hotels`)
