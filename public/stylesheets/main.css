@@ -6,19 +6,17 @@ main .contenedor{
     position: relative;
 }
 /* se ve solo en desktop */
-main .contenedor .buscador{
+.buscador{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 1rem;
-    margin-bottom: 1rem;
 }
-main .contenedor .buscador form{
+.buscador form{
     background-color: #DDE7EA;
     border-radius: 1rem;
     margin-right: 0.5rem;
 }
-main .contenedor .buscador input{
+.buscador input{
     background-color: #DDE7EA;
     border: none;
     border-radius: 1rem;
@@ -26,14 +24,14 @@ main .contenedor .buscador input{
     padding: 10px;
 }
 
-main .contenedor .buscador input:focus{
+.buscador input:focus{
    outline: none;
 }
-main .contenedor .buscador i{
+.buscador i{
     position: relative;
     padding-right: 0.2rem;
 }
-main .contenedor .buscador button{
+.buscador button{
     background-color: #DDE7EA;
     border: none;
     border-radius: 1rem;
