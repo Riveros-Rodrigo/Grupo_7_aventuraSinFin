@@ -30,10 +30,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     city : DataTypes.STRING,
     countryId: DataTypes.INTEGER,
-    hotelId: DataTypes.INTEGER,
+    lodging: DataTypes.BOOLEAN,
     description: DataTypes.TEXT,
-    price: DataTypes.INTEGER,
-    discount: DataTypes.INTEGER,
+    phone: DataTypes.TEXT,
+    address: DataTypes.TEXT,
     image: DataTypes.STRING
   }, {
     sequelize,

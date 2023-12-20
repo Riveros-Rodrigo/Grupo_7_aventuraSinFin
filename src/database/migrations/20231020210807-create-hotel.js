@@ -9,10 +9,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       countrieId: {
         type: Sequelize.INTEGER,
         references : {
@@ -21,19 +17,46 @@ module.exports = {
           }
         }
       },
-      description: {
-        type: Sequelize.TEXT
+      productId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName:'Products'
+          }
+        }
       },
-      price: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      stay: {
+        type: Sequelize.STRING
       },
-      discount: {
-        type: Sequelize.INTEGER.UNSIGNED,
+      passengers: {
+        type: Sequelize.INTEGER,
+      },
+      wifi: {
+        type: Sequelize.BOOLEAN,
+      },
+      breakfast: {
+        type: Sequelize.BOOLEAN,
+      },
+      parking: {
+        type: Sequelize.BOOLEAN,
       },
       image: {
         type: Sequelize.STRING
       },
-
+      checkInWeb: {
+        type: Sequelize.STRING
+      },
+      price: {
+        type: Sequelize.INTEGER
+      },
+      agencyId : {
+        type: Sequelize.INTEGER,
+        references : {
+          model: {
+            tableName:'Agencies'
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
