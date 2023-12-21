@@ -1,3 +1,4 @@
+const { Op } = require("sequelize");
 const db = require("../database/models");
 
 module.exports = {
@@ -18,16 +19,14 @@ module.exports = {
   search: async (req, res) => {
     try {
       const keywords = req.query.keywords;
-      const results = await db.Product.findAll({
+      const results = await db.Countrie.findAll({
+
         where: {
-          [db.Sequelize.Op.or]: [
-            { countrie: { [db.Sequelize.Op.iLike]: `%${keywords}%` } },
-            { '$categories.name$': { [db.Sequelize.Op.iLike]: `%${keywords}%` } }
-          ]
+          name:{
+            [Op.substring]: keywords
+          }
         },
-        include: [{
-          model: db.Categorie,
-        }]
+        include: ['products']
       });
 
       return res.render('results', {

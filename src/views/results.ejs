@@ -20,14 +20,14 @@
             </label>
         </div>
 <section class="contenedor-card">
-    <% if (keywords && results.length) { %>
+    <% if (keywords && products.length) { %>
         <h3>Hoteles recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-            <% results.forEach(product => { %>
+            <% products.forEach(product => { %>
                 <% if (product.category === "hotel") { %>
                     <div class="col mx-auto">
                         <%- include('./partials/cards-hotel-index', {
-                            ...product
+                            ...product.dataValues
                         }) %>
                     </div>
                 <% }%>
@@ -37,14 +37,14 @@
 </section>
 
 <section class="contenedor-card">
-    <% if (keywords && results.length) { %>
+    <% if (keywords && products.length) { %>
         <h3>Lugares recomendados para ti en <%= keywords %> </h3>
         <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-            <% results.forEach(product => { %>
+            <% products.forEach(product => { %>
                 <% if (product.category !== "hotel") { %>
                     <div class="col mx-auto">
                         <%- include('./partials/cards-lugar-index', {
-                            ...product
+                            ...product.dataValues
                         }) %>
                     </div>
                 <% } %>
@@ -64,14 +64,14 @@
 <!-- mobile -->
         <!-- Hoteles recomendados mobile slider -->
         <section class="contenedor-primer-carrusel">
-            <% if (keywords && results.length) { %>
+            <% if (keywords && products.length) { %>
             <div class="swiper-container mySwiper">
                 <h3 class="text-center">Hoteles recomendados para ti en <%= keywords %> </h3>
                 <div class="swiper-wrapper d-flex justify-content-center">
-                    <% results.forEach(product => { %>
+                    <% products.forEach(product => { %>
                         <% if (product.category === "hotel") { %>
                         <%-include('./partials/cards-slider-hotel-mobile',{
-                            ...product
+                            ...product.dataValues
                         }) %>
                     <% }%>
                 <% }) %>
@@ -81,14 +81,14 @@
         </section>
         <!-- lugares recomendados mobile slider -->
         <section class="contenedor-primer-carrusel">
-            <% if (keywords && results.length) { %>
+            <% if (keywords && products.length) { %>
             <div class="swiper-container mySwiper">
                 <h3 class="text-center">Lugares recomendados para ti en <%= keywords %> </h3>
                 <div class="swiper-wrapper d-flex justify-content-center">
-                    <% results.forEach(product => { %>
+                    <% products.forEach(product => { %>
                         <% if (product.category === "pais") { %>
                         <%-include('./partials/cards-slider-lugar-mobile',{
-                            ...product
+                            ...product.dataValues
                         }) %>
                     <% }%>
                 <% }) %>
