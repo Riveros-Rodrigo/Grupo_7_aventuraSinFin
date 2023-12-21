@@ -19,14 +19,14 @@ module.exports = {
   search: async (req, res) => {
     try {
       const keywords = req.query.keywords;
-      const results = await db.Countrie.findAll({
+      const results = await db.Product.findAll({
 
         where: {
           name:{
             [Op.substring]: keywords
           }
         },
-        include: ['products']
+        include: ['countrie']
       });
 
       return res.render('results', {
