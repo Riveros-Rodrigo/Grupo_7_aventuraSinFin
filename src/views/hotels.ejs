@@ -14,9 +14,9 @@
         <!-- Hoteles recomendados mobile slider -->
         <section class="contenedor-primer-carrusel">
             <div class="swiper-container mySwiper">
-                <h3>Hoteles recomendados para ti </h3>
+                <h3 class="my-4"> Hoteles recomendados para ti </h3>
                 <div class="swiper-wrapper">
-                    <% products.filter(product => product.hotel).forEach(product => { %>
+                    <% products.forEach(product => { %>
                         <%-include('./partials/cards-slider-hotel-mobile',{
                             ...product.dataValues
                         }) %>
@@ -26,10 +26,10 @@
         </section>
     <!-- cards solo vista desktop HOTELES  -->
     <section class="contenedor-card">
-        <h3>Hoteles recomendados para ti</h3>
-        <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-            <% products.filter(product => product.hotel).forEach(product => { %>
-                <div class="col d-flex">
+        <h3 class="my-4"> Hoteles recomendados para ti </h3>
+        <div class="row segunda-tarjeta-desktop">
+            <% products.forEach(product => { %>
+                <div class="col-12 col-md-4 d-flex">
                     <%-include('./partials/cards-hotel-index',{
                         ...product.dataValues
                     }) %>

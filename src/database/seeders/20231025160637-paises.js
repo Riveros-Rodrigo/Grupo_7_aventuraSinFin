@@ -64,7 +64,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          name: "Estados Unidos",
+          name: "USA",
           image: null,
           flag : 'flag_estados-unidos.png',
           createdAt: new Date(),
