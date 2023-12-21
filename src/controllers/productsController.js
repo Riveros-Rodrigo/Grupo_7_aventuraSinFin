@@ -1,17 +1,34 @@
 module.exports = {
-  detail: require('./products/detail'),
+  
+  /* destinos */
   add: require('./products/add'),
-  addHotel: require('./products/addHotel'),
+  create: require('./products/create'),
+  detail: require('./products/detail'),
+  edit: require('./products/edit'),
+  update : require('./products/update'),
+  remove : require('./products/remove'),
+
+  /* vuelos */
+  addFlight: require('./products/addFlight'),
+  createFlight : require('./products/createFlight'),
+
+  /* hoteles */
+  addHotel: require('./products/addAddHotel'),
   createHotel: require('./products/createHotel'),
+  detailHotel : require('./products/detailHotel'),
+  editHotel: require('./products/editHotel'),
+  updateHotel : require('./products/updateHotel'),
+  removeHotel : require('./products/removeHotel'),
+
+  /* alojamientos */
+  addAlojamiento: require('./products/addAlojamiento'),
+  createAlojamiento : require('./products/createAlojamiento'),
+  
+  /* paquetes */
   addPaquete: require('./products/addPaquete'),
   createPaquete: require('./products/createPaquete'),
-  create: require('./products/create'),
-  edit: require('./products/edit'),
   editPaquete: require('./products/editPaquete'),
-  editHotel: require('./products/editHotel'),
-  update : require('./products/update'),
-  updateHotel : require('./products/updateHotel'),
   updatePaquete : require('./products/updatePaquete'),
-  remove : require('./products/remove'),
+  
   filter: require('./products/filter')
 };

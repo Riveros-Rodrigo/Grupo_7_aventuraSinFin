@@ -4,7 +4,7 @@ module.exports = {
   index: async (req, res) => {
     try {
       const products = await db.Product.findAll({
-        include : ['hotel','countrie']
+        include : ['countrie']
       });
       return res.render('index', {
         products,
@@ -45,12 +45,15 @@ module.exports = {
       const products = await db.Product.findAll({
         include : [
         {
-          association : 'hotel',
-          include : ['countrie']
-
+          association : 'hotels',
+          include : ['countrie','agency', 'images']
         },
         {
           association : 'countrie'
+        },
+        {
+          association : 'flights',
+          include : ['airline']
         }
       ]
       });
@@ -67,7 +70,10 @@ module.exports = {
   vuelos: async (req, res) => {
     try {
       const products = await db.Product.findAll({
-        include : ['countrie','hotel']
+        where : {
+          lodging : false
+        },
+        include : ['countrie']
       });
       return res.render('vuelos', {
         products,
@@ -81,7 +87,10 @@ module.exports = {
   hotels: async (req, res) => {
     try {
       const products = await db.Product.findAll({
-        include : ['countrie','hotel']
+        where : {
+          lodging : true
+        },
+        include : ['countrie']
       });
       return res.render('hotels', {
         products,

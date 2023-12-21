@@ -14,16 +14,26 @@ module.exports = (sequelize, DataTypes) => {
       Hotel.belongsTo(models.Countrie, {
         as : 'countrie',
         foreignKey : 'countrieId'
+      });
+      Hotel.belongsTo(models.Agency, {
+        as : 'agency',
+        foreignKey : 'agencyId'
+      });
+      Hotel.hasMany(models.Image, {
+        as : 'images',
+        foreignKey: 'hotelId'
       })
     }
   }
   Hotel.init({
-    name: DataTypes.STRING,
-    description: DataTypes.TEXT,
+    productId: DataTypes.INTEGER,
     price: DataTypes.INTEGER,
-    discount: DataTypes.INTEGER,
-    countrieId: DataTypes.INTEGER,
-    image: DataTypes.STRING,
+    passengers: DataTypes.INTEGER,
+    stay: DataTypes.STRING,
+    breakfast: DataTypes.BOOLEAN,
+    parking: DataTypes.STRING,
+    checkInWeb: DataTypes.BOOLEAN,
+    agencyId : DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'Hotel',

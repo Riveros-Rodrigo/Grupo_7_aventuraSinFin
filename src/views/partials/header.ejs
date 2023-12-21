@@ -7,26 +7,37 @@
         <input type="checkbox" id="menu" class="nav__input"> 
         <div class="nav__menu">
             <ul>
-                <li><a href="/vuelos">Vuelos</a><i class="fas fa-plane" ></i></li>
-                <li><a href="/hotels">Hoteles</a><i class="fas fa-hotel" id="hotel"></i></li>
-                <li><a href="">Paquetes</a><i class="fas fa-briefcase" id="paquetes"></i></li>
+                <li><a href="/vuelos" ><span>Vuelos</span><span><i class="fas fa-plane fa-lg"></i></span></a></li>
+                <li><a href="/hotels" ><span>Hoteles</span><span><i class="fas fa-hotel fa-lg" id="hotel"></i></span></a></li>
+                <li><a href="" ><span>Paquetes</span><span><i class="fas fa-briefcase fa-lg" id="paquetes"></i></span></a></li>
             </ul>
             <hr>
             <ul>
                 <!-- si no existe el locals.userlogin me muesta en la vista para que se logee  -->
                 <% if (!locals.userLogin) { %>
-                    <li><a href="/users/shoppingCart">Carrito</a><i class="fas fa-cart-arrow-down"></i></li>
-                    <li><a href="/users/login">Ingresar</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="/users/shoppingCart">Carrito<i class="fas fa-cart-arrow-down fa-lg"></i></a></li>
+                    <li><a href="/users/login">Ingresar<i class="fas fa-sign-in-alt fa-lg"></i></a></li>
                 <% } else { %>
                     <!-- si existe me muestra estas opciones la de profile y salir -->
                     <% if (userLogin.rol === 1) { %>
                         <!-- si el rol es de admin me va mostrar en la vista el admin -->
-                        <li><a href="/dashboard">Admin</a><i class="fa-solid fa-gears"></i></li>
+                        <li><a href="/dashboard"><i class="fa-solid fa-gears fa-lg"></i>Admin</a></li>
                     <% } %>
-                    <li><a href="/users/profile">Hola <%= userLogin.name %>!</a><i class="fa-solid fa-user"></i></li>
-                    <li><a href="/users/logout">Salir</a></li>
+                    <li class="text-center"><a href="/users/profile"><span><i class="fa-solid fa-user fa-lg"></i> </span>Hola!</a></li>
+                    <li><a href="/users/logout" class="d-flex flex-column align-items-center"><i class="fa-solid fa-right-from-bracket fa-lg"></i>Salir </a></li>
                 <% } %>
             </ul>
         </div>
     </div>
+    <main>
+        <label class="buscador">
+            <form action="/search" method="get" class="mb-4">
+                <input type="text" name="keywords" placeholder="Buscar...">
+                <button type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </label>
+      
+</main>
 </header> 

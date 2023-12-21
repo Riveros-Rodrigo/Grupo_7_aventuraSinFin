@@ -2,18 +2,13 @@ const db = require('../../database/models')
 
 module.exports = (req, res) => {
     
-    const hotels = db.Hotel.findAll({
-      order : ['name']
-    });
-
     const countries = db.Countrie.findAll({
       order : ['name']
     });
 
-    Promise.all([hotels, countries])
-      .then(([hotels, countries]) => {
+    Promise.all([countries])
+      .then(([countries]) => {
         return res.render("productAdd", {
-          hotels,
           countries
         });
       })

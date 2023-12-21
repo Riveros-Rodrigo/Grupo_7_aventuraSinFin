@@ -11,24 +11,34 @@ module.exports = (sequelize, DataTypes) => {
      */
      static associate(models) {
        // define association here
-       Product.belongsTo(models.Hotel, {
-         as : 'hotel',
-         foreignKey : 'hotelId'
-       });
+  
 
      Product.belongsTo(models.Countrie, {
-       as : 'countrie',
-       foreignKey : 'countryId'
+        as : 'countrie',
+        foreignKey : 'countryId'
      })
+     Product.belongsTo(models.Hotel, {
+        as: 'hotel', 
+        foreignKey: 'countryId' 
+      });
+     Product.hasMany(models.Flight, {
+      as : 'flights',
+      foreignKey : 'productId'
+     });
+     Product.hasMany(models.Hotel,{
+      as: 'hotels',
+      foreignKey : 'productId'
+     });
    }
    }
   Product.init({
     name: DataTypes.STRING,
+    city : DataTypes.STRING,
     countryId: DataTypes.INTEGER,
-    hotelId: DataTypes.INTEGER,
+    lodging: DataTypes.BOOLEAN,
     description: DataTypes.TEXT,
-    price: DataTypes.INTEGER,
-    discount: DataTypes.INTEGER,
+    phone: DataTypes.TEXT,
+    address: DataTypes.TEXT,
     image: DataTypes.STRING
   }, {
     sequelize,

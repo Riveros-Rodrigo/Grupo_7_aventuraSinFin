@@ -11,14 +11,6 @@
     <!-- cuerpo de pagina -->
     <main>
         <div class="contenedor">
-            <label class="buscador">
-                <form action="/search" method="get">
-                    <input type="text" name="keywords" placeholder="Buscar...">
-                    <button type="submit">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-            </label>
             <!-- banner slider -->
             <section class="container-slider">
                 <%-include('./partials/slider-banner') %>
@@ -111,32 +103,7 @@
             </div>
         </section>
 
-            <!-- cards solo vista desktop VUELOS -->
-        <section class="contenedor-card"> 
-            <h3>Lugares recomendados para ti </h3>
-            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <% products.filter(product => product.countrie).forEach(product => { %>
-                    <div class="col d-flex">
-                        <%-include('./partials/cards-lugar-index',{
-                            ...product.dataValues
-                        }) %>
-                    </div>
-                <% }) %>
-            </div>
-        </section>
-    <!-- cards solo vista desktop HOTELES  -->
-        <section class="contenedor-card">
-            <h3>Hoteles recomendados para ti</h3>
-            <div class="row row-cols-1 row-cols-xl-2-1 row-cols-xxl-5 row-cols-lg-2 g-4 segunda-tarjeta-desktop">
-                <% products.filter(product => product.hotel).forEach(product => { %>
-                    <div class="col d-flex">
-                        <%-include('./partials/cards-hotel-index',{
-                            ...product.dataValues
-                        }) %>
-                    </div>
-                <% }) %>
-            </div>
-        </section>
+       
     <!-- Por que elegirnos -->
         <section class="container__testimonials">
             <h2 class="section__title">Por que elegirnos?</h2>
