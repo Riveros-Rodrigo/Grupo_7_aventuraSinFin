@@ -1,5 +1,5 @@
 const express = require('express');
-const { detail, add, addHotel , addPaquete , edit, create, update, remove, filter, createHotel, createPaquete, editPaquete, editHotel, updateHotel, updatePaquete } = require('../controllers/productsController');
+const { detail, add, addHotel, detailHotel, addPaquete , edit, create, update, remove, filter, createHotel, createPaquete, editPaquete, editHotel, updateHotel, updatePaquete } = require('../controllers/productsController');
 const upload = require('../middlewares/upload');
 const productAddValidator = require('../validations/productAddValidator');
 const productAddValidatorHotel = require('../validations/productAddValidatorHotel');
@@ -9,6 +9,7 @@ const router = express.Router();
 
 router
     .get('/detail/:id', detail)
+    .get('/detail/hotel/:id', detailHotel)
     .get('/add', add)
     .post('/add', upload.single('images'),create)
     .get('/add/hoteles', addHotel)

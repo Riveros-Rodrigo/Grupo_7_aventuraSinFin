@@ -8,7 +8,7 @@ module.exports = {
       "Hotels",
       [
         {
-          productId: 5,
+          productId: 9,
           stay: '2 noches',
           passengers: 2,
           wifi: true,
@@ -21,7 +21,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 6,
+          productId: 10,
           stay: '2 noches',
           passengers: 3,
           wifi: true,
@@ -34,7 +34,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 7,
+          productId: 11,
           stay: '3 noches',
           passengers: 1,
           wifi: true,
@@ -47,7 +47,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 8,
+          productId: 12,
           stay: '2 noches',
           passengers: 4,
           wifi: true,
@@ -60,7 +60,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 5,
+          productId: 9,
           stay: '3 noches',
           passengers: 2,
           wifi: true,
@@ -73,7 +73,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 6,
+          productId: 10,
           stay: '2 noches',
           passengers: 3,
           wifi: true,
@@ -86,7 +86,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 7,
+          productId: 11,
           stay: '1 noches',
           passengers: 1,
           wifi: true,
@@ -99,7 +99,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 8,
+          productId: 12,
           stay: '2 noches',
           passengers: 4,
           wifi: true,
@@ -112,7 +112,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 5,
+          productId: 9,
           stay: '2 noches',
           passengers: 2,
           wifi: true,
@@ -125,7 +125,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 6,
+          productId: 10,
           stay: '2 noches',
           passengers: 3,
           wifi: true,
@@ -138,7 +138,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 7,
+          productId: 11,
           stay: '3 noches',
           passengers: 1,
           wifi: true,
@@ -151,7 +151,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 8,
+          productId: 12,
           stay: '2 noches',
           passengers: 4,
           wifi: true,
@@ -164,7 +164,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 5,
+          productId: 9,
           stay: '2 noches',
           passengers: 2,
           wifi: true,
@@ -177,7 +177,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 6,
+          productId: 10,
           stay: '2 noches',
           passengers: 3,
           wifi: true,
@@ -190,7 +190,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 7,
+          productId: 11,
           stay: '3 noches',
           passengers: 1,
           wifi: true,
@@ -203,7 +203,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          productId: 8,
+          productId: 12,
           stay: '2 noches',
           passengers: 4,
           wifi: true,

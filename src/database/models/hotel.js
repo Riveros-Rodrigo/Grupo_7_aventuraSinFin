@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
       Hotel.belongsTo(models.Countrie, {
         as : 'countrie',
         foreignKey : 'countrieId'
-      })
+      });
+      Hotel.belongsTo(models.Agency, {
+        as : 'agency',
+        foreignKey : 'agencyId'
+      });
     }
   }
   Hotel.init({

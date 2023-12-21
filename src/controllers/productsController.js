@@ -1,5 +1,6 @@
 module.exports = {
   detail: require('./products/detail'),
+  detailHotel : require('./products/detailHotel'),
   add: require('./products/add'),
   addHotel: require('./products/addHotel'),
   createHotel: require('./products/createHotel'),

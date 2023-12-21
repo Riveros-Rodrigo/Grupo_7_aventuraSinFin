@@ -1,19 +1,21 @@
-        <div class="card">
+        <div class="card mb-3">
             <img src="/images/<%= image || 'card1.png' %>" class="card-img-top" alt="...">
+            <img src="/images/<%= countrie.flag %>" width="80px" alt="" style="position: absolute; top: 20px; left: 20px;">
+            <h3 style="position: absolute; top: 0px; right: 20px; text-shadow: 5px 5px 5px black;" class="text-white"><%= countrie.name %></h3>
             <div class="card-body rounded-bottom d-flex flex-column justify-content-center align-items-center">
-                <h5 class="card-title text-white"><%=  hotel.name %></h5>
+                <h4 class="card-title text-white"><%= name %></h4>
                 <ul class="card-text text-white">
-                    <li><%= name %></li>
-                    <li>Precio: <%= price %></li>
-                    <li>Descripcion: <%= description %></li>
-                    <div class="estrellas">
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
-                        <i class="fa-sharp fa-solid fa-star"></i>
+                    <p class="text-white my-3" style="width: 90%; display: -webkit-box;-webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;"><%= description %></p>
+                    <div class="d-flex justify-content-between">
+                        <div class="estrellas">
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                        </div>
+                        <a class="pointer btn btn-primary mt-2" href="/products/detail/hotel/<%= id %>">+ Info</a>
                     </div>
-                    <a class="pointer btn btn-primary mt-2" href="products/detail/<%= id %>">Mas Detalles</a>
                 </ul>
             </div>                        
         </div>

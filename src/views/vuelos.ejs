@@ -13,7 +13,7 @@
         <!-- Vuelos recomendados mobile slider -->
         <section class="contenedor-primer-carrusel">
             <div class="swiper-container mySwiper">
-                <h3>Vuelos Recomendados para ti</h3>
+                <h3>Destinos recomendados para ti</h3>
                 <div class="swiper-wrapper">
                     <% products.filter(product => product.countrie).forEach(product => { %>
                         <%-include('./partials/cards-slider-lugar-mobile',{
@@ -25,10 +25,10 @@
         </section>
         <!-- cards solo vista desktop LUGARES -->
         <section class="contenedor-card"> 
-            <h3>Vuelos Recomendados para ti </h3>
+            <h3>Destinos recomendados para ti </h3>
             <div class="row segunda-tarjeta-desktop">
                 <% products.filter(product => product.countrie).forEach(product => { %>
-                    <div class="col d-flex">
+                    <div class="col-12 col-md-3 col-lg-4 col-xl-3 d-flex">
                         <%-include('./partials/cards-lugar-index',{
                             ...product.dataValues
                         }) %>
