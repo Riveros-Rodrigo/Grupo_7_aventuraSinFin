@@ -21,23 +21,23 @@
         <div class="col-md-6 col-lg-4 mx-auto">
             <div class="card border rounded">
                 <div class="card-header bg-white">
-                    <h4 class="card-title">Agregar producto país</h4>
+                    <h4 class="card-title">Agregar producto destino</h4>
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
-
+                        <!-- destino -->
                         <div class="mb-3">
                             <label for="name" class="form-label">Destino</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="productName" name="name" value="<%= locals.old && (old.name && old.name) %>"/>
                             <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
                         </div>
-
+                        <!-- ciudad -->
                         <div class="mb-3">
                             <label for="city" class="form-label">Ciudad</label>
-                            <input type="text" class="form-control <%= locals.errors ? (errors.city ? 'is-invalid' : 'is-valid') : '' %>" id="productcity" city="city" value="<%= locals.old && (old.city && old.city) %>"/>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.city ? 'is-invalid' : 'is-valid') : '' %>" id="productcity" name="city" value="<%= locals.old && (old.city && old.city) %>"/>
                             <small id="cityErrors" class="text-warning fs-6"> <%= locals.errors && (errors.city && errors.city.msg) %> </small>
                         </div>
-
+                        <!-- countries -->
                         <div class="mb-2">
                             <label for="country" class="form-label" >Países</label>
                             <select class="form-select <%= locals.errors && (errors.country && 'is-invalid') %>" aria-label="Default select example" name="country" id="country">
@@ -50,7 +50,7 @@
                               </select>
                               <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.country && errors.country.msg) %> </small>
                         </div>
-
+                        <!-- description -->
                         <div class="mb-3">
                             <label for="description" class="form-label">Descripción</label>
                             <textarea class="form-control <%= locals.errors ? (errors.description ? 'is-invalid' : 'is-valid') : '' %>" id="description" style="resize: none" name="description"><%= locals.old && (old.description && old.description) %></textarea>

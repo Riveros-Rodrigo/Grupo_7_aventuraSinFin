@@ -5,15 +5,13 @@ module.exports = async (req,res) =>{
   const errors = validationResult(req);
 
   if(errors.isEmpty()){
-    console.log(req.body);
     const {name,city,country,description} = req.body;
-    return res.send(req.body)
     //creo el nuevo producto en la base de dato.
     //usando async y await nos evitamos llenar el codigo de promesas, de esta manera nos evitamos la anidacion de .then()
     
     await db.Product.create({
       name: name.trim(),
-      city,
+      city: city.trim(),
       countryId: country ? +country : null,
       description : description.trim(),
       image : req.file ? req.file.filename : null
@@ -38,4 +36,3 @@ module.exports = async (req,res) =>{
     });
   }
 }
-

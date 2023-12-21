@@ -5,22 +5,25 @@ module.exports = async(req, res) => {
     const errors = validationResult(req);
 
     if(errors.isEmpty()){
-    const {hotelId,name,description,price,discount} = req.body
-
+    const {hotel,stay,passengers,wifi,breakfast,parking,checkInWeb,price,agencyId} = req.body
+        return res.send(req.body)
     await db.Product.create({
-        hotelId : +hotelId,
-        countryId: null,
-        name,
-        description : description.trim(),
+        hotel,
+        stay : stay.trim(),
+        passengers,
+        wifi,
+        breakfast,
+        parking,
+        checkInWeb,
         price: +price,
-        discount : discount || 0,
+        agencyId,
         image : req.file ? req.file.filename : null
     });
     return res.redirect('/dashboard')
 
     }else{
         const hotels = await db.Hotel.findAll({
-            order : ['name']
+            order : [['productId', 'ASC']] //Ordeno por productId de forma ascendente
         });
 
         const countries = await db.Countrie.findAll({

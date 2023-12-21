@@ -21,7 +21,7 @@
                         <div class="col-md-6 col-lg-4 mx-auto">
                             <div class="card border rounded">
                                 <div class="card-header bg-white">
-                                    <h4 class="card-title">Agregar producto hotel</h4>
+                                    <h4 class="card-title">Agregar producto alojamiento</h4>
                                 </div>
                                 <div class="card-body">
                                     <form action="" method="POST" enctype="multipart/form-data">
@@ -30,7 +30,7 @@
                                             <label for="hotelId" class="form-label">Hoteles</label>
                                             <select
                                                 class="form-select <%= locals.errors && (errors.hotelId && 'is-invalid') %>"
-                                                aria-label="Default select example" name="name" id="hotelId">
+                                                aria-label="Default select example" name="hotel" id="hotelId">
                                                 <option selected hidden value="">Seleccione...</option>
                                                 <% hotels.forEach(hotel=> { %>
                                                     <option value="<%= hotel.id %>" <%=locals.old &&
@@ -73,79 +73,89 @@
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="wifi"
-                                                            id="wifiSi" value="si">
+                                                            id="wifiSi" value="si"
+                                                            <%= wifi === 'si' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="wifiSi">Sí</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="wifi"
-                                                            id="wifiNo" value="no">
+                                                            id="wifiNo" value="no"
+                                                            <%= hotels.wifi === 'no' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="wifiNo">No</label>
                                                     </div>
                                                 </div>
                                             </div>
-
+                                            <!-- desayuno -->
                                         <div class="form-group">
                                             <label for="breakfast">Desayuno:</label>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="breakfast"
-                                                            id="breakfastSi" value="si">
+                                                            id="breakfastSi" value="si"
+                                                            <%= breakfast === 'si' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="breakfastSi">Sí</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="breakfast"
-                                                            id="breakfastNo" value="no">
+                                                            id="breakfastNo" value="no"
+                                                            <%= breakfast === 'no' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="breakfastNo">No</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <!-- estacionamiento -->
                                         <div class="form-group">
-                                            <label for="checkInWeb">Estacionamiento:</label>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-check d-flex justify-content-center">
-                                                        <input class="form-check-input" type="radio" name="checkInWeb"
-                                                            id="checkInWebSi" value="si">
-                                                        <label class="form-check-label" for="checkInWebSi">Sí</label>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-check d-flex justify-content-center">
-                                                        <input class="form-check-input" type="radio" name="checkInWeb"
-                                                            id="checkInWebNo" value="no">
-                                                        <label class="form-check-label" for="checkInWebNo">No</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="parking">Registrarse en la web:</label>
+                                            <label for="parking">Estacionamiento</label>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="parking"
-                                                            id="parkingSi" value="si">
+                                                            id="parkingSi" value="si"
+                                                            <%= parking === 'si' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="parkingSi">Sí</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-check d-flex justify-content-center">
                                                         <input class="form-check-input" type="radio" name="parking"
-                                                            id="parkingNo" value="no">
+                                                            id="parkingNo" value="no"
+                                                            <%= parking === 'no' ? 'checked' : '' %>>
                                                         <label class="form-check-label" for="parkingNo">No</label>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <!-- registro web -->
+                                        <div class="form-group">
+                                            <label for="checkInWeb">Registrarse en la web:</label>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-check d-flex justify-content-center">
+                                                        <input class="form-check-input" type="radio" name="checkInWeb"
+                                                            id="checkInWebSi" value="si"
+                                                            <%= checkInWeb === 'si' ? 'checked' : '' %>>
+                                                        <label class="form-check-label" for="checkInWebSi">Sí</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-check d-flex justify-content-center">
+                                                        <input class="form-check-input" type="radio" name="checkInWeb"
+                                                            id="checkInWebNo" value="no"
+                                                            <%= checkInWeb === 'no' ? 'checked' : '' %>>
+                                                        <label class="form-check-label" for="checkInWebNo">No</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                     </div>
+                                    <!-- precio -->
                                         <div class="mb-3">
                                             <label for="price" class="form-label">Precio</label>
                                             <input type="number"
@@ -161,7 +171,7 @@
                                             <label for="agencyId" class="form-label">Agencias</label>
                                             <select
                                                 class="form-select <%= locals.errors && (errors.hotelId && 'is-invalid') %>"
-                                                aria-label="Default select example" name="name" id="hotelId">
+                                                aria-label="Default select example" name="agencyId" id="hotelId">
                                                 <option selected hidden value="">Seleccione...</option>
                                                 <% hotels.forEach(hotel=> { %>
                                                     <option value="<%= hotel.id %>" <%=locals.old &&
