@@ -3,7 +3,7 @@ const db = require('../../database/models')
 module.exports = (req, res) => {
     
     const hotels = db.Hotel.findAll({
-      order : ['name']
+      order : [['productId', 'ASC']] //Ordeno por productId de forma ascendente
     });
 
     const countries = db.Countrie.findAll({
