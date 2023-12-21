@@ -11,6 +11,7 @@ const localsCheck = require('./middlewares/localsCheck');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productsRouter = require('./routes/products');
+const apisRouter = require('./routes/apis');
 const apiRouter = require('./routes/apis');
 const usersApiRoutes = require('./routes/usersApi')
 const cookieCheck = require('./middlewares/cookieCheck');
