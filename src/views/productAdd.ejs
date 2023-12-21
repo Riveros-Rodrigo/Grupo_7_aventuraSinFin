@@ -32,6 +32,12 @@
                             <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
                         </div>
 
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Ciudad</label>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.city ? 'is-invalid' : 'is-valid') : '' %>" id="productcity" city="city" value="<%= locals.old && (old.city && old.city) %>"/>
+                            <small id="cityErrors" class="text-warning fs-6"> <%= locals.errors && (errors.city && errors.city.msg) %> </small>
+                        </div>
+
                         <div class="mb-2">
                             <label for="country" class="form-label" >Países</label>
                             <select class="form-select <%= locals.errors && (errors.country && 'is-invalid') %>" aria-label="Default select example" name="country" id="country">
@@ -49,18 +55,6 @@
                             <label for="description" class="form-label">Descripción</label>
                             <textarea class="form-control <%= locals.errors ? (errors.description ? 'is-invalid' : 'is-valid') : '' %>" id="description" style="resize: none" name="description"><%= locals.old && (old.description && old.description) %></textarea>
                             <small id="descriptionErrors" class="text-warning fs-6"> <%= locals.errors && (errors.description && errors.description.msg) %> </small>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="price" class="form-label">Precio</label>
-                            <input type="number" class="form-control <%= locals.errors ? (errors.price ? 'is-invalid' : 'is-valid') : '' %>" id="productPrice" name="price" min="0" step="0.01" value="<%= locals.old && (old.price && old.price) %>"/>
-                            <small id="priceErrors" class="text-warning fs-6"> <%= locals.errors && (errors.price && errors.price.msg) %> </small>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="discount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" id="discount"
-                                name="discount" min="0" max="100"  />
                         </div>
 
                         <div class="d-flex justify-content-between mb-3">

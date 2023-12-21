@@ -11,7 +11,7 @@ router
     .get('/detail/:id', detail)
     .get('/detail/hotel/:id', detailHotel)
     .get('/add', add)
-    .post('/add', upload.single('images'),productAddValidator,create)
+    .post('/add', upload.single('images'),create)
     .get('/add/hoteles', addHotel)
     .post('/add/hoteles', upload.single('images'), productAddValidatorHotel ,createHotel)
     .get('/add/paquetes', addPaquete)
