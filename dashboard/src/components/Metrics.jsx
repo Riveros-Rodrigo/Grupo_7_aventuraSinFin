@@ -6,14 +6,14 @@ const data = [
       color: "primary",
       title: "Vuelos disponibles",
       value: 21,
-      icon: "fa-film",
+      icon: "fa-plane",
     },
     {
       id: crypto.randomUUID(),
       color: "warning",
       title: "Hoteles disponibles",
       value: 40,
-      icon: "fa-award",
+      icon: "fa-hotel",
     },
     {
       id: crypto.randomUUID(),
