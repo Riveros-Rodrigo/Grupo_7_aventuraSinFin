@@ -7,8 +7,8 @@ module.exports = (req, res) => {
     });
 
     Promise.all([countries])
-      .then(([countries]) => {
-        return res.render("productAdd", {
+      .then(([ countries]) => {
+        return res.render("productAddHotel", {
           countries
         });
       })

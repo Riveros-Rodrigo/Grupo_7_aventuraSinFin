@@ -10,6 +10,7 @@ module.exports = async (req,res) =>{
     //usando async y await nos evitamos llenar el codigo de promesas, de esta manera nos evitamos la anidacion de .then()
     
     await db.Product.create({
+      lodging : false,
       name: name.trim(),
       city: city.trim(),
       countryId: country ? +country : null,
@@ -20,16 +21,11 @@ module.exports = async (req,res) =>{
 
   }else{
     //hacemos los llamados correspondientes para renderizar la vista productAdd.
-    const hotels = db.Hotel.findAll({
-      order : [['productId', 'ASC']] //Ordeno por productId de forma ascendente
-    });
-
     const countries = await db.Countrie.findAll({
       order : ['name']
     });
 
     return res.render("productAdd", {
-      hotels,
       countries,
       errors : errors.mapped(),
       old : req.body

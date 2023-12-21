@@ -17,12 +17,5 @@ module.exports = [
     .withMessage("Es obligatorio agregar la dirección"),
   check("city").notEmpty().withMessage("La ciudad es requerida"),
   check("country").notEmpty().withMessage("El país es requerido"),
-  check("images")
-    .custom((value, { req }) => {
-      if (req.file) {
-        return true;
-      }
-      return false;
-    })
-    .withMessage("No has subido ninguna imagen"),
+
 ];
