@@ -8,257 +8,297 @@
 
             <main class="container">
                 <div class="row mt-5">
-              
+
                     <div class="col-12 col-md-12  mx-auto">
 
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Destinos</button>
+                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                    aria-controls="home-tab-pane" aria-selected="true">Destinos</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Hoteles</button>
+                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                    aria-controls="profile-tab-pane" aria-selected="false">Hoteles</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Paquetes</button>
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                    data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                    aria-controls="contact-tab-pane" aria-selected="false">Paquetes</button>
                             </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                                    <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
-                                        <a href="/products/add" class="btn btn-dark"><i class="fas fa-plus"></i>
-                                            Agregar</a>
-                                    </div>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="d-flex flex-column gap-2 flex-md-row my-3">
+                                    <a href="/products/add" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                         Destino</a>
+                                         <a href="/products/add/vuelos" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                            Vuelo</a>
+                                </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                    <table class="table table-striped ">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Producto</th>
-                                                <th scope="col">País</th>
-                                                <th scope="col">Precio</th>
-                                                <th scope="col">Descuento</th>
-                                                <th scope="col">Total</th>
-                                                <th scope="col">Acciones</th>
-                                            </tr>
-                                        </thead>
-                                        <!-- tabla de destinos -->
-                                        <tbody>
-                                            <% products.filter(product => product.countrie && !product.hotel).forEach(({ id,name, price, countrie, discount }, index)=> { %>
+                                        <table class="table table-striped ">
+                                            <thead>
                                                 <tr>
-                                                    <th scope="row">
-                                                        <%= index + 1 %>
-                                                    </th>
-                                                    <td>
-                                                        <%= name %>
-                                                    </td>
-                                                    <td>
-                                                        <%= countrie.name %>
-                                                    </td>
-                                                    <td>
-                                                        <%= price %>
-                                                    </td>
-                                                    <td>
-                                                        <%= discount %>
-                                                    </td>
-                                                    <td>
-                                                        <%= price - (discount * price / 100) %>
-                                                    </td>
-                                                    <td>
-                                                        <div class="d-flex gap-2">
-                                                            <div class="dropdown">
-                                                                <button class="btn btn-sm btn-secondary dropdown-toggle"
-                                                                    type="button" id="dropdownMenuButton<%= id %>"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    Opciones
-                                                                </button>
-                                                                <ul class="dropdown-menu"
-                                                                    aria-labelledby="dropdownMenuButton<%= id %>">
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Destino</th>
+                                                    <th scope="col">Vuelos</th>
+                                                    <th scope="col">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- tabla de destinos -->
+                                            <tbody>
+                                                <% products.filter(product=> !product.lodging).forEach(({ id,name,
+                                                    countrie, flights, image}, index)=> { %>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <%= index + 1 %>
+                                                        </th>
+                                                        <td>
+                                                            <div class="d-flex gap-3">
+                                                            <div class="d-flex flex-column align-items-center">
+                                                                <img src="/images/<%= countrie.flag %>" alt="" width="50px">
+                                                                <%= countrie.name %>
+                                                            </div>
+                                                            <img src="/images/<%= image %>" alt="" width="100px">
+                                                            <%= name %>
+                                                            </div>
+                                                        </td>
+                                                        
+                                                       
+                                                     
+                                                        <td>
+                                                            <ul class="list-group list-group-flush">
+                                                                <% flights.forEach(fly=> { %>
+                                                                    <li class="list-group-item bg-transparent d-flex gap-2 align-items-center">
+                                                                       <img src="/images/<%= fly.airline.image %>" alt=""> <span> <%= fly.airline.name %></span>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                                <div class="dropdown">
+                                                                    <button
+                                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownMenuButton<%= id %>"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Opciones
+                                                                    </button>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="dropdownMenuButton<%= id %>">
+                                                                        <li><a class="dropdown-item"
+                                                                                href="/products/detail/<%= id %>">
+                                                                                <i class="fas fa-plus"></i>
+                                                                                Info
+                                                                            </a></li>
+                                                                        <li><a class="dropdown-item"
+                                                                                href="/products/edit/<%= id %>">
+                                                                                <i class="fa-solid fa-pencil"></i>
+                                                                                Editar
+                                                                            </a></li>
+                                                                        <li class="dropdown-item">
+                                                                        <form
+                                                                            action="/products/remove/<%= id %>?_method=DELETE"
+                                                                            method="POST">
+                                                                            <button type="submit" class="bg-transparent border-0">
+                                                                                <i class="fa-solid fa-trash"></i>
+                                                                                Eliminar
+                                                                            </button>
+                                                                        </form>
+                                                                    </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="d-flex flex-column gap-2 flex-md-row my-3">
+                                    <a href="/products/add/hoteles" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                        Hotel</a>
+                                        <a href="/products/add/alojamientos" class="btn btn-dark"><i class="fas fa-plus"></i>
+                                            Alojamiento</a>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped ">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Hotel</th>
+                                                    <th scope="col">Ciudad</th>
+                                                    <th scope="col">País</th>
+                                                    <th scope="col">Teléfono</th>
+                                                    <th scope="col">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- tabla de hoteles -->
+                                            <tbody>
+                                                <% products.filter(product=> product.lodging).forEach(({ id, name, city,
+                                                    countrie, phone, address }, index)=> { %>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <%= index + 1 %>
+                                                        </th>
+                                                        <td>
+                                                            <b><%= name %></b>
+                                                            <p>  <%= address %></p>
+                                                            
+                                                        </td>
+                                                        <td>
+                                                            <%= city %>
+                                                        </td>
+                                                        <td>
+                                                            <%= countrie.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= phone %>
+                                                        </td>
+                                                      
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                                <div class="dropdown">
+                                                                    <button
+                                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownMenuButton<%= id %>"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Opciones
+                                                                    </button>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="dropdownMenuButton<%= id %>">
+                                                                        <li><a class="dropdown-item"
+                                                                            href="/products/detail/hotel/<%= id %>">
+                                                                            <i class="fas fa-plus"></i>
+                                                                            Info
+                                                                        </a></li>
                                                                     <li><a class="dropdown-item"
-                                                                            href="/products/detail/<%= id %>">Ver
-                                                                            producto</a></li>
-                                                                    <li><a class="dropdown-item"
-                                                                            href="/products/edit/<%= id %>">Editar
-                                                                            producto</a></li>
-                                                                    <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
-                                                                        <button>
-                                                                            Eliminar producto
+                                                                            href="/products/editHotel/<%= id %>">
+                                                                            <i class="fa-solid fa-pencil"></i>
+                                                                            Editar
+                                                                        </a></li>
+                                                                    <li class="dropdown-item">
+                                                                    <form
+                                                                        action="/products/removeHotel/<%= id %>?_method=DELETE"
+                                                                        method="POST">
+                                                                        <button type="submit" class="bg-transparent border-0">
+                                                                            <i class="fa-solid fa-trash"></i>
+                                                                            Eliminar
                                                                         </button>
                                                                     </form>
-                                                                </ul>
+                                                                </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <% }) %>
-                                        </tbody>
-                                    </table>
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                                <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
-                                    <a href="/products/add/hoteles" class="btn btn-dark"><i class="fas fa-plus"></i>
-                                        Agregar</a>
-                                </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                <table class="table table-striped ">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Producto</th>
-                                            <th scope="col">Hotel</th>
-                                            <th scope="col">Pais</th>
-                                            <th scope="col">Precio</th>
-                                            <th scope="col">Descuento</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- tabla de hoteles -->
-                                    <tbody>
-                                        <% products.filter(product => product.hotel && !product.countrie).forEach(({ id,hotel, price, name, discount }, index)=> { %>
-                                            <tr>
-                                                <th scope="row">
-                                                    <%= index + 1 %>
-                                                </th>
-                                                <td>
-                                                    <%= name %>
-                                                </td>
-                                                <td>
-                                                    <%= hotel.name %>
-                                                </td>
-                                                <td>
-                                                    <%= hotel.countrie.name %>
-                                                </td>
-                                                <td>
-                                                    <%= price %>
-                                                </td>
-                                                <td>
-                                                    <%= discount %>
-                                                </td>
-                                                <td>
-                                                    <%= price - (discount * price / 100) %>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex gap-2">
-                                                        <div class="dropdown">
-                                                            <button class="btn btn-sm btn-secondary dropdown-toggle"
-                                                                type="button" id="dropdownMenuButton<%= id %>"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                Opciones
-                                                            </button>
-                                                            <ul class="dropdown-menu"
-                                                                aria-labelledby="dropdownMenuButton<%= id %>">
-                                                                <li><a class="dropdown-item"
-                                                                        href="/products/detail/<%= id %>">Ver
-                                                                        producto</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/products/editHotel/<%= id %>">Editar
-                                                                        producto</a></li>
-                                                                <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
-                                                                    <button>
-                                                                        Eliminar producto
-                                                                    </button>
-                                                                </form>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <% }) %>
-                                    </tbody>
-                                </table>
-                            </div>
-                            </div>
 
                             </div>
-                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
                                 <div class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
                                     <a href="/products/add/paquetes" class="btn btn-dark"><i class="fas fa-plus"></i>
                                         Agregar</a>
                                 </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                <table class="table table-striped ">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Producto</th>
-                                            <th scope="col">Hotel</th>
-                                            <th scope="col">Pais</th>
-                                            <th scope="col">Precio</th>
-                                            <th scope="col">Descuento</th>
-                                            <th scope="col">Total</th>
-                                            <th scope="col">Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <!-- tabla de paquetes -->
-                                    <tbody>
-                                        <% products.filter(product => product.hotel && product.countrie).forEach(({ id,hotel,countrie, price, name, discount }, index)=> { %>
-                                            <tr>
-                                                <th scope="row">
-                                                    <%= index + 1 %>
-                                                </th>
-                                                <td>
-                                                    <%= name %>
-                                                </td>
-                                                <td>
-                                                    <%= hotel.name %>
-                                                </td>
-                                                <td>
-                                                    <%= countrie.name %>
-                                                </td>
-                                                <td>
-                                                    <%= price %>
-                                                </td>
-                                                <td>
-                                                    <%= discount %>
-                                                </td>
-                                                <td>
-                                                    <%= price - (discount * price / 100) %>
-                                                </td>
-                                                <td>
-                                                    <div class="d-flex gap-2">
-                                                        <div class="dropdown">
-                                                            <button class="btn btn-sm btn-secondary dropdown-toggle"
-                                                                type="button" id="dropdownMenuButton<%= id %>"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                Opciones
-                                                            </button>
-                                                            <ul class="dropdown-menu"
-                                                                aria-labelledby="dropdownMenuButton<%= id %>">
-                                                                <li><a class="dropdown-item"
-                                                                        href="/products/detail/<%= id %>">Ver
-                                                                        producto</a></li>
-                                                                <li><a class="dropdown-item"
-                                                                        href="/products/editPaquete/<%= id %>">Editar
-                                                                        producto</a></li>
-                                                                <form action="/products/remove/<%= id %>?_method=DELETE" method="POST"> 
-                                                                    <button>
-                                                                        Eliminar producto
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped ">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Producto</th>
+                                                    <th scope="col">Hotel</th>
+                                                    <th scope="col">Pais</th>
+                                                    <th scope="col">Precio</th>
+                                                    <th scope="col">Descuento</th>
+                                                    <th scope="col">Total</th>
+                                                    <th scope="col">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <!-- tabla de paquetes -->
+                                            <tbody>
+                                                <% products.filter(product=> product.hotel &&
+                                                    product.countrie).forEach(({ id,hotel,countrie, price, name,
+                                                    discount }, index)=> { %>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            <%= index + 1 %>
+                                                        </th>
+                                                        <td>
+                                                            <%= name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= hotel.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= countrie.name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= price %>
+                                                        </td>
+                                                        <td>
+                                                            <%= discount %>
+                                                        </td>
+                                                        <td>
+                                                            <%= price - (discount * price / 100) %>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                                <div class="dropdown">
+                                                                    <button
+                                                                        class="btn btn-sm btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownMenuButton<%= id %>"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        Opciones
                                                                     </button>
-                                                                </form>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <% }) %>
-                                    </tbody>
-                                </table>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="dropdownMenuButton<%= id %>">
+                                                                        <li><a class="dropdown-item"
+                                                                                href="/products/detail/<%= id %>">Ver
+                                                                                producto</a></li>
+                                                                        <li><a class="dropdown-item"
+                                                                                href="/products/editPaquete/<%= id %>">Editar
+                                                                                producto</a></li>
+                                                                        <form
+                                                                            action="/products/remove/<%= id %>?_method=DELETE"
+                                                                            method="POST">
+                                                                            <button>
+                                                                                Eliminar producto
+                                                                            </button>
+                                                                        </form>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <% }) %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-                            </div>
-                            </div>
-                          </div>
-                          
-
-
-
                         </div>
 
+
+
+
                     </div>
+
+                </div>
             </main>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

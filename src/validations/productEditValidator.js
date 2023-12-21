@@ -2,7 +2,7 @@ const {check} = require('express-validator')
 
 module.exports = [
     check('name')
-        .notEmpty().withMessage('Es obligatorio agregar el nombre del destino'),
+        .notEmpty().withMessage('Es obligatorio agregar el nombre del vuelo'),
     check('country')
         .notEmpty().withMessage('Es obligatorio agregar el país'),
     check('description')
@@ -11,11 +11,4 @@ module.exports = [
             min: 20,
             max: 300
         }).withMessage('La descripción debe tener entre 20 y 300 caracteres'),
-    check('images')
-        .custom((value, {req}) =>{
-            if(req.file){
-                return true
-            }
-            return false
-        }).withMessage('No has subido ninguna imagen')
 ]

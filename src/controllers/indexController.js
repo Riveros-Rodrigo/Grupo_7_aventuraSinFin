@@ -45,12 +45,15 @@ module.exports = {
       const products = await db.Product.findAll({
         include : [
         {
-          association : 'hotel',
-          include : ['countrie']
-
+          association : 'hotels',
+          include : ['countrie','agency', 'images']
         },
         {
           association : 'countrie'
+        },
+        {
+          association : 'flights',
+          include : ['airline']
         }
       ]
       });

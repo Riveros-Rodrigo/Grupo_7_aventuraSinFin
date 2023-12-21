@@ -1,40 +1,36 @@
 const {validationResult} = require('express-validator');
-const db = require('../../database/models')
+const db = require('../../database/models');
 
-module.exports = async(req, res) => {
-    const errors = validationResult(req);
+module.exports = async (req,res) =>{
+  const errors = validationResult(req);
 
-    if(errors.isEmpty()){
-    const {hotel,stay,passengers,wifi,breakfast,parking,checkInWeb,price,agencyId} = req.body
-        return res.send(req.body)
+  if(errors.isEmpty()){
+    const {name,city,country,description,phone, address} = req.body;
+    //creo el nuevo producto en la base de dato.
+    //usando async y await nos evitamos llenar el codigo de promesas, de esta manera nos evitamos la anidacion de .then()
+    
     await db.Product.create({
-        hotel,
-        stay : stay.trim(),
-        passengers,
-        wifi,
-        breakfast,
-        parking,
-        checkInWeb,
-        price: +price,
-        agencyId,
-        image : req.file ? req.file.filename : null
+      lodging : true,
+      name: name.trim(),
+      city: city.trim(),
+      countryId: country ? +country : null,
+      description : description.trim(),
+      phone,
+      address,
+      image : req.file ? req.file.filename : null
     });
     return res.redirect('/dashboard')
 
-    }else{
-        const hotels = await db.Hotel.findAll({
-            order : [['productId', 'ASC']] //Ordeno por productId de forma ascendente
-        });
-
-        const countries = await db.Countrie.findAll({
-            order : ['name']
-        });
-
-    return res.render("productAddHotels", {
-        hotels,
-        countries,
-        errors : errors.mapped(),
-        old : req.body
+  }else{
+    //hacemos los llamados correspondientes para renderizar la vista productAdd.
+    const countries = await db.Countrie.findAll({
+      order : ['name']
     });
-    } 
-    }
+
+    return res.render("productAddHotel", {
+      countries,
+      errors : errors.mapped(),
+      old : req.body
+    });
+  }
+}

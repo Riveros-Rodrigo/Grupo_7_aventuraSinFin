@@ -15,16 +15,10 @@ module.exports = (sequelize, DataTypes) => {
          as : 'hotel',
          foreignKey : 'hotelId'
        });
-
-     Image.belongsTo(models.Countrie, {
-       as : 'countrie',
-       foreignKey : 'countryId'
-     })
    }
    }
   Image.init({
     name: DataTypes.STRING,
-    countryId: DataTypes.INTEGER,
     hotelId: DataTypes.INTEGER,
   }, {
     sequelize,

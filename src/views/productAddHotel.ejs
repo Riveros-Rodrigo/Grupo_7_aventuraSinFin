@@ -22,7 +22,7 @@
             <div class="card border rounded">
                 <div class="card-header bg-white d-flex justify-content-between">
                     <a class="link-dark " href="/dashboard">Volver al dasboard</a>
-                    <h4 class="card-title">Nuevo Destino</h4>
+                    <h4 class="card-title">Agregar Hotel</h4>
 
                 </div>
                 <div class="card-body">
@@ -31,20 +31,27 @@
                             <img src="/images/default.webp" class="img-fluid" alt="" id="img-prev">
                         </div>
                        <div class="col-12 col-md-4">
-                        <!-- destino -->
+                        <!-- hotel -->
                         <div class="mb-3">
-                            <label for="name" class="form-label">Destino</label>
+                            <label for="name" class="form-label">Hotel</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.name ? 'is-invalid' : 'is-valid') : '' %>" id="productName" name="name" value="<%= locals.old && (old.name && old.name) %>"/>
-                            <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
+                            <small id="nameErrors" class="text-danger small"> <%= locals.errors && (errors.name && errors.name.msg) %> </small>
+                        </div>
+                        <div class="row">
+                              <!-- telefono -->
+                          <div class="mb-3 col-12">
+                            <label for="phone" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.phone ? 'is-invalid' : 'is-valid') : '' %>" id="productphone" name="phone" value="<%= locals.old && (old.phone && old.phone) %>"/>
+                            <small id="phoneErrors" class="text-danger small"> <%= locals.errors && (errors.phone && errors.phone.msg) %> </small>
                         </div>
                         <!-- ciudad -->
-                        <div class="mb-3">
+                        <div class="mb-3 col-6">
                             <label for="city" class="form-label">Ciudad</label>
                             <input type="text" class="form-control <%= locals.errors ? (errors.city ? 'is-invalid' : 'is-valid') : '' %>" id="productcity" name="city" value="<%= locals.old && (old.city && old.city) %>"/>
-                            <small id="cityErrors" class="text-warning fs-6"> <%= locals.errors && (errors.city && errors.city.msg) %> </small>
+                            <small id="cityErrors" class="text-danger small"><%= locals.errors && (errors.city && errors.city.msg) %> </small>
                         </div>
                         <!-- countries -->
-                        <div class="mb-2">
+                        <div class="mb-2 col-6">
                             <label for="country" class="form-label" >Países</label>
                             <select class="form-select <%= locals.errors && (errors.country && 'is-invalid') %>" aria-label="Default select example" name="country" id="country">
                                 <option selected hidden value="">Seleccione...</option>
@@ -54,19 +61,26 @@
                                   </option>
                                   <% }) %>
                               </select>
-                              <small id="nameErrors" class="text-warning fs-6"> <%= locals.errors && (errors.country && errors.country.msg) %> </small>
+                              <small id="nameErrors" class="text-danger small"> <%= locals.errors && (errors.country && errors.country.msg) %> </small>
                         </div>
+                        
+                    </div>
                     </div>
                     
                     <div class="col-12 col-md-4">
-
+                        <!-- telefono -->
+                        <div class="mb-3 col-12">
+                            <label for="address" class="form-label">Dirección</label>
+                            <input type="text" class="form-control <%= locals.errors ? (errors.address ? 'is-invalid' : 'is-valid') : '' %>" id="productaddress" name="address" value="<%= locals.old && (old.address && old.address) %>"/>
+                            <small id="cityErrors" class="text-danger small"> <%= locals.errors && (errors.city && errors.city.msg) %> </small>
+                        </div>
                         <!-- description -->
                         <div class="mb-3">
                             <label for="description" class="form-label">Descripción</label>
-                            <textarea class="form-control <%= locals.errors ? (errors.description ? 'is-invalid' : 'is-valid') : '' %>" id="description" style="resize: none" rows="5" name="description"><%= locals.old && (old.description && old.description) %></textarea>
-                            <small id="descriptionErrors" class="text-warning fs-6"> <%= locals.errors && (errors.description && errors.description.msg) %> </small>
+                            <textarea class="form-control <%= locals.errors ? (errors.description ? 'is-invalid' : 'is-valid') : '' %>" id="description" style="resize: none" rows="4" name="description"><%= locals.old && (old.description && old.description) %></textarea>
+                            <small id="descriptionErrors" class="text-danger small"> <%= locals.errors && (errors.description && errors.description.msg) %> </small>
                         </div>
-
+                       
                         <div class="d-flex justify-content-between align-items-center mb-3">
                             <label for="images" class="btn btn-secondary"><i class="fas fa-plus"></i> Imagen</label>
                             <input hidden class="form-control" type="file" id="images"
@@ -75,7 +89,7 @@
                                 Guardar
                             </button>
                         </div>
-                        <small class="text-warning fs-6"> <%= locals.errors && (errors.images && errors.images.msg) %> </small>
+                        <small class="text-danger small"> <%= locals.errors && (errors.images && errors.images.msg) %> </small>
                     </form>
                 </div>
                 </div>
@@ -85,14 +99,13 @@
 </div>
 </main>
 
-<script>
-    const onImagePrev = ({target}) => {
-        const url = URL.createObjectURL(target.files[0])
-        document.getElementById('img-prev').setAttribute('src',url)
-    }
-</script>
-
             <%- include('partials/footer') %>
+            <script>
+                const onImagePrev = ({target}) => {
+                    const url = URL.createObjectURL(target.files[0])
+                    document.getElementById('img-prev').setAttribute('src',url)
+                }
+            </script>
             <!-- <script src="/javascripts/validations/validationProductAdd.js"></script> -->
     </body>
 
