@@ -5,15 +5,40 @@ import { FormProduct } from "./FormProduct"
 export const LastProductInDb = (props) => {
   const [products, setProducts] = useState(props.products)
   const [showProductsForm, setShowProductsForm] = useState(false)
+  const [productToEdit, setProductToEdit] = useState(undefined)
 
-
-  const onDelete = (nombre) => {
-    const updatedProducts = products.filter(item => item.nombre !== nombre)
+  const onDelete = (id) => {
+    const updatedProducts = products.filter(item => item.id !== id)
     setProducts(updatedProducts)
   }
 
   const onDisplayProductsForm = () => {
     setShowProductsForm(prev => !prev)
+  }
+
+  const addProduct = (product) => {
+    setProducts([...products, product])
+    setShowProductsForm(false)
+  }
+
+  const editProduct = (product) => {
+    const index = products.findIndex(item => item.id === product.id)
+    const updatedProducts = [...products]
+    updatedProducts[index] = product
+    setProducts(updatedProducts)
+    setProductToEdit(undefined)
+    setShowProductsForm(false)
+  }
+
+  const onCancelForm = () => {
+    setShowProductsForm(false)
+    productToEdit(undefined)
+  }
+
+  const onClickEdit = (id) => {
+    const productToEdit = products.find(item => item.id == id)
+    setProductToEdit(productToEdit)
+    setShowProductsForm(true)
   }
 
   return (
@@ -30,7 +55,12 @@ export const LastProductInDb = (props) => {
           </p>
 
           {showProductsForm && <div>
-            <FormProduct />
+            <FormProduct 
+              addProduct={addProduct}
+              editProduct={editProduct}
+              product={productToEdit}
+              onCancel={onCancelForm}
+              />
           </div>}
 
           <table className="table">
@@ -46,12 +76,12 @@ export const LastProductInDb = (props) => {
             <tbody>
               {
                 products.map((item, index) => (
-                  <tr key={item.nombre}>
-                    <th scope="row">{index + 1}</th>
+                  <tr key={item.id}>
+                    <th scope="row">{(index + 1)}</th>
                     <td>{item.nombre}</td>
                     <td>{item.precio}</td>
                     <td>{item.descuento}</td>
-                    <td><ActionDropdown onClickDelete={() => onDelete(item.nombre)} /></td>
+                    <td><ActionDropdown id={item.id} onClickDelete={onDelete} onClickEdit={onClickEdit} /></td>
                   </tr>))
               }
 

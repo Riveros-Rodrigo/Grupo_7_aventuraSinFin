@@ -7,9 +7,9 @@ export const TopBar = ({ setShow }) => {
       <ul className="navbar-nav ml-auto">
         <li>
           <img
-            style={{ "height": "50px" }}S
+            style={{ "height": "50px" }}
             src="/images/logoLetrasBlancaModPixeles.png"
-            alt="Logo"W
+            alt="Logo"
           />
         </li>
 
